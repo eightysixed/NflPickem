@@ -1,0 +1,895 @@
+<html>
+<head>
+<link rel="icon"
+ href="./favicon.gif" />
+<style>
+	#matchupTable {
+		color: #666666;
+		margin: 10px;
+	}
+	#matchupTable td {
+		color: #666666;
+		border-bottom-color: #444444;
+		border-bottom-style: solid;
+		border-bottom-width: 2px;
+	}
+	#pickTable {
+		color: #6666FF;
+		margin: 10px;
+	}
+	#pickTable td {
+		color: #3333bb;
+		font-family: Helvetica, sans-serif;
+		border-bottom-color: #444444;
+		border-bottom-style: solid;
+		border-bottom-width: 2px;
+	}
+
+	.resultTable {
+		color: #6666FF;
+		margin: 10px;
+	}
+	.resultTable td {
+		color: #3333bb;
+		font-family: Helvetica, sans-serif;
+		border-bottom-color: #444444;
+		border-bottom-style: solid;
+		border-bottom-width: 2px;
+	}
+
+	
+	
+	select {
+		color: #3333bb;
+		font-family: Helvetica, sans-serif;
+		font-size: 18px;
+		font-weight: bolder;
+	}
+
+	#divResults
+	{
+		position: absolute;
+		top: 60px;
+		left: 10px;
+	}
+	
+	.detailsHeader
+	{
+		text-align: center;
+		background-color: #ccccee;
+		color: #000033;
+	}
+	
+</style>
+	<script language="javascript" src="results.js"></script>
+<script language="javascript">
+var week = 1;
+var players = new Array();
+var teams = new Array(
+	"49ers",
+	"Bears",
+	"Bengals",
+	"Browns",
+	"Bills",
+	"Broncos",
+	"Buccaneers",
+	"Cardinals",
+	"Chiefs",
+	"Colts",
+	"Cowboys",
+	"Dolphins",
+	"Eagles",
+	"Falcons",
+	"Jaguars",
+	"LA Rams",
+	"LA Chargers",
+	"Lions",
+	"NY Giants",
+	"NY Jets",
+	"Packers",
+	"Panthers",
+	"Patriots",
+	"Raiders",
+	"Ravens",
+	"Redskins",
+	"Saints",
+	"Seahawks",
+	"Steelers",
+	"Texans",
+	"Titans",
+	"Vikings"
+);
+
+
+var season = [
+        {
+                week : 1,
+                matchups : [
+                        ["Chiefs", "Patriots"],
+                        ["NY Jets", "Bills"],
+                        ["Falcons", "Bears"],
+                        ["Ravens", "Bengals"],
+                        ["Steelers", "Browns"],
+                        ["Cardinals", "Lions"],
+                        ["Jaguars", "Texans"],
+                        ["Buccaneers", "Dolphins"],
+                        ["Raiders", "Titans"],
+                        ["Eagles", "Redskins"],
+                        ["Colts", "LA Rams"],
+                        ["Seahawks", "Packers"],
+                        ["Panthers", "49ers"],
+                        ["NY Giants", "Cowboys"],
+                        ["Saints", "Vikings"],
+                        ["LA Chargers", "Broncos"],
+                ],
+                bye : "",
+                designatedMatchUp : ["Buccaneers", "Dolphins"]
+        },
+        {
+                week : 2,
+                matchups : [
+                        ["Texans", "Bengals"],
+                        ["Browns", "Ravens"],
+                        ["Bills", "Panthers"],
+                        ["Cardinals", "Colts"],
+                        ["Titans", "Jaguars"],
+                        ["Eagles", "Chiefs"],
+                        ["Patriots", "Saints"],
+                        ["Vikings", "Steelers"],
+                        ["Bears", "Buccaneers"],
+                        ["Dolphins", "LA Chargers"],
+                        ["NY Jets", "Raiders"],
+                        ["Cowboys", "Broncos"],
+                        ["Redskins", "LA Rams"],
+                        ["49ers", "Seahawks"],
+                        ["Packers", "Falcons"],
+                        ["Lions", "NY Giants"],
+                ],
+                bye : "",
+                designatedMatchUp : []
+        },
+        {
+                week : 3,
+                matchups : [
+                        ["LA Rams", "49ers"],
+                        ["Ravens", "Jaguars"],
+                        ["Broncos", "Bills"],
+                        ["Saints", "Panthers"],
+                        ["Steelers", "Bears"],
+                        ["Falcons", "Lions"],
+                        ["Browns", "Colts"],
+                        ["Buccaneers", "Vikings"],
+                        ["Texans", "Patriots"],
+                        ["Dolphins", "NY Jets"],
+                        ["NY Giants", "Eagles"],
+                        ["Seahawks", "Titans"],
+                        ["Bengals", "Packers"],
+                        ["Chiefs", "LA Chargers"],
+                        ["Raiders", "Redskins"],
+                        ["Cowboys", "Cardinals"],
+                ],
+                bye : "",
+                designatedMatchUp : []
+        },
+        {
+                week : 4,
+                matchups : [
+                        ["Bears", "Packers"],
+                        ["Saints", "Dolphins"],
+                        ["Bills", "Falcons"],
+                        ["Steelers", "Ravens"],
+                        ["Bengals", "Browns"],
+                        ["LA Rams", "Cowboys"],
+                        ["Titans", "Texans"],
+                        ["Lions", "Vikings"],
+                        ["Panthers", "Patriots"],
+                        ["Jaguars", "NY Jets"],
+                        ["49ers", "Cardinals"],
+                        ["Eagles", "LA Chargers"],
+                        ["NY Giants", "Buccaneers"],
+                        ["Raiders", "Broncos"],
+                        ["Colts", "Seahawks"],
+                        ["Redskins", "Chiefs"],
+                ],
+                bye : "",
+                designatedMatchUp : []
+        },
+        {
+                week : 5,
+                matchups : [
+                        ["Patriots", "Buccaneers"],
+                        ["Bills", "Bengals"],
+                        ["NY Jets", "Browns"],
+                        ["Panthers", "Lions"],
+                        ["49ers", "Colts"],
+                        ["Titans", "Dolphins"],
+                        ["LA Chargers", "NY Giants"],
+                        ["Cardinals", "Eagles"],
+                        ["Jaguars", "Steelers"],
+                        ["Seahawks", "LA Rams"],
+                        ["Ravens", "Raiders"],
+                        ["Packers", "Cowboys"],
+                        ["Chiefs", "Texans"],
+                        ["Vikings", "Bears"],
+                ],
+                bye : "Falcons, Broncos, Saints, Redskins",
+                designatedMatchUp : []
+        },
+        {
+                week : 6,
+                matchups : [
+                        ["Eagles", "Panthers"],
+                        ["Dolphins", "Falcons"],
+                        ["Bears", "Ravens"],
+                        ["Browns", "Texans"],
+                        ["Packers", "Vikings"],
+                        ["Lions", "Saints"],
+                        ["Patriots", "NY Jets"],
+                        ["49ers", "Redskins"],
+                        ["Buccaneers", "Cardinals"],
+                        ["LA Rams", "Jaguars"],
+                        ["Steelers", "Chiefs"],
+                        ["LA Chargers", "Raiders"],
+                        ["NY Giants", "Broncos"],
+                        ["Colts", "Titans"],
+                ],
+                bye : "Bills, Bengals, Cowboys, Seahawks",
+                designatedMatchUp : []
+        },
+        {
+                week : 7,
+                matchups : [
+                        ["Chiefs", "Raiders"],
+                        ["Buccaneers", "Bills"],
+                        ["Panthers", "Bears"],
+                        ["Titans", "Browns"],
+                        ["Saints", "Packers"],
+                        ["Jaguars", "Colts"],
+                        ["Cardinals", "LA Rams"],
+                        ["NY Jets", "Dolphins"],
+                        ["Ravens", "Vikings"],
+                        ["Bengals", "Steelers"],
+                        ["Cowboys", "49ers"],
+                        ["Broncos", "LA Chargers"],
+                        ["Seahawks", "NY Giants"],
+                        ["Falcons", "Patriots"],
+                        ["Redskins", "Eagles"],
+                ],
+                bye : "Lions, Texans",
+                designatedMatchUp : []
+        },
+        {
+                week : 8,
+                matchups : [
+                        ["Dolphins", "Ravens"],
+                        ["Vikings", "Browns"],
+                        ["Raiders", "Bills"],
+                        ["Colts", "Bengals"],
+                        ["LA Chargers", "Patriots"],
+                        ["Bears", "Saints"],
+                        ["Falcons", "NY Jets"],
+                        ["49ers", "Eagles"],
+                        ["Panthers", "Buccaneers"],
+                        ["Texans", "Seahawks"],
+                        ["Cowboys", "Redskins"],
+                        ["Steelers", "Lions"],
+                        ["Broncos", "Chiefs"],
+                ],
+                bye : "Packers, Titans, LA Rams, NY Giants, Cardinals, Jaguars",
+                designatedMatchUp : []
+        },
+        {
+                week : 9,
+                matchups : [
+                        ["Bills", "NY Jets"],
+                        ["Falcons", "Panthers"],
+                        ["Colts", "Texans"],
+                        ["Bengals", "Jaguars"],
+                        ["Buccaneers", "Saints"],
+                        ["LA Rams", "NY Giants"],
+                        ["Broncos", "Eagles"],
+                        ["Ravens", "Titans"],
+                        ["Cardinals", "49ers"],
+                        ["Redskins", "Seahawks"],
+                        ["Chiefs", "Cowboys"],
+                        ["Raiders", "Dolphins"],
+                        ["Lions", "Packers"],
+                ],
+                bye : "Bears, Browns, Vikings, Patriots, Steelers, LA Chargers",
+                designatedMatchUp : []
+        },
+        {
+                week : 10,
+                matchups : [
+                        ["Seahawks", "Cardinals"],
+                        ["Saints", "Bills"],
+                        ["Packers", "Bears"],
+                        ["Browns", "Lions"],
+                        ["Steelers", "Colts"],
+                        ["LA Chargers", "Jaguars"],
+                        ["NY Jets", "Buccaneers"],
+                        ["Bengals", "Titans"],
+                        ["Vikings", "Redskins"],
+                        ["Texans", "LA Rams"],
+                        ["Cowboys", "Falcons"],
+                        ["NY Giants", "49ers"],
+                        ["Patriots", "Broncos"],
+                        ["Dolphins", "Panthers"],
+                ],
+                bye : "Chiefs, Raiders, Eagles, Ravens",
+                designatedMatchUp : []
+        },
+        {
+                week : 11,
+                matchups : [
+                        ["Titans", "Steelers"],
+                        ["Lions", "Bears"],
+                        ["Ravens", "Packers"],
+                        ["Jaguars", "Browns"],
+                        ["Cardinals", "Texans"],
+                        ["LA Rams", "Vikings"],
+                        ["Redskins", "Saints"],
+                        ["Chiefs", "NY Giants"],
+                        ["Bills", "LA Chargers"],
+                        ["Bengals", "Broncos"],
+                        ["Patriots", "Raiders"],
+                        ["Eagles", "Cowboys"],
+                        ["Falcons", "Seahawks"],
+                ],
+                bye : "Colts, Dolphins, NY Jets, 49ers, Buccaneers, Panthers",
+                designatedMatchUp : []
+        },
+        {
+                week : 12,
+                matchups : [
+                        ["Vikings", "Lions"],
+                        ["LA Chargers", "Cowboys"],
+                        ["NY Giants", "Redskins"],
+                        ["Buccaneers", "Falcons"],
+                        ["Browns", "Bengals"],
+                        ["Titans", "Colts"],
+                        ["Bills", "Chiefs"],
+                        ["Dolphins", "Patriots"],
+                        ["Panthers", "NY Jets"],
+                        ["Bears", "Eagles"],
+                        ["Saints", "LA Rams"],
+                        ["Seahawks", "49ers"],
+                        ["Jaguars", "Cardinals"],
+                        ["Broncos", "Raiders"],
+                        ["Packers", "Steelers"],
+                        ["Texans", "Ravens"],
+                ],
+                bye : "",
+                designatedMatchUp : []
+        },
+        {
+                week : 13,
+                matchups : [
+                        ["Redskins", "Cowboys"],
+                        ["Vikings", "Falcons"],
+                        ["Lions", "Ravens"],
+                        ["Patriots", "Bills"],
+                        ["49ers", "Bears"],
+                        ["Buccaneers", "Packers"],
+                        ["Colts", "Jaguars"],
+                        ["Broncos", "Dolphins"],
+                        ["Panthers", "Saints"],
+                        ["Chiefs", "NY Jets"],
+                        ["Texans", "Titans"],
+                        ["Browns", "LA Chargers"],
+                        ["LA Rams", "Cardinals"],
+                        ["NY Giants", "Raiders"],
+                        ["Eagles", "Seahawks"],
+                        ["Steelers", "Bengals"],
+                ],
+                bye : "",
+                designatedMatchUp : []
+        },
+        {
+                week : 14,
+                matchups : [
+                        ["Saints", "Falcons"],
+                        ["Colts", "Bills"],
+                        ["Vikings", "Panthers"],
+                        ["Bears", "Bengals"],
+                        ["Packers", "Browns"],
+                        ["49ers", "Texans"],
+                        ["Seahawks", "Jaguars"],
+                        ["Raiders", "Chiefs"],
+                        ["Lions", "Buccaneers"],
+                        ["Titans", "Cardinals"],
+                        ["NY Jets", "Broncos"],
+                        ["Redskins", "LA Chargers"],
+                        ["Eagles", "LA Rams"],
+                        ["Cowboys", "NY Giants"],
+                        ["Ravens", "Steelers"],
+                        ["Patriots", "Dolphins"],
+                ],
+                bye : "",
+                designatedMatchUp : []
+        },
+        {
+                week : 15,
+                matchups : [
+                        ["Broncos", "Colts"],
+                        ["Bears", "Lions"],
+                        ["LA Chargers", "Chiefs"],
+                        ["Dolphins", "Bills"],
+                        ["Packers", "Panthers"],
+                        ["Ravens", "Browns"],
+                        ["Texans", "Jaguars"],
+                        ["Bengals", "Vikings"],
+                        ["NY Jets", "Saints"],
+                        ["Eagles", "NY Giants"],
+                        ["Cardinals", "Redskins"],
+                        ["LA Rams", "Seahawks"],
+                        ["Patriots", "Steelers"],
+                        ["Titans", "49ers"],
+                        ["Cowboys", "Raiders"],
+                        ["Falcons", "Buccaneers"],
+                ],
+                bye : "",
+                designatedMatchUp : []
+        },
+        {
+                week : 16,
+                matchups : [
+                        ["Colts", "Ravens"],
+                        ["Vikings", "Packers"],
+                        ["Buccaneers", "Panthers"],
+                        ["Browns", "Bears"],
+                        ["Lions", "Bengals"],
+                        ["Dolphins", "Chiefs"],
+                        ["Bills", "Patriots"],
+                        ["Falcons", "Saints"],
+                        ["LA Chargers", "NY Jets"],
+                        ["LA Rams", "Titans"],
+                        ["Broncos", "Redskins"],
+                        ["Jaguars", "49ers"],
+                        ["NY Giants", "Cardinals"],
+                        ["Seahawks", "Cowboys"],
+                        ["Steelers", "Texans"],
+                        ["Raiders", "Eagles"],
+                ],
+                bye : "",
+                designatedMatchUp : []
+        },
+        {
+                week : 17,
+                matchups : [
+                        ["Panthers", "Falcons"],
+                        ["Bengals", "Ravens"],
+                        ["Packers", "Lions"],
+                        ["Texans", "Colts"],
+                        ["Bills", "Dolphins"],
+                        ["Bears", "Vikings"],
+                        ["NY Jets", "Patriots"],
+                        ["Redskins", "NY Giants"],
+                        ["Cowboys", "Eagles"],
+                        ["Browns", "Steelers"],
+                        ["Saints", "Buccaneers"],
+                        ["Jaguars", "Titans"],
+                        ["Chiefs", "Broncos"],
+                        ["Raiders", "LA Chargers"],
+                        ["49ers", "LA Rams"],
+                        ["Cardinals", "Seahawks"],
+                ],
+                bye : "",
+                designatedMatchUp : []
+        }
+	];
+var loading = function()
+{
+	loadPlayers();
+}
+
+var loadMatchups = function()
+{
+	var t = gebi("matchupTable");
+	var r = t.insertRow(-1);
+	var c = r.insertCell(-1);
+	c.colSpan = 3;
+	c.textContent = "WEEK " + week + " MATCHUPS"
+
+	r = t.insertRow(-1);
+	c = r.insertCell(-1);
+	c.textContent = "#";
+
+	c = r.insertCell(-1);
+	c.textContent = "Away Team";
+
+	c = r.insertCell(-1);
+	c.textContent = "Home Team";
+	
+	
+	var thisWeek = season[week-1];
+	
+	for(var i =0 ; i < thisWeek.matchups.length; i++)
+	{
+		r = t.insertRow(-1);
+		c = r.insertCell(-1);
+		c.textContent = (i+1);
+		c = r.insertCell(-1);
+		c.textContent = thisWeek.matchups[i][0];
+		c = r.insertCell(-1);
+		c.textContent = thisWeek.matchups[i][1];
+		
+	}
+
+	if (thisWeek.bye != "")
+	{
+		r = t.insertRow(-1);
+		c = r.insertCell(-1);
+		c.textContent = "BYE";
+		c = r.insertCell(-1);
+		c.colSpan = 2;
+		c.textContent = thisWeek.bye;
+	}
+		
+
+}
+
+var loadPicks = function()
+{
+	var t = gebi("pickTable");
+	var r = t.insertRow(-1);
+	var c = r.insertCell(-1);
+	c.colSpan = 2;
+	c.textContent = "WEEK " + week + " PICKS"
+	
+	
+	r = t.insertRow(-1);
+	c = r.insertCell(-1);
+	c.textContent = "Points (Rank)"
+	
+	c = r.insertCell(-1)
+	c.textContent = "Selection"
+	
+	for(var i = 5; i >= 1; i--)
+	{
+		r = t.insertRow(-1);
+		c = r.insertCell(-1);
+		c.textContent = i+"pts";
+		
+		c = r.insertCell(-1);
+		var s = document.createElement("select");
+		s.id = "pick" + i;
+		s.add(new Option("",""));
+		for(var team = 0; team < teams.length; team++)
+		{
+			s.add(new Option(teams[team], teams[team]));
+		}
+		c.appendChild(s);
+	}
+	
+	if (season[week -1].designatedMatchUp.length == 0)
+	{
+		season[week -1].designatedMatchUp = season[week -1].matchups[2];
+	}
+	r = t.insertRow(-1);
+	c = r.insertCell(-1);
+	c.colSpan = 2;
+	c.textContent = "Designated Matchup (6pts) : " + season[week -1].designatedMatchUp[0] + " vs. " + season[week -1].designatedMatchUp[1];
+
+	
+	r = t.insertRow(-1);
+	c = r.insertCell(-1);
+	c.colSpan = 2;
+	s = document.createElement("select");
+	s.id = "designatedMatchUp";
+	s.add(new Option("",""));
+	s.add(new Option(season[week -1].designatedMatchUp[0], season[week -1].designatedMatchUp[0]));
+	s.add(new Option(season[week -1].designatedMatchUp[1], season[week -1].designatedMatchUp[1]));
+	c.appendChild(s);
+	
+}
+
+var gebi = function(id)
+{
+	return document.getElementById(id);
+}
+
+
+var submitPicks = function()
+{
+	//alert("The SITE is not ready.  This is just for demosntration purposes");
+	var retString = ",\n{\n\tweek : " + week + ",\n";
+	var retCode = 0;
+	var picksValidation = new Array();
+	for (i=5; i >=1; i--)
+	{
+		if (gebi("pick" + i).value != "")
+		{
+			if (picksValidation[gebi("pick" + i).value] == undefined)
+			{
+				retString += "\tpick" + i + " : \"" + gebi("pick" + i).value + "\",\n";  
+				picksValidation[gebi("pick" + i).value] = 1;
+			}
+			else
+			{
+				retCode = "Dupplicated Pick";
+			}
+		}
+		else
+		{
+			retCode = "Incomplete Pick";
+		}
+	}
+	if (gebi("designatedMatchUp").value != "")
+	{
+		retString += "\tdesignatedMatchUp : \"" + gebi("designatedMatchUp").value + "\"\n";
+	}
+	else
+	{
+		retCode = "Empty Designated Match";
+	}
+	retString += "}\n";
+	
+	if (retCode == 0)
+	{
+		gebi("textOutput").value = retString;
+		var yourMessage = "Enter your name here: \n" + retString;
+		var subject = "NFL Pickems - Week" + week;
+		document.location.href = "mailto:andre-claude.paulin@ultra-tcs.com?subject="
+        + encodeURIComponent(subject)
+        + "&body=" + encodeURIComponent(yourMessage);
+		
+	}
+	else
+	{
+		gebi("textOutput").value = retCode;		
+	}
+	
+	
+}
+
+var loadPlayers = function()
+{
+	var playerFiles = ["./perso.js", "./jfn.js", "./pp.js", "./acp.js", "./mac.js", "./ad.js", "mal.js"];
+	
+	if (window.location.search.match(/type=job/) != null)
+	{
+		 playerFiles = ["./job.js", "./acp2.js", "./js.js", "./tk.js", "./sw.js", "./pg.js"];
+	}
+	
+	for(var i = 0; i < playerFiles.length; i++)
+	{
+		var sc = document.createElement("script");
+		sc.src = playerFiles[i];
+		
+		//alert("players.size = " + players.length);
+		document.head.appendChild(sc);
+	}
+	setTimeout('showResultButton();', 1000);
+}
+
+var showResultButton = function()
+{
+	loadMatchups();
+	loadPicks();
+	var resultButton = document.createElement("input");
+	resultButton.type = "button";
+	resultButton.value = "Show Result"
+	resultButton.addEventListener("click", function() {
+		showResult();
+	});
+	gebi("buttonSection").appendChild(resultButton);
+}
+
+var pointsCalculated = false;
+var showResult = function()
+{
+	gebi("divChoices").style.visibility = "hidden";
+	gebi("divOutput").style.visibility = "hidden";
+	gebi("divResults").style.visibility = "visible";
+	if (pointsCalculated == false)
+	{
+		calculateResults();
+		sortPlayers()
+
+		var t = document.createElement("table");
+		t.className = "resultTable";
+		var r = t.insertRow(-1);
+		var c = r.insertCell(-1);
+		c.colSpan = 3;
+		var rb = document.createElement("input");
+		rb.type = "button";
+		rb.value = "Return to Main View";
+		rb.addEventListener("click", function() {returnFromResults();});
+		c.appendChild(rb);
+
+		r = t.insertRow(-1);
+		c = r.insertCell(-1);
+		c.textContent = "Name";
+
+		c = r.insertCell(-1);
+		c.textContent = "Total";
+
+		for(var i = 1 ; i <= week; i++)
+		{
+			c = r.insertCell(-1);
+			c.textContent = "Week " + i;
+		}
+
+		for (var i = 0; i < players.length; i++)
+		{
+			r = t.insertRow(-1);
+			c = r.insertCell(-1);
+			c.textContent = players[i].name;
+			c = r.insertCell(-1);
+			c.textContent = players[i].total;
+			for(var w = 0 ; w < players[i].weeks.length; w++)
+			{
+				c = r.insertCell(-1);
+				c.textContent = players[i].weeks[w].points;
+			}
+		}
+		gebi("divResults").appendChild(t);
+
+		t = document.createElement("table");
+		t.className = "resultTable";
+		r = t.insertRow(-1);
+		c = r.insertCell(-1);
+		c.colSpan = 7;
+		c.className = "detailsHeader";
+		c.textContent = "Weekly Details";
+
+		for (var i = week; i >= 1; i--)
+		{
+			r = t.insertRow(-1);
+			c = r.insertCell(-1);
+			c.className = "detailsHeader";
+			c.textContent = "WEEK " + i;
+
+			c = r.insertCell(-1);
+			c.className = "detailsHeader";
+			c.textContent = "5 Pts";
+
+			c = r.insertCell(-1);
+			c.className = "detailsHeader";
+			c.textContent = "4 Pts";
+			c = r.insertCell(-1);
+			c.className = "detailsHeader";
+			c.textContent = "3 Pts";
+			c = r.insertCell(-1);
+			c.className = "detailsHeader";
+			c.textContent = "2 Pts";
+			c = r.insertCell(-1);
+			c.className = "detailsHeader";
+			c.textContent = "1 Pts";
+			c = r.insertCell(-1);
+			c.className = "detailsHeader";
+			c.textContent = "Designated Matchup";
+
+			for (var p = 0; p < players.length; p++)
+			{
+				r = t.insertRow(-1);
+				c = r.insertCell(-1);
+				c.textContent = players[p].name;
+				if (players[p].weeks[i-1] != undefined)
+				{
+					c = r.insertCell(-1);
+					c.textContent = players[p].weeks[i-1].pick5;
+					c = r.insertCell(-1);
+					c.textContent = players[p].weeks[i-1].pick4;
+					c = r.insertCell(-1);
+					c.textContent = players[p].weeks[i-1].pick3;
+					c = r.insertCell(-1);
+					c.textContent = players[p].weeks[i-1].pick2;
+					c = r.insertCell(-1);
+					c.textContent = players[p].weeks[i-1].pick1;
+					c = r.insertCell(-1);
+					c.textContent = players[p].weeks[i-1].designatedMatchUp;
+
+				}
+
+			}
+		}
+
+		gebi("divResults").appendChild(t);
+	}	
+}
+
+var calculateResults = function()
+{
+	pointsCalculated = true;
+	for (var i =0; i < players.length; i++)
+	{
+		players[i].total = 0;
+		for(var w = 0; w < players[i].weeks.length; w++)
+		{
+			getWeekPoints(players[i].weeks[w]);
+			players[i].total += players[i].weeks[w].points;
+		}
+	}
+}
+
+var getWeekPoints = function(w)
+{
+	w.points = 0;
+	w.points += getPoints(5, w.week, w.pick5);
+	w.points += getPoints(4, w.week, w.pick4);
+	w.points += getPoints(3, w.week, w.pick3);
+	w.points += getPoints(2, w.week, w.pick2);
+	w.points += getPoints(1, w.week, w.pick1);
+	w.points += getPoints(6, w.week, w.designatedMatchUp);
+	
+	// Bonus for perfect week
+	if (w.points == 21)
+	{
+		w.points += 2;
+	}
+}
+
+var getPoints = function(points, gameWeek, team)
+{
+	for(var i = 0; i < results.length; i++)
+	{
+		if (results[i][0] == team && results[i][gameWeek] == "W")
+		{
+			return points;
+		}
+		else if (results[i][0] == team && results[i][gameWeek] == "T")
+		{
+			return point/2;
+		}
+		else if (results[i][0] == team)
+		{
+			return 0;
+		}
+	}
+}
+
+var sortPlayers = function()
+{
+	for(var i = 0 ; i < players.length; i++)
+	{
+		for (var j = i+1; j < players.length; j++)
+		{
+			if(players[i].total < players[j].total)
+			{
+				var temp = players[i];
+				players[i] = players[j];
+				players[j] = temp;
+			}
+		}
+	}
+}
+
+var returnFromResults = function()
+{
+	gebi("divChoices").style.visibility = "visible";
+	gebi("divOutput").style.visibility = "visible";
+	gebi("divResults").style.visibility = "hidden";
+
+}
+</script>
+</head>
+<body onload="loading();">
+	<h1>NFL Pickems 2017</h1>
+	<div id="divChoices">
+		<table>
+			<tr>
+				<td>
+					<table id="matchupTable">
+					</table>
+				</td>
+				<td>
+					<table id="pickTable">
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td id="buttonSection">
+					<input type="button" value="submit" onclick="submitPicks();"/>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="divOutput">
+		<textarea cols="45" rows="10" id="textOutput" ></textarea>
+	</div>
+	<div id="divResults">
+	</div>
+</body>
+</html>
