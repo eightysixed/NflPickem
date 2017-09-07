@@ -645,11 +645,25 @@ var submitPicks = function()
 
 var loadPlayers = function()
 {
-	var playerFiles = ["./perso.js", "./jfn.js", "./pp.js", "./acp.js", "./mac.js", "./ad.js", "mal.js"];
+	var playerFiles = ["./perso.js", "./jfn.js", "./pp.js", "./acp.js", "./mac.js", "./ad.js", "./mal.js", "./gd.js"];
 	
 	if (window.location.search.match(/type=job/) != null)
 	{
-		 playerFiles = ["./job.js", "./acp2.js", "./js.js", "./tk.js", "./sw.js", "./pg.js"];
+		 playerFiles = ["./job.js", 
+							 "./acp2.js", 
+							 "./js.js", 
+							 "./tk.js", 
+							 "./sw.js", 
+							 "./pg.js", 
+							 "./ach.js", 
+							 "./sa.js", 
+							 "./kr.js", 
+							 "./ef.js", 
+							 "./joshfaier.js", 
+		                "./jordiefaier.js", 
+							 "./coreyfaier.js",
+							 "./martincharron.js"
+		];
 	}
 	
 	for(var i = 0; i < playerFiles.length; i++)
