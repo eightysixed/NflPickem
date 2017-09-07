@@ -1,18 +1,18 @@
 players.push(
 	{
-		name : "Dede",
-		paid: true,
+		name : "Genevieve",
+		paid: false,
 		weeks : [
 {
 week : 1,
 pick5 : "Patriots",
-pick4 : "Steelers",
+pick4 : "NY Jets",
 pick3 : "Falcons",
-pick2 : "Bills",
-pick1 : "Panthers",
+pick2 : "Bengals",
+pick1 : "Steelers",
 designatedMatchUp : "Buccaneers"
 }
-
+		
 		
 		]
 	}

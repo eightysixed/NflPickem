@@ -1,0 +1,25 @@
+open pages.videotron.ca
+vlxigbev
+3333tgo
+bin
+hash
+cd nfl
+put nfl.html 
+put favicon.gif 
+put results.js
+
+put job.js 
+put acp2.js 
+put ach.js
+put js.js 
+put pg.js 
+put sw.js 
+put tk.js 
+put sa.js
+put kr.js
+put ef.js
+put coreyfaier.js
+put joshfaier.js
+put jordiefaier.js
+put martincharron.js
+quit

@@ -1,18 +1,18 @@
 players.push(
 	{
-		name : "Andre-Claude",
+		name : "Martin Charron",
 		paid: false,
 		weeks : [
 {
 week : 1,
-pick5 : "Patriots",
+pick5 : "Falcons",
 pick4 : "Steelers",
-pick3 : "Falcons",
-pick2 : "Bills",
-pick1 : "Panthers",
+pick3 : "Texans",
+pick2 : "Colts",
+pick1 : "Saints",
 designatedMatchUp : "Buccaneers"
 }
-
+		
 		
 		]
 	}

@@ -1,6 +1,7 @@
 players.push(
 	{
 		name : "Jean-Fancois",
+		paid: true,
 		weeks : [
 {
 week : 1,
