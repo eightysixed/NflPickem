@@ -60,11 +60,30 @@
 		color: #000033;
 	}
 	
+	.winPick
+	{
+		background-color: #aaaaff;
+	}
+	
+	.tiePick
+	{
+		background-color: #aaaaaa;
+	}
+	
+	.lostPick
+	{
+		background-color: #ffaaaa;
+	}
+	
 </style>
-	<script language="javascript" src="results.js"></script>
+<script language="javascript" src="results.js"></script>
 <script language="javascript">
-var week = 1;
-var players = new Array();
+var allPlayers = null;
+var players = null;
+var config = null;
+var getConfigObj = new XMLHttpRequest();
+var getPlayersObj = new XMLHttpRequest();
+var submitPicksObject = new XMLHttpRequest();
 var teams = new Array(
 	"49ers",
 	"Bears",
@@ -489,7 +508,7 @@ var loadMatchups = function()
 	var r = t.insertRow(-1);
 	var c = r.insertCell(-1);
 	c.colSpan = 3;
-	c.textContent = "WEEK " + week + " MATCHUPS"
+	c.textContent = "WEEK " + config.week + " MATCHUPS"
 
 	r = t.insertRow(-1);
 	c = r.insertCell(-1);
@@ -502,7 +521,7 @@ var loadMatchups = function()
 	c.textContent = "Home Team";
 	
 	
-	var thisWeek = season[week-1];
+	var thisWeek = season[config.week-1];
 	
 	for(var i =0 ; i < thisWeek.matchups.length; i++)
 	{
@@ -535,7 +554,29 @@ var loadPicks = function()
 	var r = t.insertRow(-1);
 	var c = r.insertCell(-1);
 	c.colSpan = 2;
-	c.textContent = "WEEK " + week + " PICKS"
+	c.textContent = "WEEK " + config.week + " PICKS"
+	
+	
+	r = t.insertRow(-1);
+	c = r.insertCell(-1);
+	c.textContent = "Name"
+	
+	c = r.insertCell(-1);
+	var nameSelect = document.createElement("select");
+	nameSelect.id = "nameSelect";
+	c.appendChild(nameSelect);
+
+	
+	
+	r = t.insertRow(-1);
+	c = r.insertCell(-1);
+	c.textContent = "Password"
+
+	c = r.insertCell(-1);
+	var password = document.createElement("input");
+	password.type = "text";
+	password.id = "password";
+	c.appendChild(password);
 	
 	
 	r = t.insertRow(-1);
@@ -562,14 +603,14 @@ var loadPicks = function()
 		c.appendChild(s);
 	}
 	
-	if (season[week -1].designatedMatchUp.length == 0)
+	if (season[config.week -1].designatedMatchUp.length == 0)
 	{
-		season[week -1].designatedMatchUp = season[week -1].matchups[2];
+		season[config.week -1].designatedMatchUp = season[config.week -1].matchups[2];
 	}
 	r = t.insertRow(-1);
 	c = r.insertCell(-1);
 	c.colSpan = 2;
-	c.textContent = "Designated Matchup (6pts) : " + season[week -1].designatedMatchUp[0] + " vs. " + season[week -1].designatedMatchUp[1];
+	c.textContent = "Designated Matchup (6pts) : " + season[config.week -1].designatedMatchUp[0] + " vs. " + season[config.week -1].designatedMatchUp[1];
 
 	
 	r = t.insertRow(-1);
@@ -578,8 +619,8 @@ var loadPicks = function()
 	s = document.createElement("select");
 	s.id = "designatedMatchUp";
 	s.add(new Option("",""));
-	s.add(new Option(season[week -1].designatedMatchUp[0], season[week -1].designatedMatchUp[0]));
-	s.add(new Option(season[week -1].designatedMatchUp[1], season[week -1].designatedMatchUp[1]));
+	s.add(new Option(season[config.week -1].designatedMatchUp[0], season[config.week -1].designatedMatchUp[0]));
+	s.add(new Option(season[config.week -1].designatedMatchUp[1], season[config.week -1].designatedMatchUp[1]));
 	c.appendChild(s);
 	
 }
@@ -593,8 +634,13 @@ var gebi = function(id)
 var submitPicks = function()
 {
 	//alert("The SITE is not ready.  This is just for demosntration purposes");
-	var retString = ",\n{\n\tweek : " + week + ",\n";
+	var retString = ",\n{\n\tweek : " + config.week + ",\n";
 	var retCode = 0;
+	var pickObj = new Object();
+	pickObj.name = gebi("nameSelect").value;
+	pickObj.password = gebi("password").value;
+	pickObj.pick = new Object();
+	pickObj.pick.week = config.week;
 	var picksValidation = new Array();
 	for (i=5; i >=1; i--)
 	{
@@ -603,6 +649,7 @@ var submitPicks = function()
 			if (picksValidation[gebi("pick" + i).value] == undefined)
 			{
 				retString += "\tpick" + i + " : \"" + gebi("pick" + i).value + "\",\n";  
+				pickObj.pick["pick" + i] = gebi("pick" + i).value;
 				picksValidation[gebi("pick" + i).value] = 1;
 			}
 			else
@@ -618,6 +665,7 @@ var submitPicks = function()
 	if (gebi("designatedMatchUp").value != "")
 	{
 		retString += "\tdesignatedMatchUp : \"" + gebi("designatedMatchUp").value + "\"\n";
+		pickObj.pick["designatedMatchUp"] = gebi("designatedMatchUp").value;
 	}
 	else
 	{
@@ -627,12 +675,15 @@ var submitPicks = function()
 	
 	if (retCode == 0)
 	{
-		gebi("textOutput").value = retString;
+/*		gebi("textOutput").value = retString;
 		var yourMessage = "Enter your name here: \n" + retString;
 		var subject = "NFL Pickems - Week" + week;
 		document.location.href = "mailto:andre-claude.paulin@ultra-tcs.com?subject="
         + encodeURIComponent(subject)
         + "&body=" + encodeURIComponent(yourMessage);
+*/
+		submitPicksObject.open("POST", "submitPicks/results/12345");
+		submitPicksObject.send(JSON.stringify(pickObj, null, 2));
 		
 	}
 	else
@@ -643,44 +694,83 @@ var submitPicks = function()
 	
 }
 
-var loadPlayers = function()
+submitPicksObject.onreadystatechange = function()
 {
-	var playerFiles = ["./perso.js", "./jfn.js", "./pp.js", "./acp.js", "./mac.js", "./ad.js", "./mal.js", "./gd.js"];
-	
-	if (window.location.search.match(/type=job/) != null)
+	if (this.readyState == 4 && this.status == 200)
 	{
-		 playerFiles = ["./job.js", 
-							 "./acp2.js", 
-							 "./js.js", 
-							 "./tk.js", 
-							 "./sw.js", 
-							 "./pg.js", 
-							 "./ach.js", 
-							 "./sa.js", 
-							 "./kr.js", 
-							 "./ef.js", 
-							 "./joshfaier.js", 
-		                "./jordiefaier.js", 
-							 "./coreyfaier.js",
-							 "./martincharron.js"
-		];
+		alert(submitPicksObject.responseText);
 	}
+}
+
+
+
+var getPlayersAndConfig = function()
+{
+	getConfigObj.open("GET", "config.json");
+	getConfigObj.send();
 	
-	for(var i = 0; i < playerFiles.length; i++)
+	getPlayersObj.open("GET", "players.json");
+	getPlayersObj.send();
+}
+
+getConfigObj.onreadystatechange = function()
+{
+	if (this.readyState == 4 && this.status == 200)
 	{
-		var sc = document.createElement("script");
-		sc.src = playerFiles[i];
-		
-		//alert("players.size = " + players.length);
-		document.head.appendChild(sc);
+		config = JSON.parse(getConfigObj.responseText);
 	}
-	setTimeout('showResultButton();', 1000);
+}
+
+getPlayersObj.onreadystatechange = function()
+{
+	if (this.readyState == 4 && this.status == 200)
+	{
+		allPlayers = JSON.parse(getPlayersObj.responseText);
+		players = new Array();
+		loadMatchups();
+		loadPicks();
+		if (window.location.search.match(/type=job/) != null)
+		{
+			for(var i = 0; i < allPlayers.length; i++)
+			{
+				if (allPlayers[i].type == "job")
+				{
+					players.push(allPlayers[i]);
+				}
+			}
+		}
+		else
+		{
+			for(var i = 0; i < allPlayers.length; i++)
+			{
+				if (allPlayers[i].type != "job")
+				{
+					players.push(allPlayers[i]);
+				}
+			}
+		}
+		for(var i=0; i < players.length; i++)
+		{
+			gebi("nameSelect").add(new Option(players[i].name, players[i].name));
+		}
+		showResultButton();
+	}
+}
+
+
+
+
+var loadPlayers = function()
+{	
+	//loadMatchups();
+	//loadPicks();
+	getPlayersAndConfig();
 }
 
 var showResultButton = function()
 {
-	loadMatchups();
-	loadPicks();
+	//loadMatchups();
+	//loadPicks();
 	var resultButton = document.createElement("input");
 	resultButton.type = "button";
 	resultButton.value = "Show Result"
@@ -688,6 +778,10 @@ var showResultButton = function()
 		showResult();
 	});
 	gebi("buttonSection").appendChild(resultButton);
+	if (config.draftPeriod == false)
+	{
+		resultButton.click();
+	}
 }
 
 var pointsCalculated = false;
@@ -719,7 +813,7 @@ var showResult = function()
 		c = r.insertCell(-1);
 		c.textContent = "Total";
 
-		for(var i = 1 ; i <= week; i++)
+		for(var i = 1 ; i <= config.week; i++)
 		{
 			c = r.insertCell(-1);
 			c.textContent = "Week " + i;
@@ -748,7 +842,7 @@ var showResult = function()
 		c.className = "detailsHeader";
 		c.textContent = "Weekly Details";
 
-		for (var i = week; i >= 1; i--)
+		for (var i = config.week; i >= 1; i--)
 		{
 			r = t.insertRow(-1);
 			c = r.insertCell(-1);
@@ -784,7 +878,9 @@ var showResult = function()
 				{
 					c = r.insertCell(-1);
 					c.textContent = players[p].weeks[i-1].pick5;
-					c = r.insertCell(-1);
+					c.className = stylePick(i, players[p].weeks[i-1].pick5);
+					
+					c = r.insertCell(-1);					
 					c.textContent = players[p].weeks[i-1].pick4;
 					c = r.insertCell(-1);
 					c.textContent = players[p].weeks[i-1].pick3;
@@ -803,6 +899,32 @@ var showResult = function()
 		gebi("divResults").appendChild(t);
 	}	
 }
+
+var stylePick = function(week, pick)
+{
+	for(var i = 0; i < results.length; i++)
+	{
+		if (results[i][0] == pick && results[i][week] == "W")
+		{
+			return "winPick";
+		}
+		else if (results[i][0] == pick && results[i][week] == "T")
+		{
+			return "tiePick";
+		}
+		else if (results[i][0] == pick && results[i][week] == "L")
+		{
+			return "lostPick";
+		}
+		else 
+		{
+			//return "";
+		}
+	}
+	return "";
+}
+
+
 
 var calculateResults = function()
 {
