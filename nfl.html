@@ -882,14 +882,19 @@ var showResult = function()
 					
 					c = r.insertCell(-1);					
 					c.textContent = players[p].weeks[i-1].pick4;
+					c.className = stylePick(i, players[p].weeks[i-1].pick4);
 					c = r.insertCell(-1);
 					c.textContent = players[p].weeks[i-1].pick3;
+					c.className = stylePick(i, players[p].weeks[i-1].pick3);
 					c = r.insertCell(-1);
 					c.textContent = players[p].weeks[i-1].pick2;
+					c.className = stylePick(i, players[p].weeks[i-1].pick2);
 					c = r.insertCell(-1);
 					c.textContent = players[p].weeks[i-1].pick1;
+					c.className = stylePick(i, players[p].weeks[i-1].pick1);
 					c = r.insertCell(-1);
 					c.textContent = players[p].weeks[i-1].designatedMatchUp;
+					c.className = stylePick(i, players[p].weeks[i-1].designatedMatchUp);
 
 				}
 
