@@ -709,7 +709,7 @@ var getPlayersAndConfig = function()
 	getConfigObj.open("GET", "config.json");
 	getConfigObj.send();
 	
-	getPlayersObj.open("GET", "players.json");
+	getPlayersObj.open("GET", "/getplayers/all/" + Math.floor(10000*Math.random()));
 	getPlayersObj.send();
 }
 
@@ -964,6 +964,10 @@ var getWeekPoints = function(w)
 
 var getPoints = function(points, gameWeek, team)
 {
+	if (team == "")
+	{
+		return 0;
+	}
 	for(var i = 0; i < results.length; i++)
 	{
 		if (results[i][0] == team && results[i][gameWeek] == "W")

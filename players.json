@@ -1,326 +1,331 @@
 [
-	{
-		"name": "Andre Charette",
-		"paid": false,
-		"type": "job",
-		"weeks" : [
-			{ 
-				"week" : 1, 
-				"pick5" : "Patriots", 
-				"pick4" : "49ers", 
-				"pick3" : "Jaguars", 
-				"pick2" : "Saints", 
-				"pick1" : "Cardinals", 
-				"designatedMatchUp" : "Buccaneers" 
-			} 
-		]
-	},
-	{
-		"name" : "Andre-Claude",
-		"paid": false,
-		"type": "job",
-		"weeks" : [
-			{
-			"week" : 1,
-			"pick5" : "Patriots",
-			"pick4" : "Steelers",
-			"pick3" : "Falcons",
-			"pick2" : "Bills",
-			"pick1" : "Panthers",
-			"designatedMatchUp" : "Buccaneers"
-			}
-		]
-	},
-	{
-		"name" : "Dede",
-		"paid": true,
-		"type": "perso",
-		"weeks" : [
-			{
-			"week" : 1,
-			"pick5" : "Patriots",
-			"pick4" : "Steelers",
-			"pick3" : "Falcons",
-			"pick2" : "Bills",
-			"pick1" : "Panthers",
-			"designatedMatchUp" : "Buccaneers"
-			}
-		]
-	},
-	{
-		"name" : "Ariane",
-		"paid": true,
-		"type": "perso",
-		"weeks" : [
-			{
-			"week" : 1,
-			"pick5" : "Seahawks",
-			"pick4" : "Patriots",
-			"pick3" : "Lions",
-			"pick2" : "NY Jets",
-			"pick1" : "Saints",
-			"designatedMatchUp" : "Dolphins"
-			}
-		]
-	},
-	{
-		"name" : "Corey Faier",
-		"paid": false,
-		"type": "job",
-		"weeks" : [
-			{
-			"week" : 1,
-			"pick5" : "Steelers",
-			"pick4" : "Falcons",
-			"pick3" : "Patriots",
-			"pick2" : "Bills",
-			"pick1" : "Panthers",
-			"designatedMatchUp" : "Buccaneers"
-			}
-		]
-	},
-	{
-		"name" : "Edwin Faier",
-		"paid": false,
-		"type": "job",
-		"weeks" : [
-			{ 
-			"week" : 1, 
-			"pick5" : "Patriots", 
-			"pick4" : "Falcons", 
-			"pick3" : "Steelers", 
-			"pick2" : "Bills", 
-			"pick1" : "Texans", 
-			"designatedMatchUp" : "Buccaneers" 
-			} 
-		]
-	},
-	{
-		"name" : "Genevieve",
-		"paid": false,
-		"type": "perso",
-		"weeks" : [
-			{
-			"week" : 1,
-			"pick5" : "Patriots",
-			"pick4" : "NY Jets",
-			"pick3" : "Falcons",
-			"pick2" : "Bengals",
-			"pick1" : "Steelers",
-			"designatedMatchUp" : "Buccaneers"
-			}
-		]
-	},
-	{
-		"name" : "Jean-Fancois",
-		"paid": true,
-		"type": "perso",
-		"weeks" : [
-			{
-			"week" : 1,
-			"pick5" : "Patriots",
-			"pick4" : "Steelers",
-			"pick3" : "Seahawks",
-			"pick2" : "Broncos",
-			"pick1" : "Raiders",
-			"designatedMatchUp" : "Buccaneers"
-			}		
-		]
-	},
-	{
-		"name" : "Jordie Faier",
-		"paid": false,
-		"type": "job",
-		"weeks" : [
-			{
-			"week" : 1,
-			"pick5" : "Steelers",
-			"pick4" : "Patriots",
-			"pick3" : "Falcons",
-			"pick2" : "Bills",
-			"pick1" : "Texans",
-			"designatedMatchUp" : "Dolphins"
-			}
-		]
-	},
-	{
-		"name" : "Josh Faier",
-		"paid": false,
-		"type": "job",
-		"weeks" : [
-			{
-			"week" : 1,
-			"pick5" : "Steelers",
-			"pick4" : "Bills",
-			"pick3" : "Falcons",
-			"pick2" : "Patriots",
-			"pick1" : "Texans",
-			"designatedMatchUp" : "Buccaneers"
-			}
-		]
-	},
-	{
-		"name" : "Jason Sagan",
-		"paid": false,
-		"type": "job",
-		"weeks" : [
-			{ 
-			"week" : 1, 
-			"pick5" : "Steelers", 
-			"pick4" : "Falcons", 
-			"pick3" : "Bills", 
-			"pick2" : "Panthers", 
-			"pick1" : "Texans", 
-			"designatedMatchUp" : "Buccaneers" 
-			}
-		]
-	},
-	{
-		"name" : "Kevin Ranger",
-		"paid": false,
-		"type": "job",
-		"weeks" : [
-			{
-			"week" : 1,
-			"pick5" : "Steelers",
-			"pick4" : "Falcons",
-			"pick3" : "Bills",
-			"pick2" : "Patriots",
-			"pick1" : "Eagles",
-			"designatedMatchUp" : "Buccaneers"
-			}
-		]
-	},
-	{
-		"name" : "Marc-Andre Castonguay",
-		"paid": true,
-		"type": "perso",
-		"weeks" : [
-			{
-			"week" : 1,
-			"pick5" : "Falcons",
-			"pick4" : "Patriots",
-			"pick3" : "Steelers",
-			"pick2" : "Panthers",
-			"pick1" : "Redskins",
-			"designatedMatchUp" : "Buccaneers"
-			}
-		]
-	},
-	{
-		"name" : "M-A Leblanc",
-		"paid": false,
-		"type": "perso",
-		"weeks" : [
-			{
-			"week" : 1,
-			"pick5" : "Patriots",
-			"pick4" : "Steelers",
-			"pick3" : "Texans",
-			"pick2" : "Cowboys",
-			"pick1" : "Ravens",
-			"designatedMatchUp" : "Dolphins"
-			}
-		]
-	},
-	{
-		"name" : "Martin Charron",
-		"paid": false,
-		"type": "job",
-		"weeks" : [
-			{
-			"week" : 1,
-			"pick5" : "Falcons",
-			"pick4" : "Steelers",
-			"pick3" : "Texans",
-			"pick2" : "Colts",
-			"pick1" : "Saints",
-			"designatedMatchUp" : "Buccaneers"
-			}
-		]
-	},
-	{
-		"name" : "Paolo Giannetti",
-		"paid": false,
-		"type": "job",
-		"weeks" : [
-			{
-				"week" : 1, 
-				"pick5" : "Patriots", 
-				"pick4" : "Bills", 
-				"pick3" : "Steelers", 
-				"pick2" : "Falcons", 
-				"pick1" : "Panthers", 
-				"designatedMatchUp" : "Buccaneers" 
-			}		
-		]
-	},
-	{
-		"name" : "Pascale",
-		"paid": true,
-		"type": "perso",
-		"weeks" : [
-			{
-				"week" : 1,
-				"pick5" : "Packers",
-				"pick4" : "Patriots",
-				"pick3" : "NY Giants",
-				"pick2" : "Steelers",
-				"pick1" : "Colts",
-				"designatedMatchUp" : "Buccaneers"
-			}
-		]
-	},
-	{
-		"name" : "Souha Al-Sawda",
-		"paid": false,
-		"type": "job",
-		"weeks" : [
-			{ 
-					  "week" : 1, 
-					  "pick5" : "Vikings", 
-					  "pick4" : "Cowboys", 
-					  "pick3" : "Raiders", 
-					  "pick2" : "Falcons", 
-					  "pick1" : "Steelers", 
-					  "designatedMatchUp" : "Buccaneers" 
-			}
-		
-		
-		]
-	},
-	{
-		"name" : "Sarah Woolverton",
-		"paid": false,
-		"type": "job",
-		"weeks" : [
-			{
-			"week" : 1,
-			"pick5" : "NY Jets",
-			"pick4" : "Saints",
-			"pick3" : "Eagles",
-			"pick2" : "Falcons",
-			"pick1" : "Patriots",
-			"designatedMatchUp" : "Buccaneers"
-			}
-		]
-	},
-	{
-		"name" : "Ted Knowles",
-		"paid": false,
-		"type": "job",
-		"weeks" : [
-			{ 
-					  "week" : 1, 
-					  "pick5" : "Patriots", 
-					  "pick4" : "Steelers", 
-					  "pick3" : "Falcons", 
-					  "pick2" : "Panthers", 
-					  "pick1" : "Bills", 
-					  "designatedMatchUp" : "Buccaneers" 
-			} 
-		]
-	}
+ {
+  "name": "Andre Charette",
+  "paid": false,
+  "type": "job",
+  "weeks": [
+   {
+    "week": 1,
+    "pick5": "Patriots",
+    "pick4": "49ers",
+    "pick3": "Jaguars",
+    "pick2": "Saints",
+    "pick1": "Cardinals",
+    "designatedMatchUp": "Buccaneers"
+   }
+  ]
+ },
+ {
+  "name": "Andre-Claude",
+  "paid": false,
+  "type": "job",
+  "weeks": [
+   {
+    "week": 1,
+    "pick5": "Patriots",
+    "pick4": "Steelers",
+    "pick3": "Falcons",
+    "pick2": "Bills",
+    "pick1": "Panthers",
+    "designatedMatchUp": "Buccaneers"
+   },
+   {
+    "week": 2,
+    "pick5": "49ers",
+    "pick4": "Bears",
+    "pick3": "Browns",
+    "pick2": "Buccaneers",
+    "pick1": "Cardinals",
+    "designatedMatchUp": "Titans"
+   }
+  ]
+ },
+ {
+  "name": "Dede",
+  "paid": true,
+  "type": "perso",
+  "weeks": [
+   {
+    "week": 1,
+    "pick5": "Patriots",
+    "pick4": "Steelers",
+    "pick3": "Falcons",
+    "pick2": "Bills",
+    "pick1": "Panthers",
+    "designatedMatchUp": "Buccaneers"
+   }
+  ]
+ },
+ {
+  "name": "Ariane",
+  "paid": true,
+  "type": "perso",
+  "weeks": [
+   {
+    "week": 1,
+    "pick5": "Seahawks",
+    "pick4": "Patriots",
+    "pick3": "Lions",
+    "pick2": "NY Jets",
+    "pick1": "Saints",
+    "designatedMatchUp": "Dolphins"
+   }
+  ]
+ },
+ {
+  "name": "Corey Faier",
+  "paid": false,
+  "type": "job",
+  "weeks": [
+   {
+    "week": 1,
+    "pick5": "Steelers",
+    "pick4": "Falcons",
+    "pick3": "Patriots",
+    "pick2": "Bills",
+    "pick1": "Panthers",
+    "designatedMatchUp": "Buccaneers"
+   }
+  ]
+ },
+ {
+  "name": "Edwin Faier",
+  "paid": false,
+  "type": "job",
+  "weeks": [
+   {
+    "week": 1,
+    "pick5": "Patriots",
+    "pick4": "Falcons",
+    "pick3": "Steelers",
+    "pick2": "Bills",
+    "pick1": "Texans",
+    "designatedMatchUp": "Buccaneers"
+   }
+  ]
+ },
+ {
+  "name": "Genevieve",
+  "paid": false,
+  "type": "perso",
+  "weeks": [
+   {
+    "week": 1,
+    "pick5": "Patriots",
+    "pick4": "NY Jets",
+    "pick3": "Falcons",
+    "pick2": "Bengals",
+    "pick1": "Steelers",
+    "designatedMatchUp": "Buccaneers"
+   }
+  ]
+ },
+ {
+  "name": "Jean-Fancois",
+  "paid": true,
+  "type": "perso",
+  "weeks": [
+   {
+    "week": 1,
+    "pick5": "Patriots",
+    "pick4": "Steelers",
+    "pick3": "Seahawks",
+    "pick2": "Broncos",
+    "pick1": "Raiders",
+    "designatedMatchUp": "Buccaneers"
+   }
+  ]
+ },
+ {
+  "name": "Jordie Faier",
+  "paid": false,
+  "type": "job",
+  "weeks": [
+   {
+    "week": 1,
+    "pick5": "Steelers",
+    "pick4": "Patriots",
+    "pick3": "Falcons",
+    "pick2": "Bills",
+    "pick1": "Texans",
+    "designatedMatchUp": "Dolphins"
+   }
+  ]
+ },
+ {
+  "name": "Josh Faier",
+  "paid": false,
+  "type": "job",
+  "weeks": [
+   {
+    "week": 1,
+    "pick5": "Steelers",
+    "pick4": "Bills",
+    "pick3": "Falcons",
+    "pick2": "Patriots",
+    "pick1": "Texans",
+    "designatedMatchUp": "Buccaneers"
+   }
+  ]
+ },
+ {
+  "name": "Jason Sagan",
+  "paid": false,
+  "type": "job",
+  "weeks": [
+   {
+    "week": 1,
+    "pick5": "Steelers",
+    "pick4": "Falcons",
+    "pick3": "Bills",
+    "pick2": "Panthers",
+    "pick1": "Texans",
+    "designatedMatchUp": "Buccaneers"
+   }
+  ]
+ },
+ {
+  "name": "Kevin Ranger",
+  "paid": false,
+  "type": "job",
+  "weeks": [
+   {
+    "week": 1,
+    "pick5": "Steelers",
+    "pick4": "Falcons",
+    "pick3": "Bills",
+    "pick2": "Patriots",
+    "pick1": "Eagles",
+    "designatedMatchUp": "Buccaneers"
+   }
+  ]
+ },
+ {
+  "name": "Marc-Andre Castonguay",
+  "paid": true,
+  "type": "perso",
+  "weeks": [
+   {
+    "week": 1,
+    "pick5": "Falcons",
+    "pick4": "Patriots",
+    "pick3": "Steelers",
+    "pick2": "Panthers",
+    "pick1": "Redskins",
+    "designatedMatchUp": "Buccaneers"
+   }
+  ]
+ },
+ {
+  "name": "M-A Leblanc",
+  "paid": false,
+  "type": "perso",
+  "weeks": [
+   {
+    "week": 1,
+    "pick5": "Patriots",
+    "pick4": "Steelers",
+    "pick3": "Texans",
+    "pick2": "Cowboys",
+    "pick1": "Ravens",
+    "designatedMatchUp": "Dolphins"
+   }
+  ]
+ },
+ {
+  "name": "Martin Charron",
+  "paid": false,
+  "type": "job",
+  "weeks": [
+   {
+    "week": 1,
+    "pick5": "Falcons",
+    "pick4": "Steelers",
+    "pick3": "Texans",
+    "pick2": "Colts",
+    "pick1": "Saints",
+    "designatedMatchUp": "Buccaneers"
+   }
+  ]
+ },
+ {
+  "name": "Paolo Giannetti",
+  "paid": false,
+  "type": "job",
+  "weeks": [
+   {
+    "week": 1,
+    "pick5": "Patriots",
+    "pick4": "Bills",
+    "pick3": "Steelers",
+    "pick2": "Falcons",
+    "pick1": "Panthers",
+    "designatedMatchUp": "Buccaneers"
+   }
+  ]
+ },
+ {
+  "name": "Pascale",
+  "paid": true,
+  "type": "perso",
+  "weeks": [
+   {
+    "week": 1,
+    "pick5": "Packers",
+    "pick4": "Patriots",
+    "pick3": "NY Giants",
+    "pick2": "Steelers",
+    "pick1": "Colts",
+    "designatedMatchUp": "Buccaneers"
+   }
+  ]
+ },
+ {
+  "name": "Souha Al-Sawda",
+  "paid": false,
+  "type": "job",
+  "weeks": [
+   {
+    "week": 1,
+    "pick5": "Vikings",
+    "pick4": "Cowboys",
+    "pick3": "Raiders",
+    "pick2": "Falcons",
+    "pick1": "Steelers",
+    "designatedMatchUp": "Buccaneers"
+   }
+  ]
+ },
+ {
+  "name": "Sarah Woolverton",
+  "paid": false,
+  "type": "job",
+  "weeks": [
+   {
+    "week": 1,
+    "pick5": "NY Jets",
+    "pick4": "Saints",
+    "pick3": "Eagles",
+    "pick2": "Falcons",
+    "pick1": "Patriots",
+    "designatedMatchUp": "Buccaneers"
+   }
+  ]
+ },
+ {
+  "name": "Ted Knowles",
+  "paid": false,
+  "type": "job",
+  "weeks": [
+   {
+    "week": 1,
+    "pick5": "Patriots",
+    "pick4": "Steelers",
+    "pick3": "Falcons",
+    "pick2": "Panthers",
+    "pick1": "Bills",
+    "designatedMatchUp": "Buccaneers"
+   }
+  ]
+ }
 ]
-
-

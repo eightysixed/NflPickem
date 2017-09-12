@@ -103,6 +103,33 @@ var getStats = function(req, res)
 //app.post('/results', postResults);
 //app.get('/stats', getStats);
 */
+router.route("/getplayers/:type/:arg1").get(function(req, res, next) 															 
+{
+	console.log("GET Players");
+	var playersString = fs.readFileSync("players.json", "utf8");
+	var playersObj = JSON.parse(playersString);
+	if (config.draftPeriod == true)
+	{
+		for(var p = 0; p < playersObj.length; p++)
+		{
+			for(var w=0; w < playersObj[p].weeks.length; w++)
+			{
+				if (playersObj[p].weeks[w].week == config.week)
+				{
+					playersObj[p].weeks[w].pick5 = "";
+					playersObj[p].weeks[w].pick4 = "";
+					playersObj[p].weeks[w].pick3 = "";
+					playersObj[p].weeks[w].pick2 = "";
+					playersObj[p].weeks[w].pick1 = "";
+					playersObj[p].weeks[w].designatedMatchUp = "";
+				}
+			}
+		}
+	}
+    res.send(JSON.stringify(playersObj, null, 2));
+});
+															 
+															 
 router.route("/submitPicks/:type/:arg1").post(function(req, res, next) 
 {
 	console.log("!!!!!! " + req.ip + " : " + "Got testplans POST Data " + req.params.type + " : " + req.params.arg1);
