@@ -129,6 +129,27 @@ router.route("/getplayers/:type/:arg1").get(function(req, res, next)
     res.send(JSON.stringify(playersObj, null, 2));
 });
 															 
+router.route("/changeconfig/:type/:arg1").post(function(req, res, next) 
+{
+	var newConfigString = req.body;
+	var newConfigObj = JSON.parse(newConfigString);
+
+	if (newConfigObj != null)
+	{
+		if (newConfigObj.week != undefined && newConfigObj.draftPeriod != undefined)
+		{
+			config = newConfigObj;
+			fs.writeFileSync("config.json",
+				JSON.stringify(config, null, 1),
+				"utf8",
+				errorProcessing);
+			
+			res.send('SUCCESS: Config changed.');
+			
+		}
+	}
+   next();
+});
 															 
 router.route("/submitPicks/:type/:arg1").post(function(req, res, next) 
 {
@@ -170,119 +191,6 @@ router.route("/submitPicks/:type/:arg1").post(function(req, res, next)
 		res.send('FAIL: Invalid Request');
 	}
 	
-	//var playerString =  fs.readFileSync("players.json");
-	
-	
-	
-	////////
-/*	if (req.params.type == "newFeature" || req.params.type == "updateFeature")
-	{
-		var tesPlanString =  fs.readFileSync("./data/testPlans/testPlans.json");
-		var testPlans = JSON.parse(tesPlanString);
-		var testPlan = null;
-		var newFeatures = JSON.parse(req.body);
-		
-		debug("Test Plan File contains " + testPlans.length + " test plan.");
-		
-		if (newFeatures.testPlanId < 3)
-		{
-			debug("\tToken is valid.");
-			/*fs.writeFileSync("./data/testPlans/testPlans.json",
-				req.body, 
-				"utf8",
-				errorProcessing);
-			*/
-/*			res.send('Test Plan Closed.  Not change possible.');
-		}
-		else
-		{
-			for(var i = 0 ; i < testPlans.length && testPlan == null; i++)
-			{
-				debug("Looking for " + i);
-				if (testPlans[i].id == newFeatures.testPlanId)
-				{
-					testPlan = testPlans[i];
-				}					
-			}
-			
-			if (testPlan != null && req.params.type == "newFeature")
-			{
-				for(var nt = 0; nt < newFeatures.features.length; nt++)
-				{
-					var featureExist = false;
-					for(var featureCounter = 0; featureCounter < testPlan.features.length; featureCounter++)
-					{
-						console.log("New Test " + nt + " feature of testPlan " + testPlan.id + " : " + testPlan.features[featureCounter].id);
-						if (testPlan.features[featureCounter].id == newFeatures.features[nt].id)
-						{
-							featureExist = true;
-						}
-					}
-					if (featureExist == false)
-					{
-						var newFeatureObj = new Object();
-						newFeatureObj.id = newFeatures.features[nt].id;
-						newFeatureObj.priority = newFeatures.features[nt].priority;
-						newFeatureObj.testCases = new Array();
-						
-						testPlan.features.push(newFeatureObj);
-					}
-				}
-				fs.writeFileSync("./data/testPlans/testPlans.json",
-					JSON.stringify(testPlans, null, 1),
-					"utf8",
-					errorProcessing);
-				
-				res.send('Test Plan Updated.  Success.');
-				
-			}
-			else if (testPlan != null && req.params.type == "updateFeature")
-			{
-				var featureFound = false;
-				debug("Test plan found, looking through " + testPlan.features.length + " features.");
-				debug(req.body);
-				for (var featureCounter = 0; featureCounter < newFeatures.feature.length; featureCounter++)
-				{
-					featureFound = false;
-					for (var i =0; i < testPlan.features.length && featureFound == false; i++)
-					{
-						debug("Comparing " + testPlan.features[i].id + " and " + newFeatures.feature[featureCounter].id);
-						if (testPlan.features[i].id == newFeatures.feature[featureCounter].id)
-						{
-							featureFound = true;
-							testPlan.features[i] = newFeatures.feature[featureCounter]
-						}
-					}
-					
-				}
-				if (true)
-				{
-					fs.writeFileSync("./data/testPlans/testPlans.json",
-						JSON.stringify(testPlans, null, 1),
-						"utf8",
-						errorProcessing);
-					
-					res.send('Test Plan Updated.  Success.');
-				}
-				else
-				{
-					res.send('Feature could not be found. Fail.');
-				}
-			}
-			else
-			{
-				res.send('Failure could not find test plan ' + newFeatures.testPlanId);
-				
-			}
-			
-		}
-	}
-	else
-	{
-		debug("Unknown request type");
-		res.send('Unknown request type');
-	}
-*/
    next();
    
 });
