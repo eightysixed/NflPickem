@@ -710,7 +710,8 @@ var getPlayersAndConfig = function()
 	getConfigObj.send();
 	
 	getPlayersObj.open("GET", "/getplayers/all/" + Math.floor(10000*Math.random()));
-	getPlayersObj.send();
+
+	setTimeout('getPlayersObj.send();', 1000);
 }
 
 getConfigObj.onreadystatechange = function()
