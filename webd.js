@@ -16,13 +16,13 @@ var players = null;
 
 //A sample GET request    
 router.route("/stats").get(function(req, res) {
-	console.log("Got a GET request");
+	debug("Got a GET request");
     res.send(fs.readFileSync("results.json", "utf8"));
 });    
 
 //A sample POST request
 router.route("/results").post(function(req, res, next) {
-	console.log("Got POST Data " + req.body);
+	debug("Got POST Data " + req.body);
 	fs.appendFile("./results.json",
                 ",\n" + req.body, 
                 "utf8",
@@ -46,21 +46,21 @@ var errorProcessing = function(err)
 	}
 	else
 	{
-		console.log('The "data to append" was appended to file!');
+		debug('The "data to append" was appended to file!');
 	}
 }
 
 var expressServer = app.listen(port,function()
 {
-	console.log("Parsing password");
+	debug("Parsing password");
 	var passwordsString = fs.readFileSync("password.json");
 	passwords = JSON.parse(passwordsString);
-	console.log("Parsing config");
+	debug("Parsing config");
 	var configString = fs.readFileSync("config.json");
 	config = JSON.parse(configString);
 	var playersString = fs.readFileSync("players.json");
 	players = JSON.parse(playersString);
-	console.log("Express Started");
+	debug("Express Started");
 });
 
 
@@ -74,13 +74,11 @@ var handleRequest = function(request, response)
     try 
 	{
         //log the request on console
-        console.log(request.url);
         //Disptach
         dispatcher.dispatch(request, response);
    } 
 	catch(err) 
 	{
-        console.log(err);
 	}
 }
 var server = http.createServer(handleRequest);
@@ -88,27 +86,13 @@ server.listen(8080, "apaulinlaptop");
 
 
 
-var postResults = function(req, res)
-{
-	console.log("Got a results " + req.method + " " + req.body);
-	res.send("POST REPLY");
-}
-
-var getStats = function(req, res)
-{
-	console.log("Got a GET request " + req.body);
-	res.send("GET REPLY");
-}
-
-//app.post('/results', postResults);
-//app.get('/stats', getStats);
 */
 router.route("/getplayers/:type/:arg1").get(function(req, res, next) 															 
 {
-	console.log("GET Players");
+	debug("GET Players");
 	var playersString = fs.readFileSync("players.json", "utf8");
 	var playersObj = JSON.parse(playersString);
-	if (config.draftPeriod == true)
+	if (config.draftPeriod == "true")
 	{
 		for(var p = 0; p < playersObj.length; p++)
 		{
@@ -133,6 +117,7 @@ router.route("/changeconfig/:type/:arg1").post(function(req, res, next)
 {
 	var newConfigString = req.body;
 	var newConfigObj = JSON.parse(newConfigString);
+	debug((new Date()).toString() + ": Changing Config " + newConfigString);
 
 	if (newConfigObj != null)
 	{
@@ -153,14 +138,14 @@ router.route("/changeconfig/:type/:arg1").post(function(req, res, next)
 															 
 router.route("/submitPicks/:type/:arg1").post(function(req, res, next) 
 {
-	console.log("!!!!!! " + req.ip + " : " + "Got testplans POST Data " + req.params.type + " : " + req.params.arg1);
+	debug("!!!!!! " + req.ip + " : " + "Got testplans POST Data " + req.params.type + " : " + req.params.arg1);
 	var newPick = JSON.parse(req.body);
-	console.log(newPick);
+	debug(newPick);
 	if (newPick != null)
 	{
 		if (checkPassword(newPick) == true)
 		{
-			if (newPick.pick.week == config.week && config.draftPeriod == true)
+			if (newPick.pick.week == config.week && config.draftPeriod == "true")
 			{
 				var ret = placePick(newPick)
 				if (ret == 1)
@@ -199,7 +184,6 @@ var placePick = function(newPick)
 {
 	for(var i=0; i < players.length; i++)
 	{
-		console.log("Checking " + players[i].name);
 		if (players[i].name == newPick.name)
 		{
 			for(var w=0; w < players[i].weeks.length; w++)
@@ -224,7 +208,7 @@ var placePick = function(newPick)
 		
 	}
 	
-	console.log("Cannot place: " + newPick.name + " Week: " + newPick.pick.week);
+	debug("Cannot place: " + newPick.name + " Week: " + newPick.pick.week);
 	return -1;
 }
 
@@ -243,3 +227,8 @@ var checkPassword = function(newPick)
 	return ret;
 }
 
+var debug = function(str)
+{
+	console.log("----- " + (new Date()).toString() + " ----");
+	console.log(str);
+}

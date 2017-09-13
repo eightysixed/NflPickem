@@ -15,8 +15,8 @@ var loading = function()
 	{
 		gebi("newWeek").add(new Option(i, i));
 	}
-	gebi("newDraftPerdiod").add(new Option("True", true));
-	gebi("newDraftPerdiod").add(new Option("False", false));
+	gebi("newDraftPerdiod").add(new Option("True", "true"));
+	gebi("newDraftPerdiod").add(new Option("False", "false"));
 
 	getConfigObj.open("GET", "config.json");
 	getConfigObj.send();

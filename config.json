@@ -1,5 +1,4 @@
 {
-	"draftPeriod": true,
-	"week": 2
+ "draftPeriod": "true",
+ "week": "2"
 }
-
