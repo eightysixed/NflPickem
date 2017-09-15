@@ -270,7 +270,8 @@ var endPhrases = new Array(
 	"I am looking at these choices and I cannot stop laughing!!!",
 	"Maybe next year you should enroll in a badminton Pickem!!",
 	"Based on these choices, I wouldn't watch TV on Sunday if I were you...",
-	"You can change these picks until Thursday noon.  We stongly recommend that you do!"
+	"You can change these picks until Thursday noon.  I stongly recommend that you do!",
+	"Mppffffftttt, mppffffftttt, mppffffftttt  POUHAHAHAHAHAHAAHA!!!!!  Those are f-u-n-n-y!!!!!\nThank you for that, my day was boring so far."
 
 );
 
