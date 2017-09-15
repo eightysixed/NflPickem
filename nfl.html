@@ -3,21 +3,47 @@
 <link rel="icon"
  href="./favicon.gif" />
 <style>
-	#matchupTable {
+	.matchupTable {
 		color: #666666;
 		margin: 10px;
 	}
-	#matchupTable td {
+	.matchupTable td {
 		color: #666666;
 		border-bottom-color: #444444;
 		border-bottom-style: solid;
 		border-bottom-width: 2px;
 	}
+
+	.matchupTableSummary {
+		color: #666666;
+		margin: 10px;
+		font-size: 8pt;
+	}
+	.matchupTableSummary td {
+		color: #666666;
+		border-bottom-color: #444444;
+		border-bottom-style: solid;
+		border-bottom-width: 2px;
+	}
+
 	#pickTable {
 		color: #6666FF;
 		margin: 10px;
 	}
 	#pickTable td {
+		color: #3333bb;
+		font-family: Helvetica, sans-serif;
+		border-bottom-color: #444444;
+		border-bottom-style: solid;
+		border-bottom-width: 2px;
+	}
+
+	.resultTableTotal {
+		color: #6666FF;
+		margin: 10px;
+		font-size: 16pt;
+	}
+	.resultTableTotal td {
 		color: #3333bb;
 		font-family: Helvetica, sans-serif;
 		border-bottom-color: #444444;
@@ -505,6 +531,7 @@ var loading = function()
 var loadMatchups = function()
 {
 	var t = gebi("matchupTable");
+	t.className = "matchupTable";
 	var r = t.insertRow(-1);
 	var c = r.insertCell(-1);
 	c.colSpan = 3;
@@ -796,10 +823,12 @@ var showResult = function()
 		calculateResults();
 		sortPlayers()
 
-		var t = document.createElement("table");
-		t.className = "resultTable";
-		var r = t.insertRow(-1);
-		var c = r.insertCell(-1);
+		
+
+		var tt = document.createElement("table");
+		tt.className = "resultTableTotal";
+		r = tt.insertRow(-1);
+		c = r.insertCell(-1);
 		c.colSpan = 3;
 		var rb = document.createElement("input");
 		rb.type = "button";
@@ -807,7 +836,7 @@ var showResult = function()
 		rb.addEventListener("click", function() {returnFromResults();});
 		c.appendChild(rb);
 
-		r = t.insertRow(-1);
+		r = tt.insertRow(-1);
 		c = r.insertCell(-1);
 		c.textContent = "Name";
 
@@ -822,7 +851,7 @@ var showResult = function()
 
 		for (var i = 0; i < players.length; i++)
 		{
-			r = t.insertRow(-1);
+			r = tt.insertRow(-1);
 			c = r.insertCell(-1);
 			c.textContent = players[i].name;
 			c = r.insertCell(-1);
@@ -833,9 +862,45 @@ var showResult = function()
 				c.textContent = players[i].weeks[w].points;
 			}
 		}
-		gebi("divResults").appendChild(t);
 
-		t = document.createElement("table");
+		var tm = document.createElement("table");
+		tm.className = "matchupTableSummary";
+		r = tm.insertRow(-1);
+		c = r.insertCell(-1);
+		c.colSpan = 3;
+		c.textContent = "WEEK " + config.week + " MATCHUPS";
+
+		r = tm.insertRow(-1);
+		c = r.insertCell(-1);
+		c.textContent = "AWAY";
+		c = r.insertCell(-1);
+		c = r.insertCell(-1);
+		c.textContent = "HOME";
+		
+		
+		for (var i=0; i < season[config.week-1].matchups.length; i++)
+		{
+			r = tm.insertRow(-1);
+			c = r.insertCell(-1);
+			c.textContent = season[config.week-1].matchups[i][0];
+			c.className = stylePick(config.week, season[config.week-1].matchups[i][0]);
+			c = r.insertCell(-1);
+			c.textContent = " vs. ";
+			c = r.insertCell(-1);
+			c.textContent = season[config.week-1].matchups[i][1];
+			c.className = stylePick(config.week, season[config.week-1].matchups[i][1]);
+		}
+
+
+		var tTop = document.createElement("table");
+		var r = tTop.insertRow(-1);
+		var c = r.insertCell(-1);
+		c.appendChild(tt);
+		c = r.insertCell(-1);
+		c.appendChild(tm);		
+		gebi("divResults").appendChild(tTop);
+
+		var t = document.createElement("table");
 		t.className = "resultTable";
 		r = t.insertRow(-1);
 		c = r.insertCell(-1);
@@ -903,6 +968,12 @@ var showResult = function()
 		}
 
 		gebi("divResults").appendChild(t);
+		
+		//gebi("divResults").appendChild(tm);
+		
+		
+		
+		
 	}	
 }
 
