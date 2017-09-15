@@ -57,6 +57,12 @@ var expressServer = app.listen(port,function()
 	debug("Parsing password");
 	var passwordsString = fs.readFileSync("password.json");
 	passwords = JSON.parse(passwordsString);
+	// Verify that the admin info is present
+	if (passwords[0].name != "admin" || paswords[0].password == undefined)
+	{
+		debug("Invalid password file, admin info not present");
+		process.exit(1);
+	}
 	debug("Parsing config");
 	var configString = fs.readFileSync("config.json");
 	config = JSON.parse(configString);
