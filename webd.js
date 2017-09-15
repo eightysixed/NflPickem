@@ -135,16 +135,27 @@ router.route("/changeconfig/:type/:arg1").post(function(req, res, next)
 
 	if (newConfigObj != null)
 	{
-		if (newConfigObj.week != undefined && newConfigObj.draftPeriod != undefined)
+		if (newConfigObj.password == passwords[0].password)
 		{
-			config = newConfigObj;
-			fs.writeFileSync("config.json",
-				JSON.stringify(config, null, 1),
-				"utf8",
-				errorProcessing);
-			
-			res.send('SUCCESS: Config changed.');
-			
+			if (newConfigObj.config.week != undefined && newConfigObj.config.draftPeriod != undefined)
+			{
+				config = newConfigObj.config;
+				fs.writeFileSync("config.json",
+					JSON.stringify(config, null, 1),
+					"utf8",
+					errorProcessing);
+				
+				res.send('SUCCESS: Config changed.');
+				
+			}
+			else
+			{
+				res.send('FAIL: missing info');
+			}
+		}
+		else
+		{
+			res.send('FAIL: Wrong password');
 		}
 	}
    next();
