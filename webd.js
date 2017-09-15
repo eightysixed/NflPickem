@@ -3,6 +3,7 @@ var router = express.Router();
 var http = require('http');
 var fs = require('fs');
 var bodyParser = require('body-parser');
+var nodemailer = require('nodemailer');
 
 
 
@@ -12,6 +13,7 @@ var port = 8080;
 var passwords = null;
 var config = null;
 var players = null;
+var transporter = null;
 
 
 //A sample GET request    
@@ -61,6 +63,18 @@ var expressServer = app.listen(port,function()
 	var playersString = fs.readFileSync("players.json");
 	players = JSON.parse(playersString);
 	debug("Express Started");
+	debug ("Configuring Email Service");
+	var emailString = fs.readFileSync("emailconfig.json");
+	emailConfig = JSON.parse(emailString);
+
+	transporter = nodemailer.createTransport({
+	  service: emailConfig.service,
+	  auth: {
+		 user: emailConfig.user,
+		 pass: emailConfig.password
+	  }
+	});
+
 });
 
 
@@ -138,9 +152,9 @@ router.route("/changeconfig/:type/:arg1").post(function(req, res, next)
 															 
 router.route("/submitPicks/:type/:arg1").post(function(req, res, next) 
 {
-	debug("!!!!!! " + req.ip + " : " + "Got testplans POST Data " + req.params.type + " : " + req.params.arg1);
+	debug("!!!!!! " + req.ip + " : " + "Got submitPicks POST Data ");
 	var newPick = JSON.parse(req.body);
-	debug(newPick);
+	//debug(newPick);
 	if (newPick != null)
 	{
 		if (checkPassword(newPick) == true)
@@ -150,29 +164,37 @@ router.route("/submitPicks/:type/:arg1").post(function(req, res, next)
 				var ret = placePick(newPick)
 				if (ret == 1)
 				{
+					//sendEmail(newPick, 1);
+					debug('SUCCESS: Added Pick.');
 					res.send('SUCCESS: Added Pick.');
 				}
 				else if (ret == 2)
 				{
+					//sendEmail(newPick, 2);
+					debug('SUCCESS: Replaced Pick.');
 					res.send('SUCCESS: Replaced Pick.');
 				}
 				else
 				{
+					debug('FAIL: Cannot place pick.');
 					res.send('FAIL: Cannot place pick.');
 				}
 			}
 			else
 			{
+				debug('FAIL: Wrong week or not in draft period');
 				res.send('FAIL: Wrong week or not in draft period');
 			}
 		}
 		else
 		{
+			debug('FAIL: Invalid Password');
 			res.send('FAIL: Invalid Password');
 		}
 	}
 	else
 	{
+		debug('FAIL: Invalid Request');
 		res.send('FAIL: Invalid Request');
 	}
 	
@@ -225,6 +247,44 @@ var checkPassword = function(newPick)
 	}
 		 
 	return ret;
+}
+
+var endPhrases = new Array(
+	"I am looking at these choices and I cannot stop laughing!!!",
+	"Maybe next year you should enroll in a badminton Pickem!!",
+	"Based on these choices, I wouldn't watch TV on Sunday if I were you...",
+	"You can change these picks until Thursday noon.  We stongly recommend that you do!"
+
+);
+
+var sendEmail = function(newPick, retCode)
+{
+	var ret = false;
+	for(var i = 0; i < passwords.length && ret==false; i++)
+	{
+		if (passwords[i].name == newPick.name && passwords[i].email != undefined && passwords[i].email != "")
+		{
+			var emailbody = "The following picks were received : \n" + newPick.pick + "\n\n" + endPhrases[Math.floor(Math.random() * endPhrases.length)] + "\n\nThe WebServer";
+			var mailOptions = {
+			  from: emailConfig.use,
+			  to: passwords[i].email,
+			  subject: "NFL Pickem Week " + config.week + ". Your pick were received.",
+			  text: emailbody
+			};
+
+			transporter.sendMail(mailOptions, function(error, info){
+			  if (error) {
+				 debug(error);
+			  } else {
+				 debug('Email sent: ' + info.response);
+			  }
+			});			
+			ret = true;
+		}
+	}
+	
+	return ret;
+	
 }
 
 var debug = function(str)
