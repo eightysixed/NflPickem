@@ -15,8 +15,8 @@ var loading = function()
 	{
 		gebi("newWeek").add(new Option(i, i));
 	}
-	gebi("newDraftPerdiod").add(new Option("True", "true"));
-	gebi("newDraftPerdiod").add(new Option("False", "false"));
+	gebi("newDraftPeriod").add(new Option("True", "true"));
+	gebi("newDraftPeriod").add(new Option("False", "false"));
 
 	getConfigObj.open("GET", "config.json");
 	getConfigObj.send();
@@ -29,10 +29,13 @@ var gebi = function(id)
 
 var submitConfig = function()
 {
+		var submitConfig = new Object();
+		submitConfig.password = gebi("passwordInput").value;
 		config.week = gebi("newWeek").value;
-		config.draftPeriod = gebi("newDraftPerdiod").value;
+		config.draftPeriod = gebi("newDraftPeriod").value;
+		submitConfig.config = config;
 		submitConfigObject.open("POST", "changeconfig/all/12345");
-		submitConfigObject.send(JSON.stringify(config, null, 2));	
+		submitConfigObject.send(JSON.stringify(submitConfig, null, 2));	
 }
 
 submitConfigObject.onreadystatechange = function()
@@ -49,7 +52,7 @@ getConfigObj.onreadystatechange = function()
 	{
 		config = JSON.parse(getConfigObj.responseText);
 		gebi("newWeek").value = config.week;
-		gebi("newDraftPerdiod").value = config.draftPeriod;
+		gebi("newDraftPeriod").value = config.draftPeriod;
 	}
 }
 
@@ -73,8 +76,16 @@ getConfigObj.onreadystatechange = function()
 					Draft Period
 				</td>
 				<td>
-					<select id="newDraftPerdiod">
+					<select id="newDraftPeriod">
 					</select>
+				</td>
+			</tr>
+			<tr>
+				<td id="buttonSection">
+					Password
+				</td>
+				<td>
+					<input type="text" id="passwordInput"/>
 				</td>
 			</tr>
 			<tr>
