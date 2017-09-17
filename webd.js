@@ -166,6 +166,39 @@ router.route("/changeconfig/:type/:arg1").post(function(req, res, next)
 	}
    next();
 });
+
+router.route("/changeresults/:type/:arg1").post(function(req, res, next) 
+{
+	var newResultsString = req.body;
+	var newResultsObj = JSON.parse(newResultsString);
+	debug((new Date()).toString() + ": Changing Config " + newResultsString);
+
+	if (newResultsObj != null)
+	{
+		if (newResultsObj.password == passwords[0].password)
+		{
+			if (newResultsObj.results != undefined && newResultsObj.results != "")
+			{
+				fs.writeFileSync("results.js",
+					newResultsObj.results,
+					"utf8",
+					errorProcessing);
+				
+				res.send('SUCCESS: Config changed.');
+				
+			}
+			else
+			{
+				res.send('FAIL: missing info');
+			}
+		}
+		else
+		{
+			res.send('FAIL: Wrong password');
+		}
+	}
+   next();
+});
 															 
 router.route("/submitPicks/:type/:arg1").post(function(req, res, next) 
 {

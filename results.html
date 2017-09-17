@@ -1,0 +1,95 @@
+<html>
+<head>
+<script language="javascript" src="results.js"></script>
+<script language="javascript">
+var submitResultsObject = new XMLHttpRequest();
+var loading = function()
+{
+	var t = gebi("resultTable");
+	for(var i=0 ; i < results.length; i++)
+	{
+		var r = t.insertRow(-1);
+		for(var j=0; j < results[i].length; j++)
+		{
+			var c = r.insertCell(-1);
+			var resInput = document.createElement("input");
+			resInput.type = "text"
+			resInput.value = results[i][j];
+			if(j==0)
+			{
+				resInput.size = 10;
+			}
+			else
+			{
+				resInput.size = 2;
+			}
+			resInput.id = "input." + i + "." + j;
+			c.appendChild(resInput);
+		}
+			
+	}
+}
+
+var applyResults = function()
+{
+	var retString = "var results = [\n";
+	for(var i=0 ; i < results.length; i++)
+	{
+		retString += '\t[';
+		for(var j=0; j < results[i].length; j++)
+		{
+			retString += '"' + gebi("input." + i +"." + j).value + '"';
+			if (j != (results[i].length-1))
+			{
+				retString += ', ';
+			}
+			else
+			{
+				retString += ']';
+			}
+		}
+		if (i != (results.length -1))
+		{
+			retString += ',\n';
+		}
+		else
+		{
+			retString += '\n'; 
+		}
+	}
+	retString += "];\n"
+	
+	var submitObject = new Object();
+	submitObject.password = gebi("inputPassword").value;
+	submitObject.results = retString;
+	
+	//alert(retString);
+	submitResultsObject.open("POST", "changeresults/all/12345");
+	submitResultsObject.send(JSON.stringify(submitObject, null, 2));	
+	
+}
+
+submitResultsObject.onreadystatechange = function()
+{
+	if (this.readyState == 4 && this.status == 200)
+	{
+		alert(submitResultsObject.responseText);
+	}
+}
+
+
+
+
+var gebi = function(id)
+{
+	return document.getElementById(id);
+}
+</script>
+</head>
+<body onload="loading();">
+<input id="inputPassword" type="text" />
+<input id="applyButton" type="button" onclick="applyResults();" value="Apply" />
+<table id="resultTable">
+</table>
+</body>
+</html>
