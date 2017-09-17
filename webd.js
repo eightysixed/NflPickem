@@ -3,7 +3,7 @@ var router = express.Router();
 var http = require('http');
 var fs = require('fs');
 var bodyParser = require('body-parser');
-var nodemailer = require('nodemailer');
+//var nodemailer = require('nodemailer');
 
 
 
@@ -69,17 +69,17 @@ var expressServer = app.listen(port,function()
 	var playersString = fs.readFileSync("players.json");
 	players = JSON.parse(playersString);
 	debug("Express Started");
-	debug ("Configuring Email Service");
-	var emailString = fs.readFileSync("emailconfig.json");
-	emailConfig = JSON.parse(emailString);
+	//debug ("Configuring Email Service");
+	//var emailString = fs.readFileSync("emailconfig.json");
+	//emailConfig = JSON.parse(emailString);
 
-	transporter = nodemailer.createTransport({
-	  service: emailConfig.service,
-	  auth: {
-		 user: emailConfig.user,
-		 pass: emailConfig.password
-	  }
-	});
+	//transporter = nodemailer.createTransport({
+	//  service: emailConfig.service,
+	//  auth: {
+	//	 user: emailConfig.user,
+	//	 pass: emailConfig.password
+	//  }
+	//});
 
 });
 
