@@ -1,7 +1,7 @@
 [
  {
   "name": "Andre Charette",
-  "paid": false,
+  "paid": true,
   "type": "job",
   "weeks": [
    {
@@ -26,7 +26,7 @@
  },
  {
   "name": "Andre-Claude",
-  "paid": false,
+  "paid": true,
   "type": "job",
   "weeks": [
    {
@@ -276,7 +276,7 @@
  },
  {
   "name": "Kevin Ranger",
-  "paid": false,
+  "paid": true,
   "type": "job",
   "weeks": [
    {
@@ -426,7 +426,7 @@
  },
  {
   "name": "Souha Al-Sawda",
-  "paid": false,
+  "paid": true,
   "type": "job",
   "weeks": [
    {
@@ -476,7 +476,7 @@
  },
  {
   "name": "Ted Knowles",
-  "paid": false,
+  "paid": true,
   "type": "job",
   "weeks": [
    {
