@@ -21,7 +21,8 @@ var endPhrases = new Array(
 	"Based on these choices, I wouldn't watch TV on Sunday if I were you...",
 	"You can change these picks until Thursday noon.  I strongly recommend that you do!",
 	"Mppffffftttt, mppffffftttt, mppffffftttt  POUHAHAHAHAHAHAAHA!!!!!  Those are f-u-n-n-y!!!!!\nThank you for that, my day was boring so far.",
-	"Are you picking your teams because you like their shirt color?  Sure looks like it..."
+	"Are you picking your teams because you like their shirt color?  Sure looks like it...",
+	"Reminder, the goal of this game is to finish on top.  Looking at your picks, I figured you didn't know that."
 
 );
 
