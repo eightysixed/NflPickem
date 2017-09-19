@@ -15,6 +15,16 @@ var config = null;
 var players = null;
 var transporter = null;
 
+var endPhrases = new Array(
+	"I am looking at these choices and I cannot stop laughing!!!",
+	"Maybe next year you should enroll in a badminton Pickem!!",
+	"Based on these choices, I wouldn't watch TV on Sunday if I were you...",
+	"You can change these picks until Thursday noon.  I strongly recommend that you do!",
+	"Mppffffftttt, mppffffftttt, mppffffftttt  POUHAHAHAHAHAHAAHA!!!!!  Those are f-u-n-n-y!!!!!\nThank you for that, my day was boring so far.",
+	"Are you picking your teams because you like their shirt color?  Sure looks like it..."
+
+);
+
 
 //A sample GET request    
 router.route("/stats").get(function(req, res) {
@@ -212,17 +222,18 @@ router.route("/submitPicks/:type/:arg1").post(function(req, res, next)
 			if (newPick.pick.week == config.week && config.draftPeriod == "true")
 			{
 				var ret = placePick(newPick)
+				var emailbody = "The following picks were received : \n" + JSON.stringify(newPick.pick, null, 2) + "\n\n" + endPhrases[Math.floor(Math.random() * endPhrases.length)] + "\n\nThe WebServer";
 				if (ret == 1)
 				{
 					//sendEmail(newPick, 1);
-					debug('SUCCESS: Added Pick.');
-					res.send('SUCCESS: Added Pick.');
+					debug('SUCCESS: Added Pick.\n' + emailbody);
+					res.send('SUCCESS: Added Pick.\n' + emailbody);
 				}
 				else if (ret == 2)
 				{
 					//sendEmail(newPick, 2);
-					debug('SUCCESS: Replaced Pick.');
-					res.send('SUCCESS: Replaced Pick.');
+					debug('SUCCESS: Replaced Pick.\n' + emailbody);
+					res.send('SUCCESS: Replaced Pick.\n' + emailbody);
 				}
 				else
 				{
@@ -299,14 +310,7 @@ var checkPassword = function(newPick)
 	return ret;
 }
 
-var endPhrases = new Array(
-	"I am looking at these choices and I cannot stop laughing!!!",
-	"Maybe next year you should enroll in a badminton Pickem!!",
-	"Based on these choices, I wouldn't watch TV on Sunday if I were you...",
-	"You can change these picks until Thursday noon.  I stongly recommend that you do!",
-	"Mppffffftttt, mppffffftttt, mppffffftttt  POUHAHAHAHAHAHAAHA!!!!!  Those are f-u-n-n-y!!!!!\nThank you for that, my day was boring so far."
 
-);
 
 var sendEmail = function(newPick, retCode)
 {
