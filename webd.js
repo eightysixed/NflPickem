@@ -16,6 +16,7 @@ var players = null;
 var transporter = null;
 
 var endPhrases = new Array(
+//	"I think I have been hacked.  Those can't possibly be your choices.  Someone must really hates you to submit these to your name!",
 	"I am looking at these choices and I cannot stop laughing!!!",
 	"Maybe next year you should enroll in a badminton Pickem!!",
 	"Based on these choices, I wouldn't watch TV on Sunday if I were you...",

@@ -257,7 +257,7 @@ var season = [
                         ["Chiefs", "Texans"],
                         ["Vikings", "Bears"],
                 ],
-                bye : "Falcons, Broncos, Saints, Redskins",
+                bye : ["Falcons", "Broncos", "Saints", "Redskins"],
                 designatedMatchUp : []
         },
         {
@@ -278,7 +278,7 @@ var season = [
                         ["NY Giants", "Broncos"],
                         ["Colts", "Titans"],
                 ],
-                bye : "Bills, Bengals, Cowboys, Seahawks",
+                bye : ["Bills", "Bengals", "Cowboys", "Seahawks"],
                 designatedMatchUp : []
         },
         {
@@ -300,7 +300,7 @@ var season = [
                         ["Falcons", "Patriots"],
                         ["Redskins", "Eagles"],
                 ],
-                bye : "Lions, Texans",
+                bye : ["Lions", "Texans"],
                 designatedMatchUp : []
         },
         {
@@ -320,7 +320,7 @@ var season = [
                         ["Steelers", "Lions"],
                         ["Broncos", "Chiefs"],
                 ],
-                bye : "Packers, Titans, LA Rams, NY Giants, Cardinals, Jaguars",
+                bye : ["Packers", "Titans", "LA Rams", "NY Giants", "Cardinals", "Jaguars"],
                 designatedMatchUp : []
         },
         {
@@ -340,7 +340,7 @@ var season = [
                         ["Raiders", "Dolphins"],
                         ["Lions", "Packers"],
                 ],
-                bye : "Bears, Browns, Vikings, Patriots, Steelers, LA Chargers",
+                bye : ["Bears", "Browns", "Vikings", "Patriots", "Steelers", "LA Chargers"],
                 designatedMatchUp : []
         },
         {
@@ -361,7 +361,7 @@ var season = [
                         ["Patriots", "Broncos"],
                         ["Dolphins", "Panthers"],
                 ],
-                bye : "Chiefs, Raiders, Eagles, Ravens",
+                bye : ["Chiefs", "Raiders", "Eagles", "Ravens"],
                 designatedMatchUp : []
         },
         {
@@ -381,7 +381,7 @@ var season = [
                         ["Eagles", "Cowboys"],
                         ["Falcons", "Seahawks"],
                 ],
-                bye : "Colts, Dolphins, NY Jets, 49ers, Buccaneers, Panthers",
+                bye : ["Colts", "Dolphins", "NY Jets", "49ers", "Buccaneers", "Panthers"],
                 designatedMatchUp : []
         },
         {
@@ -673,6 +673,13 @@ var submitPicks = function()
 	{
 		if (gebi("pick" + i).value != "")
 		{
+			for(var b=0; b < season[config.week -1].bye.length; b++)
+			{
+				if (gebi("pick" + i).value == season[config.week -1].bye[b])
+				{
+					retCode = "Pick has a bye week.";					
+				}
+			}
 			if (picksValidation[gebi("pick" + i).value] == undefined)
 			{
 				retString += "\tpick" + i + " : \"" + gebi("pick" + i).value + "\",\n";  
@@ -715,7 +722,8 @@ var submitPicks = function()
 	}
 	else
 	{
-		gebi("textOutput").value = retCode;		
+		gebi("textOutput").value = retCode;
+		alert(retCode);
 	}
 	
 	
