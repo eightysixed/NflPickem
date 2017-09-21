@@ -16,7 +16,7 @@ var players = null;
 var transporter = null;
 
 var endPhrases = new Array(
-//	"I think I have been hacked.  Those can't possibly be your choices.  Someone must really hates you to submit these to your name!",
+	"I think I have been hacked.  Those can't possibly be your choices.  Someone must really wants to put a joke on you to submit these to your name!",
 	"I am looking at these choices and I cannot stop laughing!!!",
 	"Maybe next year you should enroll in a badminton Pickem!!",
 	"Based on these choices, I wouldn't watch TV on Sunday if I were you...",
@@ -121,7 +121,7 @@ server.listen(8080, "apaulinlaptop");
 */
 router.route("/getplayers/:type/:arg1").get(function(req, res, next) 															 
 {
-	debug("GET Players");
+	//debug("GET Players");
 	var playersString = fs.readFileSync("players.json", "utf8");
 	var playersObj = JSON.parse(playersString);
 	if (config.draftPeriod == "true")
@@ -183,7 +183,7 @@ router.route("/changeresults/:type/:arg1").post(function(req, res, next)
 {
 	var newResultsString = req.body;
 	var newResultsObj = JSON.parse(newResultsString);
-	debug((new Date()).toString() + ": Changing Config " + newResultsString);
+	debug((new Date()).toString() + ": Changing Result " + newResultsString);
 
 	if (newResultsObj != null)
 	{
@@ -214,9 +214,7 @@ router.route("/changeresults/:type/:arg1").post(function(req, res, next)
 															 
 router.route("/submitPicks/:type/:arg1").post(function(req, res, next) 
 {
-	debug("!!!!!! " + req.ip + " : " + "Got submitPicks POST Data ");
 	var newPick = JSON.parse(req.body);
-	//debug(newPick);
 	if (newPick != null)
 	{
 		if (checkPassword(newPick) == true)
@@ -224,7 +222,7 @@ router.route("/submitPicks/:type/:arg1").post(function(req, res, next)
 			if (newPick.pick.week == config.week && config.draftPeriod == "true")
 			{
 				var ret = placePick(newPick)
-				var emailbody = "The following picks were received : \n" + JSON.stringify(newPick.pick, null, 2) + "\n\n" + endPhrases[Math.floor(Math.random() * endPhrases.length)] + "\n\nThe WebServer";
+				var emailbody = "The following picks were received from " + newPick.name + ": \n" + JSON.stringify(newPick.pick, null, 2) + "\n\n" + endPhrases[Math.floor(Math.random() * endPhrases.length)] + "\n\nThe WebServer";
 				if (ret == 1)
 				{
 					//sendEmail(newPick, 1);
