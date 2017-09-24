@@ -1,7 +1,7 @@
 [
  {
   "name": "Andre Charette",
-  "paid": true,
+  "paid": false,
   "type": "job",
   "weeks": [
    {
@@ -21,12 +21,21 @@
     "pick2": "LA Rams",
     "pick1": "Lions",
     "designatedMatchUp": "Jaguars"
+   },
+   {
+    "week": "3",
+    "pick5": "Patriots",
+    "pick4": "Packers",
+    "pick3": "Steelers",
+    "pick2": "Dolphins",
+    "pick1": "Panthers",
+    "designatedMatchUp": "Browns"
    }
   ]
  },
  {
   "name": "Andre-Claude",
-  "paid": true,
+  "paid": false,
   "type": "job",
   "weeks": [
    {
@@ -46,6 +55,15 @@
     "pick2": "Ravens",
     "pick1": "Cardinals",
     "designatedMatchUp": "Jaguars"
+   },
+   {
+    "week": "3",
+    "pick5": "Patriots",
+    "pick4": "Packers",
+    "pick3": "Steelers",
+    "pick2": "Dolphins",
+    "pick1": "Panthers",
+    "designatedMatchUp": "Browns"
    }
   ]
  },
@@ -71,6 +89,15 @@
     "pick2": "Cardinals",
     "pick1": "Ravens",
     "designatedMatchUp": "Jaguars"
+   },
+   {
+    "week": "3",
+    "pick5": "Patriots",
+    "pick4": "Packers",
+    "pick3": "Steelers",
+    "pick2": "Dolphins",
+    "pick1": "Panthers",
+    "designatedMatchUp": "Browns"
    }
   ]
  },
@@ -96,6 +123,15 @@
     "pick2": "Packers",
     "pick1": "Seahawks",
     "designatedMatchUp": "Jaguars"
+   },
+   {
+    "week": "3",
+    "pick5": "Broncos",
+    "pick4": "Chiefs",
+    "pick3": "Patriots",
+    "pick2": "Packers",
+    "pick1": "Steelers",
+    "designatedMatchUp": "Browns"
    }
   ]
  },
@@ -121,6 +157,15 @@
     "pick2": "Ravens",
     "pick1": "Patriots",
     "designatedMatchUp": "Titans"
+   },
+   {
+    "week": "3",
+    "pick5": "Patriots",
+    "pick4": "Packers",
+    "pick3": "Steelers",
+    "pick2": "Eagles",
+    "pick1": "Dolphins",
+    "designatedMatchUp": "Colts"
    }
   ]
  },
@@ -146,6 +191,15 @@
     "pick2": "Panthers",
     "pick1": "Raiders",
     "designatedMatchUp": "Jaguars"
+   },
+   {
+    "week": "3",
+    "pick5": "Patriots",
+    "pick4": "Steelers",
+    "pick3": "Eagles",
+    "pick2": "Dolphins",
+    "pick1": "Packers",
+    "designatedMatchUp": "Colts"
    }
   ]
  },
@@ -171,6 +225,15 @@
     "pick2": "Lions",
     "pick1": "Vikings",
     "designatedMatchUp": "Titans"
+   },
+   {
+    "week": "3",
+    "pick5": "Chiefs",
+    "pick4": "Patriots",
+    "pick3": "Ravens",
+    "pick2": "Broncos",
+    "pick1": "Seahawks",
+    "designatedMatchUp": "Colts"
    }
   ]
  },
@@ -196,6 +259,15 @@
     "pick2": "Ravens",
     "pick1": "Raiders",
     "designatedMatchUp": "Jaguars"
+   },
+   {
+    "week": "3",
+    "pick5": "Steelers",
+    "pick4": "Raiders",
+    "pick3": "Patriots",
+    "pick2": "Chiefs",
+    "pick1": "Falcons",
+    "designatedMatchUp": "Browns"
    }
   ]
  },
@@ -221,6 +293,15 @@
     "pick2": "Panthers",
     "pick1": "Chiefs",
     "designatedMatchUp": "Titans"
+   },
+   {
+    "week": "3",
+    "pick5": "Steelers",
+    "pick4": "Patriots",
+    "pick3": "Packers",
+    "pick2": "Chiefs",
+    "pick1": "Raiders",
+    "designatedMatchUp": "Colts"
    }
   ]
  },
@@ -246,6 +327,15 @@
     "pick2": "Ravens",
     "pick1": "Buccaneers",
     "designatedMatchUp": "Titans"
+   },
+   {
+    "week": "3",
+    "pick5": "Packers",
+    "pick4": "Patriots",
+    "pick3": "Dolphins",
+    "pick2": "Steelers",
+    "pick1": "Panthers",
+    "designatedMatchUp": "Colts"
    }
   ]
  },
@@ -271,12 +361,21 @@
     "pick2": "Panthers",
     "pick1": "Patriots",
     "designatedMatchUp": "Titans"
+   },
+   {
+    "week": "3",
+    "pick5": "Steelers",
+    "pick4": "Packers",
+    "pick3": "Patriots",
+    "pick2": "Dolphins",
+    "pick1": "Eagles",
+    "designatedMatchUp": "Browns"
    }
   ]
  },
  {
   "name": "Kevin Ranger",
-  "paid": true,
+  "paid": false,
   "type": "job",
   "weeks": [
    {
@@ -296,6 +395,15 @@
     "pick2": "Cardinals",
     "pick1": "Chiefs",
     "designatedMatchUp": "Titans"
+   },
+   {
+    "week": "3",
+    "pick5": "Packers",
+    "pick4": "Patriots",
+    "pick3": "Steelers",
+    "pick2": "Panthers",
+    "pick1": "Eagles",
+    "designatedMatchUp": "Colts"
    }
   ]
  },
@@ -321,6 +429,15 @@
     "pick2": "Buccaneers",
     "pick1": "Patriots",
     "designatedMatchUp": "Titans"
+   },
+   {
+    "week": "3",
+    "pick5": "Patriots",
+    "pick4": "Steelers",
+    "pick3": "Chiefs",
+    "pick2": "Dolphins",
+    "pick1": "Buccaneers",
+    "designatedMatchUp": "Colts"
    }
   ]
  },
@@ -346,6 +463,15 @@
     "pick2": "Packers",
     "pick1": "Dolphins",
     "designatedMatchUp": "Titans"
+   },
+   {
+    "week": "3",
+    "pick5": "Steelers",
+    "pick4": "Chiefs",
+    "pick3": "Broncos",
+    "pick2": "Packers",
+    "pick1": "Dolphins",
+    "designatedMatchUp": "Colts"
    }
   ]
  },
@@ -371,6 +497,15 @@
     "pick2": "Lions",
     "pick1": "Chiefs",
     "designatedMatchUp": "Jaguars"
+   },
+   {
+    "week": "3",
+    "pick5": "Chiefs",
+    "pick4": "Patriots",
+    "pick3": "Eagles",
+    "pick2": "Steelers",
+    "pick1": "Raiders",
+    "designatedMatchUp": "Browns"
    }
   ]
  },
@@ -396,6 +531,15 @@
     "pick2": "Bills",
     "pick1": "Patriots",
     "designatedMatchUp": "Jaguars"
+   },
+   {
+    "week": "3",
+    "pick5": "Patriots",
+    "pick4": "Packers",
+    "pick3": "Broncos",
+    "pick2": "Raiders",
+    "pick1": "Falcons",
+    "designatedMatchUp": "Colts"
    }
   ]
  },
@@ -421,12 +565,21 @@
     "pick2": "Patriots",
     "pick1": "Cowboys",
     "designatedMatchUp": "Jaguars"
+   },
+   {
+    "week": "3",
+    "pick5": "Steelers",
+    "pick4": "Patriots",
+    "pick3": "Packers",
+    "pick2": "Raiders",
+    "pick1": "LA Rams",
+    "designatedMatchUp": "Colts"
    }
   ]
  },
  {
   "name": "Souha Al-Sawda",
-  "paid": true,
+  "paid": false,
   "type": "job",
   "weeks": [
    {
@@ -446,6 +599,15 @@
     "pick2": "Panthers",
     "pick1": "Steelers",
     "designatedMatchUp": "Jaguars"
+   },
+   {
+    "week": "3",
+    "pick5": "Patriots",
+    "pick4": "Steelers",
+    "pick3": "Packers",
+    "pick2": "Eagles",
+    "pick1": "Panthers",
+    "designatedMatchUp": "Browns"
    }
   ]
  },
@@ -471,12 +633,21 @@
     "pick2": "Patriots",
     "pick1": "49ers",
     "designatedMatchUp": "Titans"
+   },
+   {
+    "week": "3",
+    "pick5": "Steelers",
+    "pick4": "Dolphins",
+    "pick3": "Saints",
+    "pick2": "Patriots",
+    "pick1": "Eagles",
+    "designatedMatchUp": "Browns"
    }
   ]
  },
  {
   "name": "Ted Knowles",
-  "paid": true,
+  "paid": false,
   "type": "job",
   "weeks": [
    {
@@ -496,6 +667,15 @@
     "pick2": "Cardinals",
     "pick1": "Patriots",
     "designatedMatchUp": "Titans"
+   },
+   {
+    "week": "3",
+    "pick5": "Packers",
+    "pick4": "Patriots",
+    "pick3": "Steelers",
+    "pick2": "Eagles",
+    "pick1": "Chiefs",
+    "designatedMatchUp": "Browns"
    }
   ]
  }
