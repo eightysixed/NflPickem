@@ -144,6 +144,15 @@ router.route("/getplayers/:type/:arg1").get(function(req, res, next)
 	}
     res.send(JSON.stringify(playersObj, null, 2));
 });
+
+router.route("/getseason/:type/:arg1").get(function(req, res, next) 															 
+{
+	//debug("GET Players");
+	var seasonString = fs.readFileSync("season.json", "utf8");
+	var seasonObj = JSON.parse(seasonString);
+   res.send(JSON.stringify(seasonObj, null, 2));
+});
+								
 															 
 router.route("/changeconfig/:type/:arg1").post(function(req, res, next) 
 {
