@@ -89,7 +89,7 @@
 						["Redskins", "Chiefs"]
 			 ],
 			 "bye" : "",
-			 "designatedMatchUp" : ["Lions", "Vickings"]
+			 "designatedMatchUp" : ["Lions", "Vikings"]
   },
   {
 			 "week" : 5,
@@ -110,7 +110,7 @@
 						["Vikings", "Bears"]
 			 ],
 			 "bye" : ["Falcons", "Broncos", "Saints", "Redskins"],
-			 "designatedMatchUp" : []
+			 "designatedMatchUp" : ["Chiefs", "Texans"]
   },
   {
 			 "week" : 6,
