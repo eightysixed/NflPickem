@@ -153,7 +153,6 @@ router.route("/getseason/:type/:arg1").get(function(req, res, next)
    res.send(JSON.stringify(seasonObj, null, 2));
 });
 								
-															 
 router.route("/changeconfig/:type/:arg1").post(function(req, res, next) 
 {
 	var newConfigString = req.body;
@@ -187,6 +186,41 @@ router.route("/changeconfig/:type/:arg1").post(function(req, res, next)
 	}
    next();
 });
+															 
+router.route("/changeseason/:type/:arg1").post(function(req, res, next) 
+{
+	var newSeasonString = req.body;
+	var newSeasonObj = JSON.parse(newConfigString);
+	debug((new Date()).toString() + ": Changing Config " + newSeasonObj);
+
+	if (newSeasonObj != null)
+	{
+		if (newSeasonObj.password == passwords[0].password)
+		{
+			season = newConfigObj.season;
+			var ret = validateSeason(season);
+			if (ret == true)
+			{
+				fs.writeFileSync("season.json",
+					JSON.stringify(season, null, 1),
+					"utf8",
+					errorProcessing);
+				
+				res.send('SUCCESS: Season changed.');
+			}
+			else
+			{
+				res.send("Wrong season format " + JSON.stringify(season, null, 2));
+			}
+				
+		}
+		else
+		{
+			res.send('FAIL: Wrong password');
+		}
+	}
+   next();
+});
 
 router.route("/changeresults/:type/:arg1").post(function(req, res, next) 
 {
@@ -205,7 +239,7 @@ router.route("/changeresults/:type/:arg1").post(function(req, res, next)
 					"utf8",
 					errorProcessing);
 				
-				res.send('SUCCESS: Config changed.');
+				res.send('SUCCESS: Results changed.');
 				
 			}
 			else
@@ -349,6 +383,41 @@ var sendEmail = function(newPick, retCode)
 	
 	return ret;
 	
+}
+
+var validateSeason = function(s)
+{
+	var ret = true;
+	
+	if (s.length != 17)
+	{
+		ret = false;
+		debug ("Size of season is : + s.length");
+	}
+	else
+	{
+		for (var i = 0; i <= s.length && ret == true; i++)
+		{
+			if (s[i].matchups.length <= 10)
+			{
+				ret = false;
+				debug ("Not enough game in week " + (i +1)); 
+			}
+			else if (s[i].bye == undefined)
+			{
+				ret = false;
+				debug ("No bye member in week " + (i+1));
+			}
+			else if (s[i].designatedMatchUp == undefined)
+			{
+				ret = false;
+				debug ("No designatedMatchUp member in week " + (i+1));
+			}
+		}
+	}
+	
+	
+	return ret;
 }
 
 var debug = function(str)
