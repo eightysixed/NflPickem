@@ -34,6 +34,17 @@ var endPhrases = new Array(
 
 );
 
+var endPhrasesPerso = [
+	{ 
+		name: "Jean-Francois",
+		phrases: "Coudon, as-tu fais tes choix avec ton genou!?!?!"}
+	},
+	{
+		name: "Pascale",
+		phrases: "Y'a tellement d'hommes qui connaissent le football dans ton entourage, tu devrais définitivement les consulter avec de faire tes choix!"
+	}
+];
+
 
 //A sample GET request    
 router.route("/stats").get(function(req, res) {
@@ -271,7 +282,9 @@ router.route("/submitPicks/:type/:arg1").post(function(req, res, next)
 			if (newPick.pick.week == config.week && config.draftPeriod == "true")
 			{
 				var ret = placePick(newPick)
-				var emailbody = "The following picks were received from " + newPick.name + ": \n" + JSON.stringify(newPick.pick, null, 2) + "\n\n" + endPhrases[Math.floor(Math.random() * endPhrases.length)] + "\n\nThe WebServer";
+				var emailbody = "The following picks were received from " + newPick.name + ": \n" + JSON.stringify(newPick.pick, null, 2) + "\n\n";
+				emailBody += findEndPhrase(newPick.name);
+				
 				if (ret == 1)
 				{
 					//sendEmail(newPick, 1);
@@ -421,6 +434,23 @@ var validateSeason = function(s)
 		}
 	}
 	
+	
+	return ret;
+}
+
+var findendPhrase = function(name)
+{
+	var ret =  endPhrases[Math.floor(Math.random() * endPhrases.length)];
+	
+	for(var i=0; i < endPhrasesPerso.length; i++)
+	{
+		if (endPhrasesPerso[i].name == name)
+		{
+			var phrases = endPhrasesPerso[i].phrases
+			ret = phrases[Math.floor(Math.random() * phrases.length)]";
+		}
+	}
+	ret +=  "\n\nThe WebServer";
 	
 	return ret;
 }
