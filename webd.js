@@ -39,6 +39,14 @@ var endPhrasesPerso = [
 		name: "Jean-Francois",
 		phrases: "Coudon, as-tu fais tes choix avec ton genou!?!?!"}
 	},
+	{ 
+		name: "Andre Charette",
+		phrases: "Coudon, as-tu fais tes choix avec ton genou!?!?!"}
+	},
+	{ 
+		name: "Kevin Ranger",
+		phrases: "Admit that all those test equipments are not used to test the modems but to help you in your picks!?!?!"}
+	},
 	{
 		name: "Pascale",
 		phrases: "Y'a tellement d'hommes qui connaissent le football dans ton entourage, tu devrais définitivement les consulter avec de faire tes choix!"
