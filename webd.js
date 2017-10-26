@@ -455,7 +455,7 @@ var findendPhrase = function(name)
 		if (endPhrasesPerso[i].name == name)
 		{
 			var phrases = endPhrasesPerso[i].phrases
-			ret = phrases[Math.floor(Math.random() * phrases.length)]";
+			ret = phrases[Math.floor(Math.random() * phrases.length)];
 		}
 	}
 	ret +=  "\n\nThe WebServer";
