@@ -29,7 +29,8 @@ var endPhrases = new Array(
 	"If your place in society was based based on these choices, you would have to go to jail.  These are a crime against football!!!!!!",
 	"Up until now the worst decision in gambling history was made by Pete Rose, you sadly beat him by a long stretch!",
 	"Maybe I should make an 'Insta-pick' feature just for you...",
-	"Geeeeeese... If you don't want to play anymore, just quit!" 
+	"Geeeeeese... If you don't want to play anymore, just quit!",
+	"You are lucky my 'Rejected for stupidity' feature is not yet implemented."
 
 );
 
