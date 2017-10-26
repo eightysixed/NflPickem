@@ -190,14 +190,13 @@ router.route("/changeconfig/:type/:arg1").post(function(req, res, next)
 router.route("/changeseason/:type/:arg1").post(function(req, res, next) 
 {
 	var newSeasonString = req.body;
-	var newSeasonObj = JSON.parse(newConfigString);
-	debug((new Date()).toString() + ": Changing Config " + newSeasonObj);
+	var newSeasonObj = JSON.parse(newSeasonString);
 
 	if (newSeasonObj != null)
 	{
 		if (newSeasonObj.password == passwords[0].password)
 		{
-			season = newConfigObj.season;
+			season = newSeasonObj.season;
 			var ret = validateSeason(season);
 			if (ret == true)
 			{
@@ -392,16 +391,15 @@ var validateSeason = function(s)
 	if (s.length != 17)
 	{
 		ret = false;
-		debug ("Size of season is : + s.length");
 	}
 	else
 	{
-		for (var i = 0; i <= s.length && ret == true; i++)
+		for (var i = 0; i < s.length && ret == true; i++)
 		{
 			if (s[i].matchups.length <= 10)
 			{
 				ret = false;
-				debug ("Not enough game in week " + (i +1)); 
+				debug ("Not enough game in week " + (i+1)); 
 			}
 			else if (s[i].bye == undefined)
 			{

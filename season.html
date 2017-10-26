@@ -1,0 +1,101 @@
+<html>
+<head>
+<link rel="icon"
+ href="./favicon.gif" />
+<style>
+</style>
+<script language="javascript">
+var getSeasonObj = new XMLHttpRequest();
+var submitSeasonObject = new XMLHttpRequest();
+var season = null;
+var loading = function()
+{
+	for (var i=1; i <=17 ; i++)
+	{
+		gebi("newWeek").add(new Option(i, i));
+	}
+	//gebi("newDraftPeriod").add(new Option("True", "true"));
+	//gebi("newDraftPeriod").add(new Option("False", "false"));
+
+	getSeasonObj.open("GET", "season.json");
+	getSeasonObj.send();
+}
+
+var gebi = function(id)
+{
+	return document.getElementById(id);
+}
+
+var submitConfig = function()
+{
+		var submitSeason = new Object();
+		submitSeason.password = gebi("passwordInput").value;
+		season[gebi("newWeek").value-1].designatedMatchUp = new Array(gebi("newTeam1").value, gebi("newTeam2").value);
+		submitSeason.season = season;
+		submitSeasonObject.open("POST", "changeseason/all/12345");
+		submitSeasonObject.send(JSON.stringify(submitSeason, null, 2));	
+}
+
+submitSeasonObject.onreadystatechange = function()
+{
+	if (this.readyState == 4 && this.status == 200)
+	{
+		alert(submitSeasonObject.responseText);
+	}
+}
+
+getSeasonObj.onreadystatechange = function()
+{
+	if (this.readyState == 4 && this.status == 200)
+	{
+		season = JSON.parse(getSeasonObj.responseText);
+	}
+}
+
+</script>
+</head>
+<body onload="loading();">
+	<h1>NFL Pickems 2017 - Config</h1>
+	<div id="divChoices">
+		<table>
+			<tr>
+				<td>
+					Week
+				</td>
+				<td>
+					<select id="newWeek">
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td id="buttonSection">
+					Team 1
+				</td>
+				<td>
+					<input type="text" id="newTeam1">
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td id="buttonSection">
+					Team 2
+				</td>
+				<td>
+					<input type="text" id="newTeam2">
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td id="buttonSection">
+					Password
+				</td>
+				<td>
+					<input type="text" id="passwordInput"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="button" value="Change DM" onclick="submitConfig();" />
+		</table>
+	</div>
+</body>
+</html>
