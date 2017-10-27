@@ -58,6 +58,10 @@ var endPhrasesPerso = [
 	{
 		name: "Dede",
 		phrases : ["Wow! Quels choix!  Tu es sur le point d'être le premier pooleur à être intronisé au temple de la renommé du football!"]
+	},
+	{
+		name: "Andre-Claude",
+		phrases : ["Wow! Look at those choices!  You'll probably be the firt Pickem player to be inducted in the football Hall of Fame!!"]
 	}
 ];
 
@@ -299,7 +303,7 @@ router.route("/submitPicks/:type/:arg1").post(function(req, res, next)
 			{
 				var ret = placePick(newPick)
 				var emailbody = "The following picks were received from " + newPick.name + ": \n" + JSON.stringify(newPick.pick, null, 2) + "\n\n";
-				emailBody += findEndPhrase(newPick.name);
+				emailbody += findEndPhrase(newPick.name);
 				
 				if (ret == 1)
 				{
@@ -454,7 +458,7 @@ var validateSeason = function(s)
 	return ret;
 }
 
-var findendPhrase = function(name)
+var findEndPhrase = function(name)
 {
 	var ret =  endPhrases[Math.floor(Math.random() * endPhrases.length)];
 	
