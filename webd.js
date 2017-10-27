@@ -37,15 +37,15 @@ var endPhrases = new Array(
 var endPhrasesPerso = [
 	{ 
 		name: "Jean-Francois",
-		phrases: "Coudon, as-tu fais tes choix avec ton genou!?!?!"}
+		phrases: "Coudon, as-tu fais tes choix avec ton genou!?!?!"
 	},
 	{ 
 		name: "Andre Charette",
-		phrases: "Coudon, as-tu fais tes choix avec ton genou!?!?!"}
+		phrases: "Coudon, as-tu fais tes choix avec ton genou!?!?!"
 	},
 	{ 
 		name: "Kevin Ranger",
-		phrases: "Admit that all those test equipments are not used to test the modems but to help you in your picks!?!?!"}
+		phrases: "Admit that all those test equipments are not used to test the modems but to help you in your picks!?!?!"
 	},
 	{
 		name: "Pascale",
