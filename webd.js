@@ -47,10 +47,10 @@ var endPhrasesPerso = [
 		name: "Kevin Ranger",
 		phrases: ["Admit that all those test equipments are not used to test the modems but to help you in your picks!?!?!"]
 	},
-	{
-		name: "Pascale",
-		phrases: ["Y'a tellement d'hommes qui connaissent le football dans ton entourage, tu devrais définitivement les consulter avec de faire tes choix!"]
-	},
+//	{
+//		name: "Pascale",
+//		phrases: ["Y'a tellement d'hommes qui connaissent le football dans ton entourage, tu devrais définitivement les consulter avec de faire tes choix!"]
+//	},
 	{
 		name: "Ted Knowles",
 		phrases : ["After seeing the game that close, I tought you would finally understand it.  I guess I was wrong!"]
