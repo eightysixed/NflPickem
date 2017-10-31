@@ -60,6 +60,18 @@ var endPhrasesPerso = [
 		phrases : ["Wow! Quels choix!  Tu es sur le point d'être le premier pooleur à être intronisé au temple de la renommé du football!"]
 	},
 	{
+		name: "Ariane",
+		phrases : ["Aaaaaa le confort de la cave du classement, avec ces choix on dirait que tu t'y es installé un foyer et que tu veux y rester."]
+	},
+	{
+		name: "M-A Leblanc",
+		phrases : ["Tes choix semblent être basés sur les résultats de 10 ans passés.  J'imagine que vous venez de recevoir le journal de Montréal de 2007 à St-Zotique!?!?!"]
+	},
+	{
+		name: "Genevieve",
+		phrases : ["Ok Maxime tu peux arrêter de niasier!  Je sais que c'est toi!!!  (Junior Duguay en 2ieme position, c'est pas crédible...)"]
+	},
+	{
 		name: "Andre-Claude",
 		phrases : ["Wow! Look at those choices!  You'll probably be the firt Pickem player to be inducted in the football Hall of Fame!!"]
 	}
