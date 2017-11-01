@@ -72,6 +72,14 @@ var endPhrasesPerso = [
 		phrases : ["Ok Maxime tu peux arrêter de niasier!  Je sais que c'est toi!!!  (Junior Duguay en 2ieme position, c'est pas crédible...)"]
 	},
 	{
+		name: "Edwin Faier",
+		phrases : ["Your kids are making picks that are way smarter than yours.  You are the living proof that evolution exists!"]
+	},
+	{
+		name: "Marc-Andre Castonguay",
+		phrases : ["C'est drole, j'ai la toune 'Free Falling' qui me vient en tete en regardant test choix..."]
+	},
+	{
 		name: "Andre-Claude",
 		phrases : ["Wow! Look at those choices!  You'll probably be the firt Pickem player to be inducted in the football Hall of Fame!!"]
 	}
