@@ -284,7 +284,7 @@ router.route("/changeresults/:type/:arg1").post(function(req, res, next)
 {
 	var newResultsString = req.body;
 	var newResultsObj = JSON.parse(newResultsString);
-	debug((new Date()).toString() + ": Changing Result " + newResultsString);
+	//debug((new Date()).toString() + ": Changing Result " + newResultsString);
 
 	if (newResultsObj != null)
 	{
