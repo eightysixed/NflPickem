@@ -75,6 +75,51 @@
     "pick2": "Chiefs",
     "pick1": "Patriots",
     "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "9",
+    "pick5": "Texans",
+    "pick4": "Eagles",
+    "pick3": "Saints",
+    "pick2": "Seahawks",
+    "pick1": "Jaguars",
+    "designatedMatchUp": "Chiefs"
+   },
+   {
+    "week": "10",
+    "pick5": "Lions",
+    "pick4": "LA Rams",
+    "pick3": "Steelers",
+    "pick2": "Panthers",
+    "pick1": "Patriots",
+    "designatedMatchUp": "NY Giants"
+   },
+   {
+    "week": "11",
+    "pick5": "Chiefs",
+    "pick4": "Saints",
+    "pick3": "Jaguars",
+    "pick2": "Steelers",
+    "pick1": "Patriots",
+    "designatedMatchUp": "Cardinals"
+   },
+   {
+    "week": "12",
+    "pick5": "Patriots",
+    "pick4": "Steelers",
+    "pick3": "Eagles",
+    "pick2": "Chiefs",
+    "pick1": "Falcons",
+    "designatedMatchUp": "LA Chargers"
+   },
+   {
+    "week": "13",
+    "pick5": "LA Chargers",
+    "pick4": "Jaguars",
+    "pick3": "Patriots",
+    "pick2": "LA Rams",
+    "pick1": "Raiders",
+    "designatedMatchUp": "Broncos"
    }
   ]
  },
@@ -163,6 +208,42 @@
     "pick2": "Seahawks",
     "pick1": "LA Rams",
     "designatedMatchUp": "Chiefs"
+   },
+   {
+    "week": "10",
+    "pick5": "Steelers",
+    "pick4": "Lions",
+    "pick3": "LA Rams",
+    "pick2": "Panthers",
+    "pick1": "Patriots",
+    "designatedMatchUp": "49ers"
+   },
+   {
+    "week": "11",
+    "pick5": "Chiefs",
+    "pick4": "Jaguars",
+    "pick3": "Saints",
+    "pick2": "Steelers",
+    "pick1": "Patriots",
+    "designatedMatchUp": "Cardinals"
+   },
+   {
+    "week": "12",
+    "pick5": "Patriots",
+    "pick4": "Eagles",
+    "pick3": "Steelers",
+    "pick2": "Falcons",
+    "pick1": "Bengals",
+    "designatedMatchUp": "LA Chargers"
+   },
+   {
+    "week": "13",
+    "pick5": "LA Chargers",
+    "pick4": "LA Rams",
+    "pick3": "Patriots",
+    "pick2": "Jaguars",
+    "pick1": "Titans",
+    "designatedMatchUp": "Broncos"
    }
   ]
  },
@@ -246,11 +327,47 @@
    {
     "week": "9",
     "pick5": "Texans",
-    "pick4": "Seahawks",
+    "pick4": "Eagles",
     "pick3": "Saints",
-    "pick2": "Eagles",
+    "pick2": "Seahawks",
     "pick1": "LA Rams",
     "designatedMatchUp": "Chiefs"
+   },
+   {
+    "week": "10",
+    "pick5": "Steelers",
+    "pick4": "Lions",
+    "pick3": "LA Rams",
+    "pick2": "Panthers",
+    "pick1": "Patriots",
+    "designatedMatchUp": "49ers"
+   },
+   {
+    "week": "11",
+    "pick5": "Chiefs",
+    "pick4": "Jaguars",
+    "pick3": "Saints",
+    "pick2": "Steelers",
+    "pick1": "Patriots",
+    "designatedMatchUp": "Cardinals"
+   },
+   {
+    "week": "12",
+    "pick5": "Patriots",
+    "pick4": "Eagles",
+    "pick3": "Steelers",
+    "pick2": "Falcons",
+    "pick1": "Bengals",
+    "designatedMatchUp": "LA Chargers"
+   },
+   {
+    "week": "13",
+    "pick5": "LA Chargers",
+    "pick4": "LA Rams",
+    "pick3": "Patriots",
+    "pick2": "Jaguars",
+    "pick1": "Titans",
+    "designatedMatchUp": "Broncos"
    }
   ]
  },
@@ -330,6 +447,51 @@
     "pick2": "Chiefs",
     "pick1": "Bills",
     "designatedMatchUp": "Redskins"
+   },
+   {
+    "week": "9",
+    "pick5": "Eagles",
+    "pick4": "Seahawks",
+    "pick3": "Jaguars",
+    "pick2": "Raiders",
+    "pick1": "Saints",
+    "designatedMatchUp": "Chiefs"
+   },
+   {
+    "week": "10",
+    "pick5": "Jaguars",
+    "pick4": "Steelers",
+    "pick3": "LA Rams",
+    "pick2": "Panthers",
+    "pick1": "Patriots",
+    "designatedMatchUp": "NY Giants"
+   },
+   {
+    "week": "11",
+    "pick5": "Jaguars",
+    "pick4": "Saints",
+    "pick3": "Chiefs",
+    "pick2": "Eagles",
+    "pick1": "Steelers",
+    "designatedMatchUp": "Cardinals"
+   },
+   {
+    "week": "12",
+    "pick5": "Eagles",
+    "pick4": "Patriots",
+    "pick3": "Vikings",
+    "pick2": "Jaguars",
+    "pick1": "Steelers",
+    "designatedMatchUp": "LA Chargers"
+   },
+   {
+    "week": "13",
+    "pick5": "Vikings",
+    "pick4": "Saints",
+    "pick3": "Eagles",
+    "pick2": "Steelers",
+    "pick1": "LA Rams",
+    "designatedMatchUp": "Broncos"
    }
   ]
  },
@@ -345,7 +507,7 @@
     "pick3": "Patriots",
     "pick2": "Bills",
     "pick1": "Panthers",
-    "designatedMatchUp": "Buccaneers"
+    "designatedMatchUp": "Dolphins"
    },
    {
     "week": "2",
@@ -409,6 +571,51 @@
     "pick2": "Chiefs",
     "pick1": "Vikings",
     "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "9",
+    "pick5": "Eagles",
+    "pick4": "Texans",
+    "pick3": "LA Rams",
+    "pick2": "Seahawks",
+    "pick1": "Saints",
+    "designatedMatchUp": "Chiefs"
+   },
+   {
+    "week": "10",
+    "pick5": "Lions",
+    "pick4": "Steelers",
+    "pick3": "Saints",
+    "pick2": "Patriots",
+    "pick1": "Seahawks",
+    "designatedMatchUp": "49ers"
+   },
+   {
+    "week": "11",
+    "pick5": "Chiefs",
+    "pick4": "Jaguars",
+    "pick3": "Patriots",
+    "pick2": "Saints",
+    "pick1": "Steelers",
+    "designatedMatchUp": "Texans"
+   },
+   {
+    "week": "12",
+    "pick5": "Steelers",
+    "pick4": "Patriots",
+    "pick3": "Eagles",
+    "pick2": "Chiefs",
+    "pick1": "Falcons",
+    "designatedMatchUp": "LA Chargers"
+   },
+   {
+    "week": "13",
+    "pick5": "Patriots",
+    "pick4": "LA Chargers",
+    "pick3": "LA Rams",
+    "pick2": "Steelers",
+    "pick1": "Eagles",
+    "designatedMatchUp": "Dolphins"
    }
   ]
  },
@@ -424,7 +631,7 @@
     "pick3": "Steelers",
     "pick2": "Bills",
     "pick1": "Texans",
-    "designatedMatchUp": "Buccaneers"
+    "designatedMatchUp": "Dolphins"
    },
    {
     "week": "2",
@@ -488,6 +695,51 @@
     "pick2": "Chiefs",
     "pick1": "Saints",
     "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "9",
+    "pick5": "Texans",
+    "pick4": "Eagles",
+    "pick3": "Saints",
+    "pick2": "Seahawks",
+    "pick1": "Jaguars",
+    "designatedMatchUp": "Chiefs"
+   },
+   {
+    "week": "10",
+    "pick5": "Lions",
+    "pick4": "LA Rams",
+    "pick3": "Steelers",
+    "pick2": "Bears",
+    "pick1": "Titans",
+    "designatedMatchUp": "NY Giants"
+   },
+   {
+    "week": "11",
+    "pick5": "Jaguars",
+    "pick4": "Saints",
+    "pick3": "Steelers",
+    "pick2": "Chiefs",
+    "pick1": "Patriots",
+    "designatedMatchUp": "Cardinals"
+   },
+   {
+    "week": "12",
+    "pick5": "Patriots",
+    "pick4": "Steelers",
+    "pick3": "Eagles",
+    "pick2": "Chiefs",
+    "pick1": "Falcons",
+    "designatedMatchUp": "LA Chargers"
+   },
+   {
+    "week": "13",
+    "pick5": "LA Chargers",
+    "pick4": "Jaguars",
+    "pick3": "Patriots",
+    "pick2": "Raiders",
+    "pick1": "Titans",
+    "designatedMatchUp": "Dolphins"
    }
   ]
  },
@@ -567,6 +819,51 @@
     "pick2": "Buccaneers",
     "pick1": "Chiefs",
     "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "9",
+    "pick5": "Seahawks",
+    "pick4": "Saints",
+    "pick3": "Eagles",
+    "pick2": "Raiders",
+    "pick1": "Cardinals",
+    "designatedMatchUp": "Chiefs"
+   },
+   {
+    "week": "10",
+    "pick5": "Cowboys",
+    "pick4": "Panthers",
+    "pick3": "Vikings",
+    "pick2": "Seahawks",
+    "pick1": "Jaguars",
+    "designatedMatchUp": "NY Giants"
+   },
+   {
+    "week": "11",
+    "pick5": "Saints",
+    "pick4": "Vikings",
+    "pick3": "Chiefs",
+    "pick2": "Falcons",
+    "pick1": "Lions",
+    "designatedMatchUp": "Cardinals"
+   },
+   {
+    "week": "12",
+    "pick5": "Patriots",
+    "pick4": "Buccaneers",
+    "pick3": "Vikings",
+    "pick2": "Chiefs",
+    "pick1": "Seahawks",
+    "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "13",
+    "pick5": "Cowboys",
+    "pick4": "Vikings",
+    "pick3": "Chiefs",
+    "pick2": "Saints",
+    "pick1": "LA Chargers",
+    "designatedMatchUp": "Dolphins"
    }
   ]
  },
@@ -655,6 +952,42 @@
     "pick2": "Bills",
     "pick1": "Lions",
     "designatedMatchUp": "Chiefs"
+   },
+   {
+    "week": "10",
+    "pick5": "Patriots",
+    "pick4": "Lions",
+    "pick3": "Steelers",
+    "pick2": "LA Chargers",
+    "pick1": "Bears",
+    "designatedMatchUp": "49ers"
+   },
+   {
+    "week": "11",
+    "pick5": "Patriots",
+    "pick4": "Lions",
+    "pick3": "Chiefs",
+    "pick2": "Saints",
+    "pick1": "Eagles",
+    "designatedMatchUp": "Cardinals"
+   },
+   {
+    "week": "12",
+    "pick5": "Patriots",
+    "pick4": "Eagles",
+    "pick3": "Steelers",
+    "pick2": "Panthers",
+    "pick1": "Bengals",
+    "designatedMatchUp": "LA Chargers"
+   },
+   {
+    "week": "13",
+    "pick5": "Patriots",
+    "pick4": "Eagles",
+    "pick3": "LA Chargers",
+    "pick2": "LA Rams",
+    "pick1": "Steelers",
+    "designatedMatchUp": "Broncos"
    }
   ]
  },
@@ -670,7 +1003,7 @@
     "pick3": "Falcons",
     "pick2": "Bills",
     "pick1": "Texans",
-    "designatedMatchUp": "Dolphins"
+    "designatedMatchUp": "Buccaneers"
    },
    {
     "week": "2",
@@ -734,6 +1067,51 @@
     "pick2": "Falcons",
     "pick1": "Bengals",
     "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "9",
+    "pick5": "Texans",
+    "pick4": "Eagles",
+    "pick3": "Saints",
+    "pick2": "LA Rams",
+    "pick1": "Bills",
+    "designatedMatchUp": "Chiefs"
+   },
+   {
+    "week": "10",
+    "pick5": "Steelers",
+    "pick4": "LA Rams",
+    "pick3": "Seahawks",
+    "pick2": "Patriots",
+    "pick1": "Titans",
+    "designatedMatchUp": "NY Giants"
+   },
+   {
+    "week": "11",
+    "pick5": "Chiefs",
+    "pick4": "Patriots",
+    "pick3": "Steelers",
+    "pick2": "Jaguars",
+    "pick1": "Saints",
+    "designatedMatchUp": "Texans"
+   },
+   {
+    "week": "12",
+    "pick5": "Patriots",
+    "pick4": "Eagles",
+    "pick3": "Steelers",
+    "pick2": "Chiefs",
+    "pick1": "Falcons",
+    "designatedMatchUp": "LA Chargers"
+   },
+   {
+    "week": "13",
+    "pick5": "LA Chargers",
+    "pick4": "Patriots",
+    "pick3": "LA Rams",
+    "pick2": "Titans",
+    "pick1": "Steelers",
+    "designatedMatchUp": "Broncos"
    }
   ]
  },
@@ -749,7 +1127,7 @@
     "pick3": "Falcons",
     "pick2": "Patriots",
     "pick1": "Texans",
-    "designatedMatchUp": "Buccaneers"
+    "designatedMatchUp": "Dolphins"
    },
    {
     "week": "2",
@@ -813,6 +1191,51 @@
     "pick2": "Colts",
     "pick1": "Patriots",
     "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "9",
+    "pick5": "Texans",
+    "pick4": "Seahawks",
+    "pick3": "Saints",
+    "pick2": "Eagles",
+    "pick1": "Jaguars",
+    "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "10",
+    "pick5": "Lions",
+    "pick4": "LA Rams",
+    "pick3": "Patriots",
+    "pick2": "NY Jets",
+    "pick1": "Jaguars",
+    "designatedMatchUp": "NY Giants"
+   },
+   {
+    "week": "11",
+    "pick5": "Chiefs",
+    "pick4": "Steelers",
+    "pick3": "Saints",
+    "pick2": "Patriots",
+    "pick1": "Jaguars",
+    "designatedMatchUp": "Texans"
+   },
+   {
+    "week": "12",
+    "pick5": "Patriots",
+    "pick4": "Eagles",
+    "pick3": "Steelers",
+    "pick2": "Chiefs",
+    "pick1": "Falcons",
+    "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "13",
+    "pick5": "Patriots",
+    "pick4": "LA Chargers",
+    "pick3": "Texans",
+    "pick2": "Raiders",
+    "pick1": "LA Rams",
+    "designatedMatchUp": "Broncos"
    }
   ]
  },
@@ -892,6 +1315,51 @@
     "pick2": "Chiefs",
     "pick1": "Vikings",
     "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "9",
+    "pick5": "Texans",
+    "pick4": "Bills",
+    "pick3": "LA Rams",
+    "pick2": "Eagles",
+    "pick1": "Seahawks",
+    "designatedMatchUp": "Chiefs"
+   },
+   {
+    "week": "10",
+    "pick5": "Steelers",
+    "pick4": "Lions",
+    "pick3": "Patriots",
+    "pick2": "LA Rams",
+    "pick1": "Panthers",
+    "designatedMatchUp": "NY Giants"
+   },
+   {
+    "week": "11",
+    "pick5": "Chiefs",
+    "pick4": "Lions",
+    "pick3": "Jaguars",
+    "pick2": "Saints",
+    "pick1": "Steelers",
+    "designatedMatchUp": "Cardinals"
+   },
+   {
+    "week": "12",
+    "pick5": "Eagles",
+    "pick4": "Seahawks",
+    "pick3": "Falcons",
+    "pick2": "Patriots",
+    "pick1": "Redskins",
+    "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "13",
+    "pick5": "Patriots",
+    "pick4": "Steelers",
+    "pick3": "LA Rams",
+    "pick2": "LA Chargers",
+    "pick1": "Lions",
+    "designatedMatchUp": "Broncos"
    }
   ]
  },
@@ -971,6 +1439,51 @@
     "pick2": "Chiefs",
     "pick1": "Eagles",
     "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "9",
+    "pick5": "Saints",
+    "pick4": "Texans",
+    "pick3": "Seahawks",
+    "pick2": "Eagles",
+    "pick1": "Jaguars",
+    "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "10",
+    "pick5": "Patriots",
+    "pick4": "Steelers",
+    "pick3": "Panthers",
+    "pick2": "Lions",
+    "pick1": "Vikings",
+    "designatedMatchUp": "NY Giants"
+   },
+   {
+    "week": "11",
+    "pick5": "Saints",
+    "pick4": "Chiefs",
+    "pick3": "Jaguars",
+    "pick2": "Lions",
+    "pick1": "Steelers",
+    "designatedMatchUp": "Texans"
+   },
+   {
+    "week": "12",
+    "pick5": "Eagles",
+    "pick4": "Patriots",
+    "pick3": "Falcons",
+    "pick2": "Steelers",
+    "pick1": "Seahawks",
+    "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "13",
+    "pick5": "LA Chargers",
+    "pick4": "Patriots",
+    "pick3": "Jaguars",
+    "pick2": "Titans",
+    "pick1": "LA Rams",
+    "designatedMatchUp": "Broncos"
    }
   ]
  },
@@ -1050,6 +1563,51 @@
     "pick2": "Vikings",
     "pick1": "Saints",
     "designatedMatchUp": "Redskins"
+   },
+   {
+    "week": "9",
+    "pick5": "Texans",
+    "pick4": "Eagles",
+    "pick3": "Saints",
+    "pick2": "Lions",
+    "pick1": "Bills",
+    "designatedMatchUp": "Chiefs"
+   },
+   {
+    "week": "10",
+    "pick5": "Lions",
+    "pick4": "Panthers",
+    "pick3": "Patriots",
+    "pick2": "Steelers",
+    "pick1": "LA Rams",
+    "designatedMatchUp": "49ers"
+   },
+   {
+    "week": "11",
+    "pick5": "Lions",
+    "pick4": "Chiefs",
+    "pick3": "Saints",
+    "pick2": "Patriots",
+    "pick1": "Steelers",
+    "designatedMatchUp": "Cardinals"
+   },
+   {
+    "week": "12",
+    "pick5": "Patriots",
+    "pick4": "Eagles",
+    "pick3": "Steelers",
+    "pick2": "Seahawks",
+    "pick1": "Titans",
+    "designatedMatchUp": "LA Chargers"
+   },
+   {
+    "week": "13",
+    "pick5": "LA Chargers",
+    "pick4": "Patriots",
+    "pick3": "Eagles",
+    "pick2": "Steelers",
+    "pick1": "Saints",
+    "designatedMatchUp": "Broncos"
    }
   ]
  },
@@ -1129,6 +1687,51 @@
     "pick2": "Falcons",
     "pick1": "Panthers",
     "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "9",
+    "pick5": "Seahawks",
+    "pick4": "Saints",
+    "pick3": "Cardinals",
+    "pick2": "Jaguars",
+    "pick1": "Bills",
+    "designatedMatchUp": "Chiefs"
+   },
+   {
+    "week": "10",
+    "pick5": "Patriots",
+    "pick4": "Lions",
+    "pick3": "Steelers",
+    "pick2": "Jaguars",
+    "pick1": "LA Rams",
+    "designatedMatchUp": "NY Giants"
+   },
+   {
+    "week": "11",
+    "pick5": "Chiefs",
+    "pick4": "Jaguars",
+    "pick3": "Saints",
+    "pick2": "Patriots",
+    "pick1": "Eagles",
+    "designatedMatchUp": "Cardinals"
+   },
+   {
+    "week": "12",
+    "pick5": "Patriots",
+    "pick4": "Eagles",
+    "pick3": "Panthers",
+    "pick2": "Seahawks",
+    "pick1": "Jaguars",
+    "designatedMatchUp": "LA Chargers"
+   },
+   {
+    "week": "13",
+    "pick5": "Patriots",
+    "pick4": "Steelers",
+    "pick3": "Jaguars",
+    "pick2": "Chiefs",
+    "pick1": "Eagles",
+    "designatedMatchUp": "Dolphins"
    }
   ]
  },
@@ -1208,6 +1811,51 @@
     "pick2": "Patriots",
     "pick1": "Panthers",
     "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "9",
+    "pick5": "Eagles",
+    "pick4": "Saints",
+    "pick3": "LA Rams",
+    "pick2": "Bills",
+    "pick1": "Chiefs",
+    "designatedMatchUp": "Chiefs"
+   },
+   {
+    "week": "10",
+    "pick5": "Steelers",
+    "pick4": "Patriots",
+    "pick3": "Lions",
+    "pick2": "Vikings",
+    "pick1": "Saints",
+    "designatedMatchUp": "49ers"
+   },
+   {
+    "week": "11",
+    "pick5": "Chiefs",
+    "pick4": "Patriots",
+    "pick3": "Saints",
+    "pick2": "Eagles",
+    "pick1": "Steelers",
+    "designatedMatchUp": "Texans"
+   },
+   {
+    "week": "12",
+    "pick5": "Patriots",
+    "pick4": "Eagles",
+    "pick3": "Seahawks",
+    "pick2": "Steelers",
+    "pick1": "Jaguars",
+    "designatedMatchUp": "LA Chargers"
+   },
+   {
+    "week": "13",
+    "pick5": "Steelers",
+    "pick4": "Patriots",
+    "pick3": "LA Chargers",
+    "pick2": "Vikings",
+    "pick1": "Eagles",
+    "designatedMatchUp": "Dolphins"
    }
   ]
  },
@@ -1287,6 +1935,51 @@
     "pick2": "Colts",
     "pick1": "Seahawks",
     "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "9",
+    "pick5": "Eagles",
+    "pick4": "Seahawks",
+    "pick3": "Bills",
+    "pick2": "Jaguars",
+    "pick1": "Raiders",
+    "designatedMatchUp": "Chiefs"
+   },
+   {
+    "week": "10",
+    "pick5": "LA Rams",
+    "pick4": "Cowboys",
+    "pick3": "Patriots",
+    "pick2": "Seahawks",
+    "pick1": "Steelers",
+    "designatedMatchUp": "NY Giants"
+   },
+   {
+    "week": "11",
+    "pick5": "Chiefs",
+    "pick4": "Saints",
+    "pick3": "Steelers",
+    "pick2": "Jaguars",
+    "pick1": "Patriots",
+    "designatedMatchUp": "Cardinals"
+   },
+   {
+    "week": "12",
+    "pick5": "Steelers",
+    "pick4": "Patriots",
+    "pick3": "Eagles",
+    "pick2": "Falcons",
+    "pick1": "Redskins",
+    "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "13",
+    "pick5": "LA Chargers",
+    "pick4": "Jaguars",
+    "pick3": "Patriots",
+    "pick2": "Raiders",
+    "pick1": "Steelers",
+    "designatedMatchUp": "Broncos"
    }
   ]
  },
@@ -1375,6 +2068,42 @@
     "pick2": "Packers",
     "pick1": "Bills",
     "designatedMatchUp": "Chiefs"
+   },
+   {
+    "week": "10",
+    "pick5": "Patriots",
+    "pick4": "Steelers",
+    "pick3": "Lions",
+    "pick2": "LA Rams",
+    "pick1": "Seahawks",
+    "designatedMatchUp": "49ers"
+   },
+   {
+    "week": "11",
+    "pick5": "Eagles",
+    "pick4": "Saints",
+    "pick3": "Patriots",
+    "pick2": "Jaguars",
+    "pick1": "Packers",
+    "designatedMatchUp": "Cardinals"
+   },
+   {
+    "week": "12",
+    "pick5": "Seahawks",
+    "pick4": "Eagles",
+    "pick3": "Jaguars",
+    "pick2": "Ravens",
+    "pick1": "Redskins",
+    "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "13",
+    "pick5": "Eagles",
+    "pick4": "Patriots",
+    "pick3": "Steelers",
+    "pick2": "Packers",
+    "pick1": "Vikings",
+    "designatedMatchUp": "Dolphins"
    }
   ]
  },
@@ -1454,6 +2183,51 @@
     "pick2": "Chiefs",
     "pick1": "Patriots",
     "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "9",
+    "pick5": "Texans",
+    "pick4": "Seahawks",
+    "pick3": "Saints",
+    "pick2": "Eagles",
+    "pick1": "Jaguars",
+    "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "10",
+    "pick5": "Steelers",
+    "pick4": "LA Rams",
+    "pick3": "Patriots",
+    "pick2": "Panthers",
+    "pick1": "Lions",
+    "designatedMatchUp": "49ers"
+   },
+   {
+    "week": "11",
+    "pick5": "Chiefs",
+    "pick4": "Jaguars",
+    "pick3": "Steelers",
+    "pick2": "Saints",
+    "pick1": "Patriots",
+    "designatedMatchUp": "Texans"
+   },
+   {
+    "week": "12",
+    "pick5": "Patriots",
+    "pick4": "Bengals",
+    "pick3": "Steelers",
+    "pick2": "Falcons",
+    "pick1": "Eagles",
+    "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "13",
+    "pick5": "LA Chargers",
+    "pick4": "LA Rams",
+    "pick3": "Jaguars",
+    "pick2": "Patriots",
+    "pick1": "Eagles",
+    "designatedMatchUp": "Dolphins"
    }
   ]
  },
@@ -1533,6 +2307,51 @@
     "pick2": "Saints",
     "pick1": "Seahawks",
     "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "9",
+    "pick5": "Saints",
+    "pick4": "Seahawks",
+    "pick3": "Bills",
+    "pick2": "LA Rams",
+    "pick1": "Eagles",
+    "designatedMatchUp": "Chiefs"
+   },
+   {
+    "week": "10",
+    "pick5": "Patriots",
+    "pick4": "Steelers",
+    "pick3": "Seahawks",
+    "pick2": "Titans",
+    "pick1": "Vikings",
+    "designatedMatchUp": "49ers"
+   },
+   {
+    "week": "11",
+    "pick5": "Patriots",
+    "pick4": "Chiefs",
+    "pick3": "Saints",
+    "pick2": "Eagles",
+    "pick1": "Seahawks",
+    "designatedMatchUp": "Cardinals"
+   },
+   {
+    "week": "12",
+    "pick5": "Patriots",
+    "pick4": "Steelers",
+    "pick3": "Eagles",
+    "pick2": "Chiefs",
+    "pick1": "Saints",
+    "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "13",
+    "pick5": "Patriots",
+    "pick4": "Saints",
+    "pick3": "49ers",
+    "pick2": "Eagles",
+    "pick1": "Chiefs",
+    "designatedMatchUp": "Broncos"
    }
   ]
  },
@@ -1548,7 +2367,7 @@
     "pick3": "Falcons",
     "pick2": "Panthers",
     "pick1": "Bills",
-    "designatedMatchUp": "Buccaneers"
+    "designatedMatchUp": "Dolphins"
    },
    {
     "week": "2",
@@ -1612,6 +2431,51 @@
     "pick2": "Patriots",
     "pick1": "Bengals",
     "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "9",
+    "pick5": "Eagles",
+    "pick4": "Texans",
+    "pick3": "Seahawks",
+    "pick2": "Saints",
+    "pick1": "Jaguars",
+    "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "10",
+    "pick5": "Steelers",
+    "pick4": "LA Rams",
+    "pick3": "Lions",
+    "pick2": "Patriots",
+    "pick1": "Panthers",
+    "designatedMatchUp": "NY Giants"
+   },
+   {
+    "week": "11",
+    "pick5": "Steelers",
+    "pick4": "Chiefs",
+    "pick3": "Jaguars",
+    "pick2": "Saints",
+    "pick1": "Patriots",
+    "designatedMatchUp": "Cardinals"
+   },
+   {
+    "week": "12",
+    "pick5": "Steelers",
+    "pick4": "Patriots",
+    "pick3": "Eagles",
+    "pick2": "Falcons",
+    "pick1": "Seahawks",
+    "designatedMatchUp": "Cowboys"
+   },
+   {
+    "week": "13",
+    "pick5": "LA Chargers",
+    "pick4": "Jaguars",
+    "pick3": "Patriots",
+    "pick2": "LA Rams",
+    "pick1": "Titans",
+    "designatedMatchUp": "Broncos"
    }
   ]
  }

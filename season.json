@@ -714,7 +714,10 @@
    "Eagles",
    "Ravens"
   ],
-  "designatedMatchUp": []
+  "designatedMatchUp": [
+   "NY Giants",
+   "49ers"
+  ]
  },
  {
   "week": 11,
@@ -780,7 +783,10 @@
    "Buccaneers",
    "Panthers"
   ],
-  "designatedMatchUp": []
+  "designatedMatchUp": [
+   "Cardinals",
+   "Texans"
+  ]
  },
  {
   "week": 12,
@@ -851,7 +857,10 @@
    ]
   ],
   "bye": "",
-  "designatedMatchUp": []
+  "designatedMatchUp": [
+   "LA Chargers",
+   "Cowboys"
+  ]
  },
  {
   "week": 13,
@@ -922,7 +931,10 @@
    ]
   ],
   "bye": "",
-  "designatedMatchUp": []
+  "designatedMatchUp": [
+   "Broncos",
+   "Dolphins"
+  ]
  },
  {
   "week": 14,

@@ -35,31 +35,31 @@ var endPhrases = new Array(
 );
 
 var endPhrasesPerso = [
-	{ 
-		name: "Jean-Francois",
-		phrases: ["Coudon, as-tu fais tes choix avec ton genou!?!?!"]
-	},
-	{ 
-		name: "Andre Charette",
-		phrases: ["Coudon, as-tu fais tes choix avec ton genou!?!?!"]
-	},
-	{ 
-		name: "Kevin Ranger",
-		phrases: ["Admit that all those test equipments are not used to test the modems but to help you in your picks!?!?!"]
-	},
+//	{ 
+//		name: "Jean-Francois",
+//		phrases: ["Coudon, as-tu fais tes choix avec ton genou!?!?!"]
+//	},
+//	{ 
+//		name: "Andre Charette",
+//		phrases: ["Simonac, vas-tu avoir besoin d'un technical manual pour comprendre comment ca marche!?!?! Je connais quelqu'un qui en écrit des bons!"]
+//	},
+//	{ 
+//		name: "Kevin Ranger",
+//		phrases: ["Admit that all those test equipments are not used to test the modems but to help you in your picks!?!?!"]
+//	},
 //	{
 //		name: "Pascale",
 //		phrases: ["Y'a tellement d'hommes qui connaissent le football dans ton entourage, tu devrais définitivement les consulter avec de faire tes choix!"]
 //	},
-	{
-		name: "Ted Knowles",
-		phrases : ["After seeing the game that close, I tought you would finally understand it.  I guess I was wrong!"]
-	},
+//	{
+//		name: "Ted Knowles",
+//		phrases : ["After seeing the game that close, I tought you would finally understand it.  I guess I was wrong!"]
+//	},
 	{
 		name: "Dede",
 		phrases : ["Wow! Quels choix!  Tu es sur le point d'être le premier pooleur à être intronisé au temple de la renommé du football!"]
 	},
-	{
+/*	{
 		name: "Ariane",
 		phrases : ["Aaaaaa le confort de la cave du classement, avec ces choix on dirait que tu t'y es installé un foyer et que tu veux y rester."]
 	},
@@ -77,8 +77,9 @@ var endPhrasesPerso = [
 	},
 	{
 		name: "Marc-Andre Castonguay",
-		phrases : ["C'est drole, j'ai la toune 'Free Falling' qui me vient en tete en regardant test choix..."]
+		phrases : ["C'est drôle, j'ai la toune 'Free Falling' qui me vient en tête en regardant tes choix..."]
 	},
+*/
 	{
 		name: "Andre-Claude",
 		phrases : ["Wow! Look at those choices!  You'll probably be the firt Pickem player to be inducted in the football Hall of Fame!!"]
