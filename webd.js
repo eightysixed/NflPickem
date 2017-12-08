@@ -25,12 +25,15 @@ var endPhrases = new Array(
 	//"Are you picking your teams because you like their shirt color?  Sure looks like it...",
 	//"Reminder, the goal of this game is to finish on top.  Looking at your picks, I figured you didn't know that.",
 	"You could at least make the effort of looking at the screen while making your picks!",
-	"I hope you at least have a great personality...",
+	//"I hope you at least have a great personality...",
 	"If your place in society was based based on these choices, you would have to go to jail.  These are a crime against football!!!!!!",
-	"Up until now the worst decision in gambling history was made by Pete Rose, you sadly beat him by a long stretch!",
+	//"Up until now the worst decision in gambling history was made by Pete Rose, you sadly beat him by a long stretch!",
 	"Maybe I should make an 'Insta-pick' feature just for you...",
 	"Geeeeeese... If you don't want to play anymore, just quit!",
-	"You are lucky my 'Rejected for stupidity' feature is not yet implemented."
+	//"You are lucky my 'Rejected for stupidity' feature is not yet implemented.",
+	"Here's a New Year resolution for you: I will stop making bad football picks in 2018!",
+	"I hope you asked for some Football Wisdom for Christmas!",
+	"Luckily for you, the season ending is close!"
 
 );
 
@@ -39,18 +42,20 @@ var endPhrasesPerso = [
 //		name: "Jean-Francois",
 //		phrases: ["Coudon, as-tu fais tes choix avec ton genou!?!?!"]
 //	},
-//	{ 
-//		name: "Andre Charette",
+	{ 
+		name: "Andre Charette",
+		phrases : ["Avec des choix comme ça, moi aussi j'irais me cacher sur un bateau de croisière à la fin de l'année!  Ce n'est pas que tu le mérites mais ça va te permettre de te faire oublier un peu..."]
 //		phrases: ["Simonac, vas-tu avoir besoin d'un technical manual pour comprendre comment ca marche!?!?! Je connais quelqu'un qui en écrit des bons!"]
 //	},
 //	{ 
 //		name: "Kevin Ranger",
 //		phrases: ["Admit that all those test equipments are not used to test the modems but to help you in your picks!?!?!"]
 //	},
-//	{
-//		name: "Pascale",
+	{
+		name: "Pascale",
+		phrases: ["(Avec l'air de Vive le vent!) Clavicule, clavicule, clavicule petée. Aaron a mal, Les Packs sont out, y'a pas d'playoffs c't'année!"]
 //		phrases: ["Y'a tellement d'hommes qui connaissent le football dans ton entourage, tu devrais définitivement les consulter avec de faire tes choix!"]
-//	},
+	},
 //	{
 //		name: "Ted Knowles",
 //		phrases : ["After seeing the game that close, I tought you would finally understand it.  I guess I was wrong!"]
@@ -59,19 +64,22 @@ var endPhrasesPerso = [
 		name: "Dede",
 		phrases : ["Wow! Quels choix!  Tu es sur le point d'être le premier pooleur à être intronisé au temple de la renommé du football!"]
 	},
-/*	{
-		name: "Ariane",
-		phrases : ["Aaaaaa le confort de la cave du classement, avec ces choix on dirait que tu t'y es installé un foyer et que tu veux y rester."]
-	},
 	{
+		name: "Ariane",
+//		phrases : ["Aaaaaa le confort de la cave du classement, avec ces choix on dirait que tu t'y es installé un foyer et que tu veux y rester."]
+		phrases : ["Fa que..... Tu trouves que je ne me renouvelle pas assez?  Messemble que si je regarde le classement, ça fait un p'tit boute que tu n'as pas RENOUVELLÉ ta position!!! Un sérieux cas du chaudron qui se moque de la poêle!"]
+	},
+/*	{
 		name: "M-A Leblanc",
 		phrases : ["Tes choix semblent être basés sur les résultats de 10 ans passés.  J'imagine que vous venez de recevoir le journal de Montréal de 2007 à St-Zotique!?!?!"]
 	},
+*/
 	{
 		name: "Genevieve",
-		phrases : ["Ok Maxime tu peux arrêter de niasier!  Je sais que c'est toi!!!  (Junior Duguay en 2ieme position, c'est pas crédible...)"]
+		phrases : ["Pout Noel j'espère que tu as demandé de la ponctualité, tu en as franchement besoin!"]
+//		phrases : ["Ok Maxime tu peux arrêter de niasier!  Je sais que c'est toi!!!  (Junior Duguay en 2ieme position, c'est pas crédible...)"]
 	},
-	{
+/*	{
 		name: "Edwin Faier",
 		phrases : ["Your kids are making picks that are way smarter than yours.  You are the living proof that evolution exists!"]
 	},
