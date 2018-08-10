@@ -1,0 +1,96 @@
+<html>
+<head>
+<link rel="icon"
+ href="./favicon.gif" />
+<style>
+</style>
+<script language="javascript" src="results.js"></script>
+<script language="javascript">
+var config = null;
+var getConfigObj = new XMLHttpRequest();
+var submitConfigObject = new XMLHttpRequest();
+var loading = function()
+{
+	for (var i=1; i <=17 ; i++)
+	{
+		gebi("newWeek").add(new Option(i, i));
+	}
+	gebi("newDraftPeriod").add(new Option("True", "true"));
+	gebi("newDraftPeriod").add(new Option("False", "false"));
+
+	getConfigObj.open("GET", "config.json");
+	getConfigObj.send();
+}
+
+var gebi = function(id)
+{
+	return document.getElementById(id);
+}
+
+var submitConfig = function()
+{
+		var submitConfig = new Object();
+		submitConfig.password = gebi("passwordInput").value;
+		config.week = gebi("newWeek").value;
+		config.draftPeriod = gebi("newDraftPeriod").value;
+		submitConfig.config = config;
+		submitConfigObject.open("POST", "changeconfig/all/12345");
+		submitConfigObject.send(JSON.stringify(submitConfig, null, 2));	
+}
+
+submitConfigObject.onreadystatechange = function()
+{
+	if (this.readyState == 4 && this.status == 200)
+	{
+		alert(submitConfigObject.responseText);
+	}
+}
+
+getConfigObj.onreadystatechange = function()
+{
+	if (this.readyState == 4 && this.status == 200)
+	{
+		config = JSON.parse(getConfigObj.responseText);
+		gebi("newWeek").value = config.week;
+		gebi("newDraftPeriod").value = config.draftPeriod;
+	}
+}
+
+</script>
+</head>
+<body onload="loading();">
+	<h1>NFL Pickems 2017 - Config</h1>
+	<div id="divChoices">
+		<table>
+			<tr>
+				<td>
+					Week
+				</td>
+				<td>
+					<select id="newWeek">
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td id="buttonSection">
+					Draft Period
+				</td>
+				<td>
+					<select id="newDraftPeriod">
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td id="buttonSection">
+					Password
+				</td>
+				<td>
+					<input type="text" id="passwordInput"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="button" value="Change Config" onclick="submitConfig();" />
+		</table>
+	</div>
+</body>
+</html>
