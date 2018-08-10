@@ -42,9 +42,9 @@ var endPhrasesPerso = [
 //		name: "Jean-Francois",
 //		phrases: ["Coudon, as-tu fais tes choix avec ton genou!?!?!"]
 //	},
-	{ 
-		name: "Andre Charette",
-		phrases : ["Avec des choix comme ça, moi aussi j'irais me cacher sur un bateau de croisière à la fin de l'année!  Ce n'est pas que tu le mérites mais ça va te permettre de te faire oublier un peu..."]
+//	{ 
+//		name: "Andre Charette",
+//		phrases : ["Avec des choix comme ça, moi aussi j'irais me cacher sur un bateau de croisière à la fin de l'année!  Ce n'est pas que tu le mérites mais ça va te permettre de te faire oublier un peu..."]
 //		phrases: ["Simonac, vas-tu avoir besoin d'un technical manual pour comprendre comment ca marche!?!?! Je connais quelqu'un qui en écrit des bons!"]
 //	},
 //	{ 
