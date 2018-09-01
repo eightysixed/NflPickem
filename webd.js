@@ -186,6 +186,37 @@ server.listen(8080, "apaulinlaptop");
 
 
 */
+
+router.route("/login/:type/:arg1").post(function(req, res, next) 															 
+{
+	debug("Login attempt " + req.body);
+	var newLoginString = req.body;
+	var newLoginObj = JSON.parse(newLoginString);
+	debug(newLoginObj.name + " : " + newLoginObj.password);
+	
+	var playersString = fs.readFileSync("players.json", "utf8");
+	var playersObj = JSON.parse(playersString);
+	for(var p = 0; p < playersObj.length; p++)
+	{
+		for(var w=0; w < playersObj[p].weeks.length; w++)
+		{
+			if ((newLoginObj.name != playersObj[p].name && playersObj[p].weeks[w].week > (config.week-0)) ||
+				(newLoginObj.name != playersObj[p].name && playersObj[p].weeks[w].week == (config.week-0) && config.draftPeriod == "true"))
+			{
+				playersObj[p].weeks[w].pick5 = "";
+				playersObj[p].weeks[w].pick4 = "";
+				playersObj[p].weeks[w].pick3 = "";
+				playersObj[p].weeks[w].pick2 = "";
+				playersObj[p].weeks[w].pick1 = "";
+				playersObj[p].weeks[w].designatedMatchUp = "";
+			}
+			
+		}
+	}
+    res.send(JSON.stringify(playersObj, null, 2));
+});
+
+
 router.route("/getplayers/:type/:arg1").get(function(req, res, next) 															 
 {
 	//debug("GET Players");
@@ -197,6 +228,7 @@ router.route("/getplayers/:type/:arg1").get(function(req, res, next)
 		{
 			for(var w=0; w < playersObj[p].weeks.length; w++)
 			{
+				debug("checking player " + playersObj[p].name + " : week " + w);
 				if (playersObj[p].weeks[w].week == config.week)
 				{
 					playersObj[p].weeks[w].pick5 = "";
@@ -323,39 +355,32 @@ router.route("/changeresults/:type/:arg1").post(function(req, res, next)
 															 
 router.route("/submitPicks/:type/:arg1").post(function(req, res, next) 
 {
+	debug(req.body);
 	var newPick = JSON.parse(req.body);
 	if (newPick != null)
 	{
 		if (checkPassword(newPick) == true)
 		{
-			if (newPick.pick.week == config.week && config.draftPeriod == "true")
+			var ret = placePick(newPick)
+			var emailbody = "The following picks were received from " + newPick.name + ": \n" + JSON.stringify(newPick.pick, null, 2) + "\n\n";
+			emailbody += findEndPhrase(newPick.name);
+			
+			if (ret == 1)
 			{
-				var ret = placePick(newPick)
-				var emailbody = "The following picks were received from " + newPick.name + ": \n" + JSON.stringify(newPick.pick, null, 2) + "\n\n";
-				emailbody += findEndPhrase(newPick.name);
-				
-				if (ret == 1)
-				{
-					//sendEmail(newPick, 1);
-					debug('SUCCESS: Added Pick.\n' + emailbody);
-					res.send('SUCCESS: Added Pick.\n' + emailbody);
-				}
-				else if (ret == 2)
-				{
-					//sendEmail(newPick, 2);
-					debug('SUCCESS: Replaced Pick.\n' + emailbody);
-					res.send('SUCCESS: Replaced Pick.\n' + emailbody);
-				}
-				else
-				{
-					debug('FAIL: Cannot place pick.');
-					res.send('FAIL: Cannot place pick.');
-				}
+				//sendEmail(newPick, 1);
+				debug('SUCCESS: Added Pick.\n' + emailbody);
+				res.send('SUCCESS: Added Pick.\n' + emailbody);
+			}
+			else if (ret == 2)
+			{
+				//sendEmail(newPick, 2);
+				debug('SUCCESS: Replaced Pick.\n' + emailbody);
+				res.send('SUCCESS: Replaced Pick.\n' + emailbody);
 			}
 			else
 			{
-				debug('FAIL: Wrong week or not in draft period');
-				res.send('FAIL: Wrong week or not in draft period');
+				debug('FAIL: Cannot place pick.');
+				res.send('FAIL: Cannot place pick.');
 			}
 		}
 		else
@@ -380,24 +405,18 @@ var placePick = function(newPick)
 	{
 		if (players[i].name == newPick.name)
 		{
-			for(var w=0; w < players[i].weeks.length; w++)
+			for(var w=config.week -1 ; w < newPick.weeks.length; w++)
 			{
-				if (players[i].weeks[w].week == newPick.pick.week)
+				if (newPick.weeks[w] != undefined && newPick.weeks[w] != null)
 				{
-					players[i].weeks[w] = newPick.pick;
-					fs.writeFileSync("players.json",
-						JSON.stringify(players, null, 1),
-						"utf8",
-						errorProcessing);
-					return 2;
+					players[i].weeks[w] = newPick.weeks[w];
 				}
+				fs.writeFileSync("players.json",
+					JSON.stringify(players, null, 1),
+					"utf8",
+					errorProcessing);
+				return 2;
 			}
-			players[i].weeks.push(newPick.pick);
-			fs.writeFileSync("players.json",
-				JSON.stringify(players, null, 1),
-				"utf8",
-				errorProcessing);
-			return 1;
 		}
 		
 	}
