@@ -1,7 +1,5 @@
 <html>
 <head>
-<link rel="icon"
- href="./favicon.gif" />
 <style>
 	.matchupTable {
 		color: #666666;
@@ -101,16 +99,20 @@
 		background-color: #ffaaaa;
 	}
 	
-</style>
-<script language="javascript" src="results.js"></script>
+</style><script language="javascript" src="results.js"></script>
 <script language="javascript">
-var allPlayers = null;
-var players = null;
 var config = null;
 var getConfigObj = new XMLHttpRequest();
-var getPlayersObj = new XMLHttpRequest();
+var season = null;
 var getSeasonObj = new XMLHttpRequest();
+var getPlayersObj = new XMLHttpRequest();
+var getLoginInfo = new XMLHttpRequest();
+var allPlayers;
+var players;
 var submitPicksObject = new XMLHttpRequest();
+var weekSelectOldValue;
+var pickObj = new Object();
+
 var teams = new Array(
 	"49ers",
 	"Bears",
@@ -127,8 +129,8 @@ var teams = new Array(
 	"Eagles",
 	"Falcons",
 	"Jaguars",
-	"LA Rams",
-	"LA Chargers",
+	"Rams",
+	"Chargers",
 	"Lions",
 	"NY Giants",
 	"NY Jets",
@@ -146,251 +148,45 @@ var teams = new Array(
 	"Vikings"
 );
 
-var season = null;
 
-var loading = function()
+var getConfigInfo = function()
 {
-	loadPlayers();
-}
-
-var loadMatchups = function()
-{
-	var t = gebi("matchupTable");
-	t.className = "matchupTable";
-	var r = t.insertRow(-1);
-	var c = r.insertCell(-1);
-	c.colSpan = 3;
-	c.textContent = "WEEK " + config.week + " MATCHUPS"
-
-	r = t.insertRow(-1);
-	c = r.insertCell(-1);
-	c.textContent = "#";
-
-	c = r.insertCell(-1);
-	c.textContent = "Away Team";
-
-	c = r.insertCell(-1);
-	c.textContent = "Home Team";
-	
-	
-	var thisWeek = season[config.week-1];
-	
-	for(var i =0 ; i < thisWeek.matchups.length; i++)
-	{
-		r = t.insertRow(-1);
-		c = r.insertCell(-1);
-		c.textContent = (i+1);
-		c = r.insertCell(-1);
-		c.textContent = thisWeek.matchups[i][0];
-		c = r.insertCell(-1);
-		c.textContent = thisWeek.matchups[i][1];
-		
-	}
-
-	if (thisWeek.bye != "")
-	{
-		r = t.insertRow(-1);
-		c = r.insertCell(-1);
-		c.textContent = "BYE";
-		c = r.insertCell(-1);
-		c.colSpan = 2;
-		c.textContent = thisWeek.bye;
-	}
-		
-
-}
-
-var loadPicks = function()
-{
-	var t = gebi("pickTable");
-	var r = t.insertRow(-1);
-	var c = r.insertCell(-1);
-	c.colSpan = 2;
-	c.textContent = "WEEK " + config.week + " PICKS"
-	
-	
-	r = t.insertRow(-1);
-	c = r.insertCell(-1);
-	c.textContent = "Name"
-	
-	c = r.insertCell(-1);
-	var nameSelect = document.createElement("select");
-	nameSelect.id = "nameSelect";
-	c.appendChild(nameSelect);
-
-	
-	
-	r = t.insertRow(-1);
-	c = r.insertCell(-1);
-	c.textContent = "Password"
-
-	c = r.insertCell(-1);
-	var password = document.createElement("input");
-	password.type = "text";
-	password.id = "password";
-	c.appendChild(password);
-	
-	
-	r = t.insertRow(-1);
-	c = r.insertCell(-1);
-	c.textContent = "Points (Rank)"
-	
-	c = r.insertCell(-1)
-	c.textContent = "Selection"
-	
-	for(var i = 5; i >= 1; i--)
-	{
-		r = t.insertRow(-1);
-		c = r.insertCell(-1);
-		c.textContent = i+"pts";
-		
-		c = r.insertCell(-1);
-		var s = document.createElement("select");
-		s.id = "pick" + i;
-		s.add(new Option("",""));
-		for(var team = 0; team < teams.length; team++)
-		{
-			s.add(new Option(teams[team], teams[team]));
-		}
-		c.appendChild(s);
-	}
-	
-	if (season[config.week -1].designatedMatchUp.length == 0)
-	{
-		//season[config.week -1].designatedMatchUp = season[config.week -1].matchups[2];
-	}
-	r = t.insertRow(-1);
-	c = r.insertCell(-1);
-	c.colSpan = 2;
-	c.textContent = "Designated Matchup (6pts) : " + season[config.week -1].designatedMatchUp[0] + " vs. " + season[config.week -1].designatedMatchUp[1];
-
-	
-	r = t.insertRow(-1);
-	c = r.insertCell(-1);
-	c.colSpan = 2;
-	s = document.createElement("select");
-	s.id = "designatedMatchUp";
-	s.add(new Option("",""));
-	s.add(new Option(season[config.week -1].designatedMatchUp[0], season[config.week -1].designatedMatchUp[0]));
-	s.add(new Option(season[config.week -1].designatedMatchUp[1], season[config.week -1].designatedMatchUp[1]));
-	c.appendChild(s);
-	
-}
-
-var gebi = function(id)
-{
-	return document.getElementById(id);
-}
-
-
-var submitPicks = function()
-{
-	//alert("The SITE is not ready.  This is just for demosntration purposes");
-	var retString = ",\n{\n\tweek : " + config.week + ",\n";
-	var retCode = 0;
-	var pickObj = new Object();
-	pickObj.name = gebi("nameSelect").value;
-	pickObj.password = gebi("password").value;
-	pickObj.pick = new Object();
-	pickObj.pick.week = config.week;
-	var picksValidation = new Array();
-	for (i=5; i >=1; i--)
-	{
-		if (gebi("pick" + i).value != "")
-		{
-			for(var b=0; b < season[config.week -1].bye.length; b++)
-			{
-				if (gebi("pick" + i).value == season[config.week -1].bye[b])
-				{
-					retCode = "Pick has a bye week.";					
-				}
-			}
-			if (picksValidation[gebi("pick" + i).value] == undefined)
-			{
-				retString += "\tpick" + i + " : \"" + gebi("pick" + i).value + "\",\n";  
-				pickObj.pick["pick" + i] = gebi("pick" + i).value;
-				picksValidation[gebi("pick" + i).value] = 1;
-			}
-			else
-			{
-				retCode = "Dupplicated Pick";
-			}
-		}
-		else
-		{
-			retCode = "Incomplete Pick";
-		}
-	}
-	if (gebi("designatedMatchUp").value != "")
-	{
-		retString += "\tdesignatedMatchUp : \"" + gebi("designatedMatchUp").value + "\"\n";
-		pickObj.pick["designatedMatchUp"] = gebi("designatedMatchUp").value;
-	}
-	else
-	{
-		retCode = "Empty Designated Match";
-	}
-	retString += "}\n";
-	
-	if (retCode == 0)
-	{
-/*		gebi("textOutput").value = retString;
-		var yourMessage = "Enter your name here: \n" + retString;
-		var subject = "NFL Pickems - Week" + week;
-		document.location.href = "mailto:andre-claude.paulin@ultra-tcs.com?subject="
-        + encodeURIComponent(subject)
-        + "&body=" + encodeURIComponent(yourMessage);
-*/
-		submitPicksObject.open("POST", "submitPicks/results/12345");
-		submitPicksObject.send(JSON.stringify(pickObj, null, 2));
-		
-	}
-	else
-	{
-		gebi("textOutput").value = retCode;
-		alert(retCode);
-	}
-	
-	
-}
-
-submitPicksObject.onreadystatechange = function()
-{
-	if (this.readyState == 4 && this.status == 200)
-	{
-		alert(submitPicksObject.responseText);
-	}
-}
-
-
-
-var getPlayersAndConfig = function()
-{
-	getSeasonObj.open("GET", "/getseason/all/" + Math.floor(10000*Math.random()));
-	getSeasonObj.send();
-
+	gebi("divChoices").style.visibility = "hidden";
 	getConfigObj.open("GET", "config.json");
 	getConfigObj.send();
-	
-	getPlayersObj.open("GET", "/getplayers/all/" + Math.floor(10000*Math.random()));
-	setTimeout('getPlayersObj.send();', 300);
-}
-
-getSeasonObj.onreadystatechange = function()
-{
-	if (this.readyState == 4 && this.status == 200)
-	{
-		season = JSON.parse(getSeasonObj.responseText);
-	}
-}
+} 
 
 getConfigObj.onreadystatechange = function()
 {
 	if (this.readyState == 4 && this.status == 200)
 	{
-		config = JSON.parse(getConfigObj.responseText);
+		config = JSON.parse(this.responseText);
+		getSeasonInfo();
 	}
 }
+
+var getSeasonInfo = function()
+{
+	getSeasonObj.open("GET", "/getseason/all/" + Math.floor(10000*Math.random()));
+	getSeasonObj.send();
+} 
+
+
+getSeasonObj.onreadystatechange = function()
+{
+	if (this.readyState == 4 && this.status == 200)
+	{
+		season = JSON.parse(this.responseText);
+		getPlayersInfo();
+	}
+}
+
+
+var getPlayersInfo = function()
+{
+	getPlayersObj.open("GET", "/getplayers/all/" + Math.floor(10000*Math.random()));
+	getPlayersObj.send();
+} 
 
 getPlayersObj.onreadystatechange = function()
 {
@@ -398,8 +194,6 @@ getPlayersObj.onreadystatechange = function()
 	{
 		allPlayers = JSON.parse(getPlayersObj.responseText);
 		players = new Array();
-		loadMatchups();
-		loadPicks();
 		if (window.location.search.match(/type=job/) != null)
 		{
 			for(var i = 0; i < allPlayers.length; i++)
@@ -424,40 +218,77 @@ getPlayersObj.onreadystatechange = function()
 		{
 			gebi("nameSelect").add(new Option(players[i].name, players[i].name));
 		}
-		showResultButton();
 	}
 }
 
+var login = function()
+{
+	var loginObj = new Object();
+	loginObj.name = gebi("nameSelect").value;
+	loginObj.password = gebi("passwordText").value;
 
-
-
-var loadPlayers = function()
-{	
-	//loadMatchups();
-	//loadPicks();
-	getPlayersAndConfig();
+	pickObj.name = loginObj.name;
+	pickObj.password = loginObj.password;
+	
+	getLoginInfo.open("POST", "/login/player/" + Math.floor(10000*Math.random()));
+	getLoginInfo.send(JSON.stringify(loginObj, null, 2));
 }
 
-var showResultButton = function()
+getLoginInfo.onreadystatechange = function()
 {
-	//loadMatchups();
-	//loadPicks();
-	var resultButton = document.createElement("input");
-	resultButton.type = "button";
-	resultButton.value = "Show Result"
-	resultButton.addEventListener("click", function() {
-		showResult();
-	});
-	gebi("buttonSection").appendChild(resultButton);
-	if (config.draftPeriod == "false")
+	if (this.readyState == 4 && this.status == 200)
 	{
-		resultButton.click();
+		//alert(this.responseText);
+		var totalPicks = JSON.parse(this.responseText);
+		if (totalPicks.returnCode == "OK")
+		{
+			allPlayers = totalPicks.picks;
+			players = allPlayers;
+			showResult();
+			//var t = gebi("resultsTable");
+			for(var p =0 ; p < players.length; p++)
+			{
+				if (players[p].name == pickObj.name)
+				{
+					pickObj.weeks =  players[p].weeks;
+				}
+				/*var r = t.insertRow(-1);
+				//var c = r.insertCell(-1);
+				//c.colSpan = 5;
+				//c.textContent = totalPicks[p].name + " : " + totalPicks[p].type;
+				for(var w = 0 ; w < totalPicks[p].weeks.length; w++)
+				{
+					r = t.insertRow(-1);
+					c = r.insertCell(-1);
+					c.textContent = "Week #" + totalPicks[p].weeks[w].week;
+					c = r.insertCell(-1);
+					c.textContent = "5pts: " + totalPicks[p].weeks[w].pick5;
+					c = r.insertCell(-1);
+					c.textContent = "4pts: " + totalPicks[p].weeks[w].pick4;
+					c = r.insertCell(-1);
+					c.textContent = "3pts: " + totalPicks[p].weeks[w].pick3;
+					c = r.insertCell(-1);
+					c.textContent = "2pts: " + totalPicks[p].weeks[w].pick2;
+					c = r.insertCell(-1);
+					c.textContent = "1pts: " + totalPicks[p].weeks[w].pick1;
+					c = r.insertCell(-1);
+					c.textContent = "DM (6pts): " + totalPicks[p].weeks[w].designatedMatchUp;
+					
+				}
+				*/
+			}
+		}
+		else
+		{
+			alert("WRONG PASSWORD");
+		}
 	}
 }
 
 var pointsCalculated = false;
 var showResult = function()
 {
+	gebi("loginDiv").style.visibility = "hidden";
 	gebi("divChoices").style.visibility = "hidden";
 	gebi("divOutput").style.visibility = "hidden";
 	gebi("divResults").style.visibility = "visible";
@@ -475,8 +306,8 @@ var showResult = function()
 		c.colSpan = 3;
 		var rb = document.createElement("input");
 		rb.type = "button";
-		rb.value = "Return to Main View";
-		rb.addEventListener("click", function() {returnFromResults();});
+		rb.value = "Submit Picks";
+		rb.addEventListener("click", function() {gotoChoiceView();});
 		c.appendChild(rb);
 
 		r = tt.insertRow(-1);
@@ -506,36 +337,9 @@ var showResult = function()
 			}
 		}
 
-		var tm = document.createElement("table");
-		tm.className = "matchupTableSummary";
-		r = tm.insertRow(-1);
-		c = r.insertCell(-1);
-		c.colSpan = 3;
-		c.textContent = "WEEK " + config.week + " MATCHUPS";
-
-		r = tm.insertRow(-1);
-		c = r.insertCell(-1);
-		c.textContent = "AWAY";
-		c = r.insertCell(-1);
-		c = r.insertCell(-1);
-		c.textContent = "HOME";
-		
-		
-		for (var i=0; i < season[config.week-1].matchups.length; i++)
-		{
-			r = tm.insertRow(-1);
-			c = r.insertCell(-1);
-			c.textContent = season[config.week-1].matchups[i][0];
-			c.className = stylePick(config.week, season[config.week-1].matchups[i][0]);
-			c = r.insertCell(-1);
-			c.textContent = " vs. ";
-			c = r.insertCell(-1);
-			c.textContent = season[config.week-1].matchups[i][1];
-			c.className = stylePick(config.week, season[config.week-1].matchups[i][1]);
-		}
-
-
+		var tm = createMatchupTable(config.week);
 		var tTop = document.createElement("table");
+		tTop.id ="resultTopTable";
 		var r = tTop.insertRow(-1);
 		var c = r.insertCell(-1);
 		c.appendChild(tt);
@@ -619,6 +423,41 @@ var showResult = function()
 		
 	}	
 }
+
+var createMatchupTable = function(week)
+{
+	var tm = document.createElement("table");
+	tm.id = "matchupTable";
+	tm.className = "matchupTableSummary";
+	r = tm.insertRow(-1);
+	c = r.insertCell(-1);
+	c.colSpan = 3;
+	c.textContent = "WEEK " + week + " MATCHUPS";
+
+	r = tm.insertRow(-1);
+	c = r.insertCell(-1);
+	c.textContent = "AWAY";
+	c = r.insertCell(-1);
+	c = r.insertCell(-1);
+	c.textContent = "HOME";
+
+
+	for (var i=0; i < season[week-1].matchups.length; i++)
+	{
+		r = tm.insertRow(-1);
+		c = r.insertCell(-1);
+		c.textContent = season[week-1].matchups[i][0];
+		c.className = stylePick(config.week, season[week-1].matchups[i][0]);
+		c = r.insertCell(-1);
+		c.textContent = " vs. ";
+		c = r.insertCell(-1);
+		c.textContent = season[week-1].matchups[i][1];
+		c.className = stylePick(config.week, season[week-1].matchups[i][1]);
+	}
+	return tm;
+
+}
+
 
 var stylePick = function(week, pick)
 {
@@ -716,42 +555,293 @@ var sortPlayers = function()
 	}
 }
 
-var returnFromResults = function()
+var gotoChoiceView = function()
 {
 	gebi("divChoices").style.visibility = "visible";
 	gebi("divOutput").style.visibility = "visible";
 	gebi("divResults").style.visibility = "hidden";
+	loadPicks();
 
+}
+
+var loadPicks = function()
+{
+	var t = gebi("pickTable");
+	var r = t.insertRow(-1);
+	var c = r.insertCell(-1);
+	var startWeek = config.week;
+	if (config.draftPeriod == "false")
+	{
+		startWeek++;
+	}
+	c.colSpan = 2;
+	c.textContent = "WEEK " + startWeek  + " to 17 PICKS for " + pickObj.name;
+	
+	
+	r = t.insertRow(-1);
+	c = r.insertCell(-1);
+	c.textContent = "Week"
+	
+	c = r.insertCell(-1);
+	var nameSelect = document.createElement("select");
+	nameSelect.id = "weekSelect";
+	nameSelect.addEventListener("change", changeWeekSelect);
+	for(var i = startWeek; i <= 17; i++)
+	{
+		var o = new Option("Week " + i, i);
+		nameSelect.add(o);
+	}
+	c.appendChild(nameSelect);
+	nameSelect.value = startWeek;
+	weekSelectOldValue = startWeek;
+	
+	
+	r = t.insertRow(-1);
+	c = r.insertCell(-1);
+	c.textContent = "Points (Rank)"
+	
+	c = r.insertCell(-1)
+	c.textContent = "Selection"
+	
+	for(var i = 5; i >= 1; i--)
+	{
+		r = t.insertRow(-1);
+		c = r.insertCell(-1);
+		c.textContent = i+"pts";
+		
+		c = r.insertCell(-1);
+		var s = document.createElement("select");
+		s.id = "pick" + i;
+		s.add(new Option("",""));
+		for(var team = 0; team < teams.length; team++)
+		{
+			s.add(new Option(teams[team], teams[team]));
+		}
+		try
+		{
+			s.value = pickObj.weeks[startWeek-1]["pick" + i];
+		}
+		catch(e)
+		{
+			// Best effort
+		}
+		c.appendChild(s);
+	}
+	
+	if (season[config.week -1].designatedMatchUp.length == 0)
+	{
+		//season[config.week -1].designatedMatchUp = season[config.week -1].matchups[2];
+	}
+	r = t.insertRow(-1);
+	c = r.insertCell(-1);
+	c.colSpan = 2;
+	c.textContent = "Designated Matchup (6pts) : " + season[config.week -1].designatedMatchUp[0] + " vs. " + season[config.week -1].designatedMatchUp[1];
+
+	
+	r = t.insertRow(-1);
+	c = r.insertCell(-1);
+	c.id = "designatedMatchupTd";
+	c.colSpan = 2;
+	s = document.createElement("select");
+	s.id = "designatedMatchUp";
+	s.add(new Option("",""));
+	s.add(new Option(season[config.week -1].designatedMatchUp[0], season[config.week -1].designatedMatchUp[0]));
+	s.add(new Option(season[config.week -1].designatedMatchUp[1], season[config.week -1].designatedMatchUp[1]));
+	if (pickObj.weeks[startWeek-1] != undefined)
+	{
+		s.value = pickObj.weeks[startWeek-1].designatedMatchUp;
+	}
+	else
+	{
+		s.value = "";
+	}
+	c.appendChild(s);
+
+	changeWeekSelect();
+
+}
+
+var changeWeekSelect = function(e)
+{
+	var s = gebi("weekSelect");
+
+	if (gebi("matchupTable2") != undefined)
+	{
+		gebi("matchupTd").removeChild(gebi("matchupTable2"));
+	}
+	var ret = storePicValues(weekSelectOldValue);
+
+	if (ret == 0)
+	{
+		weekSelectOldValue = s.value;
+		var mt = createMatchupTable(s.value);
+		mt.id = "matchupTable2";
+		gebi("matchupTd").appendChild(mt);
+
+		for(var i = 5; i >= 1; i--)
+		{
+			var pickSelect = gebi("pick"+i);
+			if (pickObj.weeks[s.value -1] != undefined)
+			{
+				pickSelect.value = pickObj.weeks[s.value -1]["pick" + i];
+			}
+			else
+			{
+				pickSelect.value = "";
+			}
+		}
+		gebi("designatedMatchupTd").removeChild(gebi("designatedMatchUp"));
+		var dms = document.createElement("select");
+		dms.id = "designatedMatchUp";
+		dms.add(new Option("",""));
+		dms.add(new Option(season[s.value -1].designatedMatchUp[0], season[s.value -1].designatedMatchUp[0]));
+		dms.add(new Option(season[s.value -1].designatedMatchUp[1], season[s.value -1].designatedMatchUp[1]));
+		if (pickObj.weeks[s.value -1] != undefined)
+		{
+			dms.value = pickObj.weeks[s.value -1].designatedMatchUp
+		}
+		else
+		{
+			dms.value = "";
+		}
+		gebi("designatedMatchupTd").appendChild(dms);
+	}
+	else
+	{
+		s.value = weekSelectOldValue;
+		alert("Cannot change week because " + ret);
+		
+	}
+}
+
+var storePicValues = function (week)
+{
+	var retCode = 0;
+	var picksValidation = new Array();
+	if (pickObj.weeks[week-1] == undefined)
+	{
+		for(var i=1; i <= week; i++)
+		{
+			if (pickObj.weeks[i-1] == undefined)
+			{
+				// Creating all empty weeks until reaching the selected one
+				pickObj.weeks[i-1] = new Object();
+				pickObj.weeks[i-1].week = i;
+				pickObj.weeks[i-1].pick1 = "";
+				pickObj.weeks[i-1].pick2 = "";
+				pickObj.weeks[i-1].pick3 = "";
+				pickObj.weeks[i-1].pick4 = "";
+				pickObj.weeks[i-1].pick5 = "";
+				pickObj.weeks[i-1].designatedMatchUp = "";
+			}
+		}
+	}
+	for (i=5; i >=1; i--)
+	{
+		for(var b=0; b < season[week -1].bye.length; b++)
+		{
+			if (gebi("pick" + i).value == season[week -1].bye[b])
+			{
+				retCode = "Pick has a bye week.";					
+			}
+		}
+		if (picksValidation[gebi("pick" + i).value] == undefined || gebi("pick" + i).value == "")
+		{
+			pickObj.weeks[week-1]["pick" + i] = gebi("pick" + i).value;
+			picksValidation[gebi("pick" + i).value] = 1;
+		}
+		else
+		{
+			retCode = "Dupplicated Pick";
+			console.log("Dupplicated Pick");
+		}
+	}
+	pickObj.weeks[week-1]["designatedMatchUp"] = gebi("designatedMatchUp").value;
+	
+	return retCode;
+	
+}
+
+
+var submitPicks = function()
+{
+	//alert("The SITE is not ready.  This is just for demonstration purposes");
+	var retString = ",\n{\n\tweek : " + config.week + ",\n";
+	var retCode = 0;
+	retCode = storePicValues(weekSelectOldValue);
+	
+	if (retCode == 0)
+	{
+		submitPicksObject.open("POST", "submitPicks/results/12345");
+		submitPicksObject.send(JSON.stringify(pickObj, null, 2));
+		//alert(JSON.stringify(pickObj, null, 1));
+		
+	}
+	else
+	{
+		alert(retCode);
+	}
+	
+	
+}
+
+submitPicksObject.onreadystatechange = function()
+{
+	if (this.readyState == 4 && this.status == 200)
+	{
+		alert(submitPicksObject.responseText);
+	}
+}
+
+
+
+
+var gebi = function(id)
+{
+	return document.getElementById(id);
 }
 </script>
 </head>
-<body onload="loading();">
-	<h1>NFL Pickems 2017</h1>
-	<div id="divChoices">
-		<table>
-			<tr>
-				<td>
-					<table id="matchupTable">
-					</table>
-				</td>
-				<td>
-					<table id="pickTable">
-					</table>
-				</td>
-			</tr>
-			<tr>
-				<td id="">
-				</td>
-				<td id="buttonSection">
-					<input type="button" value="submit" onclick="submitPicks();"/>
-				</td>
-			</tr>
-		</table>
-	</div>
-	<div id="divOutput">
-		<textarea cols="45" rows="10" id="textOutput" ></textarea>
-	</div>
-	<div id="divResults">
-	</div>
+<body onload="getConfigInfo();" >
+<h1> Le Pool des Palourdes 2018</h1>
+<div id="loginDiv">
+	<table>
+		<tr>
+			<td>Joueur/Player</td>
+			<td>Password</td>
+		</tr>
+		<tr>
+			<td><select id="nameSelect"></select></td>
+			<td><input id="passwordText" value="" /></td>
+			<td><input type="button" id="loginButton" value="Login" onclick="login();"</td>
+		</tr>
+	
+	
+	</table>
+</div>	
+<div id="divResults">
+</div>
+<div id="divOutput"></div>
+<div id="divChoices">
+	<table>
+		<tr>
+			<td id="matchupTd">
+				<table id="matchupTable2">
+				</table>
+			</td>
+			<td>
+				<table id="pickTable">
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td id="">
+			</td>
+			<td id="buttonSection">
+				<input type="button" value="submit" onclick="submitPicks();"/>
+			</td>
+		</tr>
+	</table>
+</div>
 </body>
 </html>

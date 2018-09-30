@@ -16,24 +16,21 @@ var players = null;
 var transporter = null;
 
 var endPhrases = new Array(
-	//"I think I have been hacked.  Those can't possibly be your choices.  Someone must really wants to put a joke on you to submit these to your name!",
-	//"I am looking at these choices and I cannot stop laughing!!!",
-	//"Maybe next year you should enroll in a badminton Pickem!!",
-	//"Based on these choices, I wouldn't watch TV on Sunday if I were you...",
-	//"You can change these picks until Thursday noon.  I strongly recommend that you do!",
-	//"Mppffffftttt, mppffffftttt, mppffffftttt  POUHAHAHAHAHAHAAHA!!!!!  Those are f-u-n-n-y!!!!!\nThank you for that, my day was boring so far.",
-	//"Are you picking your teams because you like their shirt color?  Sure looks like it...",
-	//"Reminder, the goal of this game is to finish on top.  Looking at your picks, I figured you didn't know that.",
+	"I think I have been hacked.  Those can't possibly be your choices.  Someone must really wants to put a joke on you to submit these to your name!",
+	"I am looking at these choices and I cannot stop laughing!!!",
+	"Maybe next year you should enroll in a badminton Pickem!!",
+	"Based on these choices, I wouldn't watch TV on Sunday if I were you...",
+	"You can change these picks until Thursday noon.  I strongly recommend that you do!",
+	"Mppffffftttt, mppffffftttt, mppffffftttt  POUHAHAHAHAHAHAAHA!!!!!  Those are f-u-n-n-y!!!!!\nThank you for that, my day was boring so far.",
+	"Are you picking your teams because you like their shirt color?  Sure looks like it...",
+	"Reminder, the goal of this game is to finish on top.  Looking at your picks, I figured you didn't know that.",
 	"You could at least make the effort of looking at the screen while making your picks!",
-	//"I hope you at least have a great personality...",
+	"I hope you at least have a great personality...",
 	"If your place in society was based based on these choices, you would have to go to jail.  These are a crime against football!!!!!!",
-	//"Up until now the worst decision in gambling history was made by Pete Rose, you sadly beat him by a long stretch!",
+	"Up until now the worst decision in gambling history was made by Pete Rose, you sadly beat him by a long stretch!",
 	"Maybe I should make an 'Insta-pick' feature just for you...",
 	"Geeeeeese... If you don't want to play anymore, just quit!",
-	//"You are lucky my 'Rejected for stupidity' feature is not yet implemented.",
-	"Here's a New Year resolution for you: I will stop making bad football picks in 2018!",
-	"I hope you asked for some Football Wisdom for Christmas!",
-	"Luckily for you, the season ending is close!"
+	"You are lucky my 'Rejected for stupidity' feature is not yet implemented."
 
 );
 
@@ -52,9 +49,10 @@ var endPhrasesPerso = [
 //		phrases: ["Admit that all those test equipments are not used to test the modems but to help you in your picks!?!?!"]
 //	},
 	{
-		name: "Pascale",
-		phrases: ["(Avec l'air de Vive le vent!) Clavicule, clavicule, clavicule petée. Aaron a mal, Les Packs sont out, y'a pas d'playoffs c't'année!"]
+		name: "Pascale Paulin",
+//		phrases: ["(Avec l'air de Vive le vent!) Clavicule, clavicule, clavicule petée. Aaron a mal, Les Packs sont out, y'a pas d'playoffs c't'année!"]
 //		phrases: ["Y'a tellement d'hommes qui connaissent le football dans ton entourage, tu devrais définitivement les consulter avec de faire tes choix!"]
+		phrases: ["C'est ca tes choix!?!?!  Tu dois vraiment manquer de sommeil!  Reste couché le matin..."]
 	},
 //	{
 //		name: "Ted Knowles",
@@ -66,8 +64,8 @@ var endPhrasesPerso = [
 	},
 	{
 		name: "Ariane",
-//		phrases : ["Aaaaaa le confort de la cave du classement, avec ces choix on dirait que tu t'y es installé un foyer et que tu veux y rester."]
-		phrases : ["Fa que..... Tu trouves que je ne me renouvelle pas assez?  Messemble que si je regarde le classement, ça fait un p'tit boute que tu n'as pas RENOUVELLÉ ta position!!! Un sérieux cas du chaudron qui se moque de la poêle!"]
+		phrases : ["Aaaaaa le confort de la cave du classement, avec ces choix on dirait que tu y encore cette saison!  Je suis tellement content de renouer avec toi!"]
+//		phrases : ["Fa que..... Tu trouves que je ne me renouvelle pas assez?  Messemble que si je regarde le classement, ça fait un p'tit boute que tu n'as pas RENOUVELLÉ ta position!!! Un sérieux cas du chaudron qui se moque de la poêle!"]
 	},
 /*	{
 		name: "M-A Leblanc",
@@ -76,7 +74,7 @@ var endPhrasesPerso = [
 */
 	{
 		name: "Genevieve",
-		phrases : ["Pout Noel j'espère que tu as demandé de la ponctualité, tu en as franchement besoin!"]
+		phrases : ["J'espere que ta progeniture, n'a pas herite de ton talent d'analyste!"]
 //		phrases : ["Ok Maxime tu peux arrêter de niasier!  Je sais que c'est toi!!!  (Junior Duguay en 2ieme position, c'est pas crédible...)"]
 	},
 /*	{
@@ -195,23 +193,36 @@ router.route("/login/:type/:arg1").post(function(req, res, next)
 	debug(newLoginObj.name + " : " + newLoginObj.password);
 	
 	var playersString = fs.readFileSync("players.json", "utf8");
-	var playersObj = JSON.parse(playersString);
-	for(var p = 0; p < playersObj.length; p++)
+	var playersObj = new Object();
+	playersObj.picks = JSON.parse(playersString);
+	if (checkPassword(newLoginObj) != true)
 	{
-		for(var w=0; w < playersObj[p].weeks.length; w++)
+		playersObj = new Object();
+		playersObj.returnCode = "WRONg PASSWORD";
+	}
+	else
+	{
+		for(var p = 0; p < playersObj.picks.length; p++)
 		{
-			if ((newLoginObj.name != playersObj[p].name && playersObj[p].weeks[w].week > (config.week-0)) ||
-				(newLoginObj.name != playersObj[p].name && playersObj[p].weeks[w].week == (config.week-0) && config.draftPeriod == "true"))
+			for(var w=0; w < playersObj.picks[p].weeks.length; w++)
 			{
-				playersObj[p].weeks[w].pick5 = "";
-				playersObj[p].weeks[w].pick4 = "";
-				playersObj[p].weeks[w].pick3 = "";
-				playersObj[p].weeks[w].pick2 = "";
-				playersObj[p].weeks[w].pick1 = "";
-				playersObj[p].weeks[w].designatedMatchUp = "";
+				debug("Checking for " + newLoginObj.name + " : " + playersObj.picks[p].name + " : " + w  + " : " + config.week);
+				if ((newLoginObj.name != playersObj.picks[p].name && w > (config.week-1)) ||
+					(newLoginObj.name != playersObj.picks[p].name && w == (config.week-1) && config.draftPeriod == "true"))
+				{
+					debug("Removing week " + (w+1) + " for " +  newLoginObj.name);
+					playersObj.picks[p].weeks[w].pick5 = "";
+					playersObj.picks[p].weeks[w].pick4 = "";
+					playersObj.picks[p].weeks[w].pick3 = "";
+					playersObj.picks[p].weeks[w].pick2 = "";
+					playersObj.picks[p].weeks[w].pick1 = "";
+					playersObj.picks[p].weeks[w].designatedMatchUp = "";
+				}
+				
 			}
-			
 		}
+		debug("Return Code = OK");
+		playersObj.returnCode = "OK";
 	}
     res.send(JSON.stringify(playersObj, null, 2));
 });
@@ -228,16 +239,13 @@ router.route("/getplayers/:type/:arg1").get(function(req, res, next)
 		{
 			for(var w=0; w < playersObj[p].weeks.length; w++)
 			{
-				debug("checking player " + playersObj[p].name + " : week " + w);
-				if (playersObj[p].weeks[w].week == config.week)
-				{
-					playersObj[p].weeks[w].pick5 = "";
-					playersObj[p].weeks[w].pick4 = "";
-					playersObj[p].weeks[w].pick3 = "";
-					playersObj[p].weeks[w].pick2 = "";
-					playersObj[p].weeks[w].pick1 = "";
-					playersObj[p].weeks[w].designatedMatchUp = "";
-				}
+				debug("Cleaning up player " + playersObj[p].name + " : week " + w);
+				playersObj[p].weeks[w].pick5 = "";
+				playersObj[p].weeks[w].pick4 = "";
+				playersObj[p].weeks[w].pick3 = "";
+				playersObj[p].weeks[w].pick2 = "";
+				playersObj[p].weeks[w].pick1 = "";
+				playersObj[p].weeks[w].designatedMatchUp = "";
 			}
 		}
 	}
@@ -362,7 +370,7 @@ router.route("/submitPicks/:type/:arg1").post(function(req, res, next)
 		if (checkPassword(newPick) == true)
 		{
 			var ret = placePick(newPick)
-			var emailbody = "The following picks were received from " + newPick.name + ": \n" + JSON.stringify(newPick.pick, null, 2) + "\n\n";
+			var emailbody = "The picks were received from " + newPick.name + ": \n" + "\n\n";
 			emailbody += findEndPhrase(newPick.name);
 			
 			if (ret == 1)
@@ -401,22 +409,17 @@ router.route("/submitPicks/:type/:arg1").post(function(req, res, next)
 
 var placePick = function(newPick)
 {
+	debug("Placing new pick: \n" + JSON.stringify(newPick, null, 2));
 	for(var i=0; i < players.length; i++)
 	{
-		if (players[i].name == newPick.name)
+		if (players[i].name == newPick.name && players[i].password == newPick.password)
 		{
-			for(var w=config.week -1 ; w < newPick.weeks.length; w++)
-			{
-				if (newPick.weeks[w] != undefined && newPick.weeks[w] != null)
-				{
-					players[i].weeks[w] = newPick.weeks[w];
-				}
-				fs.writeFileSync("players.json",
-					JSON.stringify(players, null, 1),
-					"utf8",
-					errorProcessing);
-				return 2;
-			}
+			players[i].weeks = newPick.weeks;
+			fs.writeFileSync("players.json",
+				JSON.stringify(players, null, 1),
+				"utf8",
+				errorProcessing);
+			return 2;
 		}
 		
 	}
@@ -425,14 +428,18 @@ var placePick = function(newPick)
 	return -1;
 }
 
-var checkPassword = function(newPick)
+var checkPassword = function(loginInfo)
 {
 	var ret = false;
-	
-	for(var i = 0; i < passwords.length && ret==false; i++)
+
+	var playersString = fs.readFileSync("players.json", "utf8");
+	var playersObj = JSON.parse(playersString);
+	for(var p = 0; p < playersObj.length; p++)
 	{
-		if (passwords[i].name == newPick.name && (passwords[i].password == newPick.password || passwords[i].password == ""))
+		debug("Comparing " + loginInfo.password + " : " +  playersObj[p].password);
+		if(loginInfo.name == playersObj[p].name && loginInfo.password == playersObj[p].password)
 		{
+			debug("Found it");
 			ret = true;
 		}
 	}
