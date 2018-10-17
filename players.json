@@ -64,116 +64,6 @@
     "pick5": "Texans",
     "designatedMatchUp": "Chargers",
     "points": 0
-   },
-   {
-    "week": 7,
-    "pick1": "",
-    "pick2": "",
-    "pick3": "",
-    "pick4": "",
-    "pick5": "",
-    "designatedMatchUp": "",
-    "points": 0
-   },
-   {
-    "week": 8,
-    "pick1": "",
-    "pick2": "",
-    "pick3": "",
-    "pick4": "",
-    "pick5": "",
-    "designatedMatchUp": "",
-    "points": 0
-   },
-   {
-    "week": 9,
-    "pick1": "",
-    "pick2": "",
-    "pick3": "",
-    "pick4": "",
-    "pick5": "",
-    "designatedMatchUp": "",
-    "points": 0
-   },
-   {
-    "week": 10,
-    "pick1": "",
-    "pick2": "",
-    "pick3": "",
-    "pick4": "",
-    "pick5": "",
-    "designatedMatchUp": "",
-    "points": 0
-   },
-   {
-    "week": 11,
-    "pick1": "",
-    "pick2": "",
-    "pick3": "",
-    "pick4": "",
-    "pick5": "",
-    "designatedMatchUp": "",
-    "points": 0
-   },
-   {
-    "week": 12,
-    "pick1": "",
-    "pick2": "",
-    "pick3": "",
-    "pick4": "",
-    "pick5": "",
-    "designatedMatchUp": "",
-    "points": 0
-   },
-   {
-    "week": 13,
-    "pick1": "",
-    "pick2": "",
-    "pick3": "",
-    "pick4": "",
-    "pick5": "",
-    "designatedMatchUp": "",
-    "points": 0
-   },
-   {
-    "week": 14,
-    "pick1": "",
-    "pick2": "",
-    "pick3": "",
-    "pick4": "",
-    "pick5": "",
-    "designatedMatchUp": "",
-    "points": 0
-   },
-   {
-    "week": 15,
-    "pick1": "",
-    "pick2": "",
-    "pick3": "",
-    "pick4": "",
-    "pick5": "",
-    "designatedMatchUp": "",
-    "points": 0
-   },
-   {
-    "week": 16,
-    "pick1": "",
-    "pick2": "",
-    "pick3": "",
-    "pick4": "",
-    "pick5": "",
-    "designatedMatchUp": "",
-    "points": 0
-   },
-   {
-    "week": 17,
-    "pick1": "",
-    "pick2": "",
-    "pick3": "",
-    "pick4": "",
-    "pick5": "",
-    "designatedMatchUp": "",
-    "points": 0
    }
   ]
  },
@@ -240,7 +130,17 @@
     "pick3": "Rams",
     "pick4": "Dolphins",
     "pick5": "Eagles",
-    "designatedMatchUp": "Chargers"
+    "designatedMatchUp": "Chargers",
+    "points": 20
+   },
+   {
+    "week": 7,
+    "pick1": "Saints",
+    "pick2": "Vikings",
+    "pick3": "Patriots",
+    "pick4": "Chiefs",
+    "pick5": "Rams",
+    "designatedMatchUp": "Redskins"
    }
   ]
  },
@@ -304,10 +204,20 @@
     "week": 6,
     "pick1": "Patriots",
     "pick2": "Dolphins",
-    "pick3": "Jets",
+    "pick3": "",
     "pick4": "Panthers",
     "pick5": "Rams",
-    "designatedMatchUp": "Chargers"
+    "designatedMatchUp": "",
+    "points": 17
+   },
+   {
+    "week": 7,
+    "pick1": "Eagles",
+    "pick2": "Colts",
+    "pick3": "Chargers",
+    "pick4": "Dolphins",
+    "pick5": "Falcons",
+    "designatedMatchUp": "Cowboys"
    }
   ]
  },
