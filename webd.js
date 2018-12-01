@@ -35,10 +35,10 @@ var endPhrases = new Array(
 );
 
 var endPhrasesPerso = [
-//	{ 
-//		name: "Jean-Francois",
-//		phrases: ["Coudon, as-tu fais tes choix avec ton genou!?!?!"]
-//	},
+	{ 
+		name: "Jean-Francois",
+		phrases: ["Criss pourtant cette année t'as tes deux jambes?  C'est quoi ton excuse!?!?"]
+	},
 //	{ 
 //		name: "Andre Charette",
 //		phrases : ["Avec des choix comme ça, moi aussi j'irais me cacher sur un bateau de croisière à la fin de l'année!  Ce n'est pas que tu le mérites mais ça va te permettre de te faire oublier un peu..."]
@@ -52,7 +52,8 @@ var endPhrasesPerso = [
 		name: "Pascale Paulin",
 //		phrases: ["(Avec l'air de Vive le vent!) Clavicule, clavicule, clavicule petée. Aaron a mal, Les Packs sont out, y'a pas d'playoffs c't'année!"]
 //		phrases: ["Y'a tellement d'hommes qui connaissent le football dans ton entourage, tu devrais définitivement les consulter avec de faire tes choix!"]
-		phrases: ["C'est ca tes choix!?!?!  Tu dois vraiment manquer de sommeil!  Reste couché le matin..."]
+//		phrases: ["C'est ca tes choix!?!?!  Tu dois vraiment manquer de sommeil!  Reste couché le matin..."]
+		phrases: ["Moi qui me disais qu'en allant voir une game live tu finirais par comprendre la game.  Tu devais être trop saoule..."]
 	},
 //	{
 //		name: "Ted Knowles",
@@ -64,7 +65,8 @@ var endPhrasesPerso = [
 	},
 	{
 		name: "Ariane",
-		phrases : ["Aaaaaa le confort de la cave du classement, avec ces choix on dirait que tu y encore cette saison!  Je suis tellement content de renouer avec toi!"]
+		phrases : ["Au moins cette année tu n'es pas toute seule dans la cave..."]
+//		phrases : ["Aaaaaa le confort de la cave du classement, avec ces choix on dirait que tu y encore cette saison!  Je suis tellement content de renouer avec toi!"]
 //		phrases : ["Fa que..... Tu trouves que je ne me renouvelle pas assez?  Messemble que si je regarde le classement, ça fait un p'tit boute que tu n'as pas RENOUVELLÉ ta position!!! Un sérieux cas du chaudron qui se moque de la poêle!"]
 	},
 /*	{
@@ -74,18 +76,19 @@ var endPhrasesPerso = [
 */
 	{
 		name: "Genevieve",
-		phrases : ["J'espere que ta progeniture, n'a pas herite de ton talent d'analyste!"]
+		phrases : ["Tout ce temps d'analyse pour si peu de points...  On t'appellera pas Capitaine Efficacité!"]
+//		phrases : ["J'espere que ta progeniture, n'a pas herite de ton talent d'analyste!"]
 //		phrases : ["Ok Maxime tu peux arrêter de niasier!  Je sais que c'est toi!!!  (Junior Duguay en 2ieme position, c'est pas crédible...)"]
 	},
-/*	{
-		name: "Edwin Faier",
-		phrases : ["Your kids are making picks that are way smarter than yours.  You are the living proof that evolution exists!"]
+	{
+		name: "Jacques Sr. Duguay",
+		phrases : ["Je pensais qu'avec l'age venait la sagesse.  Pauvre toi, il ne te reste pas grand chose."]
 	},
 	{
 		name: "Marc-Andre Castonguay",
-		phrases : ["C'est drôle, j'ai la toune 'Free Falling' qui me vient en tête en regardant tes choix..."]
+		phrases : ["La bible dit: Le derniers seront les premiers.  Toi tu appliques le contraire..."]
 	},
-*/
+
 	{
 		name: "Andre-Claude",
 		phrases : ["Wow! Look at those choices!  You'll probably be the firt Pickem player to be inducted in the football Hall of Fame!!"]

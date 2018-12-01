@@ -92,7 +92,47 @@
     "pick3": "Panthers",
     "pick4": "Bears",
     "pick5": "Chiefs",
-    "designatedMatchUp": "Saints"
+    "designatedMatchUp": "Saints",
+    "points": 20
+   },
+   {
+    "week": 10,
+    "pick1": "Packers",
+    "pick2": "Patriots",
+    "pick3": "Rams",
+    "pick4": "Chargers",
+    "pick5": "Chiefs",
+    "designatedMatchUp": "Redskins",
+    "points": 19
+   },
+   {
+    "week": 11,
+    "pick1": "Panthers",
+    "pick2": "Cardinals",
+    "pick3": "Chargers",
+    "pick4": "Steelers",
+    "pick5": "Saints",
+    "designatedMatchUp": "Giants",
+    "points": 15
+   },
+   {
+    "week": 12,
+    "pick1": "Ravens",
+    "pick2": "Colts",
+    "pick3": "Chargers",
+    "pick4": "Patriots",
+    "pick5": "Saints",
+    "designatedMatchUp": "Bengals",
+    "points": 15
+   },
+   {
+    "week": 13,
+    "pick1": "Saints",
+    "pick2": "Rams",
+    "pick3": "Seahawks",
+    "pick4": "Packers",
+    "pick5": "Chiefs",
+    "designatedMatchUp": "Steelers"
    }
   ]
  },
@@ -189,7 +229,47 @@
     "pick3": "Vikings",
     "pick4": "Raiders",
     "pick5": "Chiefs",
-    "designatedMatchUp": "Rams"
+    "designatedMatchUp": "Rams",
+    "points": 9
+   },
+   {
+    "week": 10,
+    "pick1": "Rams",
+    "pick2": "Falcons",
+    "pick3": "Patriots",
+    "pick4": "Saints",
+    "pick5": "Chiefs",
+    "designatedMatchUp": "Redskins",
+    "points": 16
+   },
+   {
+    "week": 11,
+    "pick1": "Saints",
+    "pick2": "Chiefs",
+    "pick3": "Vikings",
+    "pick4": "Texans",
+    "pick5": "Cardinals",
+    "designatedMatchUp": "Buccaneers",
+    "points": 5
+   },
+   {
+    "week": 12,
+    "pick1": "Eagles",
+    "pick2": "Patriots",
+    "pick3": "Jaguars",
+    "pick4": "Vikings",
+    "pick5": "Saints",
+    "designatedMatchUp": "Bengals",
+    "points": 12
+   },
+   {
+    "week": 13,
+    "pick1": "Bears",
+    "pick2": "Patriots",
+    "pick3": "Chiefs",
+    "pick4": "Saints",
+    "pick5": "Rams",
+    "designatedMatchUp": "Steelers"
    }
   ]
  },
@@ -286,7 +366,47 @@
     "pick3": "Chargers",
     "pick4": "Chiefs",
     "pick5": "Falcons",
-    "designatedMatchUp": "Saints"
+    "designatedMatchUp": "Saints",
+    "points": 23
+   },
+   {
+    "week": 10,
+    "pick1": "Dolphins",
+    "pick2": "Rams",
+    "pick3": "Saints",
+    "pick4": "Steelers",
+    "pick5": "Falcons",
+    "designatedMatchUp": "Redskins",
+    "points": 15
+   },
+   {
+    "week": 11,
+    "pick1": "Bears",
+    "pick2": "Redskins",
+    "pick3": "Chargers",
+    "pick4": "Lions",
+    "pick5": "Steelers",
+    "designatedMatchUp": "Buccaneers",
+    "points": 10
+   },
+   {
+    "week": 12,
+    "pick1": "Patriots",
+    "pick2": "Bears",
+    "pick3": "Saints",
+    "pick4": "Chargers",
+    "pick5": "Steelers",
+    "designatedMatchUp": "Browns",
+    "points": 16
+   },
+   {
+    "week": 13,
+    "pick1": "Eagles",
+    "pick2": "Bears",
+    "pick3": "Browns",
+    "pick4": "Chiefs",
+    "pick5": "Saints",
+    "designatedMatchUp": "Steelers"
    }
   ]
  },
@@ -383,7 +503,47 @@
     "pick3": "Vikings",
     "pick4": "Bears",
     "pick5": "Chiefs",
-    "designatedMatchUp": "Saints"
+    "designatedMatchUp": "Saints",
+    "points": 20
+   },
+   {
+    "week": 10,
+    "pick1": "Saints",
+    "pick2": "Chargers",
+    "pick3": "Packers",
+    "pick4": "Rams",
+    "pick5": "Chiefs",
+    "designatedMatchUp": "Buccaneers",
+    "points": 15
+   },
+   {
+    "week": 11,
+    "pick1": "Packers",
+    "pick2": "Steelers",
+    "pick3": "Chargers",
+    "pick4": "Saints",
+    "pick5": "Panthers",
+    "designatedMatchUp": "Buccaneers",
+    "points": 6
+   },
+   {
+    "week": 12,
+    "pick1": "Bears",
+    "pick2": "Ravens",
+    "pick3": "Patriots",
+    "pick4": "Saints",
+    "pick5": "Chargers",
+    "designatedMatchUp": "Bengals",
+    "points": 15
+   },
+   {
+    "week": 13,
+    "pick1": "Patriots",
+    "pick2": "Packers",
+    "pick3": "Rams",
+    "pick4": "Saints",
+    "pick5": "Chiefs",
+    "designatedMatchUp": "Chargers"
    }
   ]
  },
@@ -480,7 +640,47 @@
     "pick3": "Bears",
     "pick4": "Patriots",
     "pick5": "Chiefs",
-    "designatedMatchUp": "Rams"
+    "designatedMatchUp": "Rams",
+    "points": 13
+   },
+   {
+    "week": 10,
+    "pick1": "Bears",
+    "pick2": "Chargers",
+    "pick3": "Rams",
+    "pick4": "Saints",
+    "pick5": "Patriots",
+    "designatedMatchUp": "Redskins",
+    "points": 16
+   },
+   {
+    "week": 11,
+    "pick1": "Chargers",
+    "pick2": "Redskins",
+    "pick3": "Bears",
+    "pick4": "Steelers",
+    "pick5": "Saints",
+    "designatedMatchUp": "Buccaneers",
+    "points": 12
+   },
+   {
+    "week": 12,
+    "pick1": "Steelers",
+    "pick2": "Bears",
+    "pick3": "Patriots",
+    "pick4": "Chargers",
+    "pick5": "Saints",
+    "designatedMatchUp": "Browns",
+    "points": 20
+   },
+   {
+    "week": 13,
+    "pick1": "Patriots",
+    "pick2": "Bears",
+    "pick3": "Colts",
+    "pick4": "Rams",
+    "pick5": "Chiefs",
+    "designatedMatchUp": "Steelers"
    }
   ]
  },
@@ -577,7 +777,47 @@
     "pick3": "Vikings",
     "pick4": "Bears",
     "pick5": "Chiefs",
-    "designatedMatchUp": "Rams"
+    "designatedMatchUp": "Rams",
+    "points": 14
+   },
+   {
+    "week": 10,
+    "pick1": "Falcons",
+    "pick2": "Rams",
+    "pick3": "Patriots",
+    "pick4": "Chargers",
+    "pick5": "Chiefs",
+    "designatedMatchUp": "Buccaneers",
+    "points": 11
+   },
+   {
+    "week": 11,
+    "pick1": "Falcons",
+    "pick2": "Texans",
+    "pick3": "Saints",
+    "pick4": "Chargers",
+    "pick5": "Steelers",
+    "designatedMatchUp": "Buccaneers",
+    "points": 10
+   },
+   {
+    "week": 12,
+    "pick1": "Texans",
+    "pick2": "Cowboys",
+    "pick3": "Saints",
+    "pick4": "Patriots",
+    "pick5": "Chargers",
+    "designatedMatchUp": "Bengals",
+    "points": 15
+   },
+   {
+    "week": 13,
+    "pick1": "Broncos",
+    "pick2": "Packers",
+    "pick3": "Saints",
+    "pick4": "Seahawks",
+    "pick5": "Chiefs",
+    "designatedMatchUp": "Steelers"
    }
   ]
  },
@@ -674,7 +914,47 @@
     "pick3": "Panthers",
     "pick4": "Bears",
     "pick5": "Chiefs",
-    "designatedMatchUp": "Rams"
+    "designatedMatchUp": "Rams",
+    "points": 14
+   },
+   {
+    "week": 10,
+    "pick1": "Rams",
+    "pick2": "Saints",
+    "pick3": "Patriots",
+    "pick4": "Chargers",
+    "pick5": "Chiefs",
+    "designatedMatchUp": "Redskins",
+    "points": 18
+   },
+   {
+    "week": 11,
+    "pick1": "Bears",
+    "pick2": "Panthers",
+    "pick3": "Saints",
+    "pick4": "Chargers",
+    "pick5": "Steelers",
+    "designatedMatchUp": "Buccaneers",
+    "points": 9
+   },
+   {
+    "week": 12,
+    "pick1": "Texans",
+    "pick2": "Ravens",
+    "pick3": "Saints",
+    "pick4": "Steelers",
+    "pick5": "Patriots",
+    "designatedMatchUp": "Bengals",
+    "points": 11
+   },
+   {
+    "week": 13,
+    "pick1": "Seahawks",
+    "pick2": "Saints",
+    "pick3": "Bears",
+    "pick4": "Rams",
+    "pick5": "Chiefs",
+    "designatedMatchUp": "Chargers"
    }
   ]
  },
@@ -771,7 +1051,47 @@
     "pick3": "Packers",
     "pick4": "Bears",
     "pick5": "Chiefs",
-    "designatedMatchUp": "Rams"
+    "designatedMatchUp": "Rams",
+    "points": 11
+   },
+   {
+    "week": 10,
+    "pick1": "Chargers",
+    "pick2": "Bears",
+    "pick3": "Rams",
+    "pick4": "Chiefs",
+    "pick5": "Saints",
+    "designatedMatchUp": "Redskins",
+    "points": 23
+   },
+   {
+    "week": 11,
+    "pick1": "Bears",
+    "pick2": "Packers",
+    "pick3": "Panthers",
+    "pick4": "Saints",
+    "pick5": "Chargers",
+    "designatedMatchUp": "Buccaneers",
+    "points": 5
+   },
+   {
+    "week": 12,
+    "pick1": "Ravens",
+    "pick2": "Bears",
+    "pick3": "Steelers",
+    "pick4": "Chargers",
+    "pick5": "Saints",
+    "designatedMatchUp": "Bengals",
+    "points": 12
+   },
+   {
+    "week": 13,
+    "pick1": "Rams",
+    "pick2": "Seahawks",
+    "pick3": "Bears",
+    "pick4": "Chiefs",
+    "pick5": "Saints",
+    "designatedMatchUp": "Chargers"
    }
   ]
  },
