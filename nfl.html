@@ -112,6 +112,7 @@ var players;
 var submitPicksObject = new XMLHttpRequest();
 var weekSelectOldValue;
 var pickObj = new Object();
+var type = "";
 
 var teams = new Array(
 	"49ers",
@@ -132,8 +133,8 @@ var teams = new Array(
 	"Rams",
 	"Chargers",
 	"Lions",
-	"NY Giants",
-	"NY Jets",
+	"Giants",
+	"Jets",
 	"Packers",
 	"Panthers",
 	"Patriots",
@@ -196,6 +197,7 @@ getPlayersObj.onreadystatechange = function()
 		players = new Array();
 		if (window.location.search.match(/type=job/) != null)
 		{
+			type = "job";
 			for(var i = 0; i < allPlayers.length; i++)
 			{
 				if (allPlayers[i].type == "job")
@@ -206,6 +208,7 @@ getPlayersObj.onreadystatechange = function()
 		}
 		else
 		{
+			type="perso";
 			for(var i = 0; i < allPlayers.length; i++)
 			{
 				if (allPlayers[i].type != "job")
@@ -325,15 +328,18 @@ var showResult = function()
 
 		for (var i = 0; i < players.length; i++)
 		{
-			r = tt.insertRow(-1);
-			c = r.insertCell(-1);
-			c.textContent = players[i].name;
-			c = r.insertCell(-1);
-			c.textContent = players[i].total;
-			for(var w = 0 ; w < players[i].weeks.length; w++)
+			if (players[i].type == type)
 			{
+				r = tt.insertRow(-1);
 				c = r.insertCell(-1);
-				c.textContent = players[i].weeks[w].points;
+				c.textContent = players[i].name;
+				c = r.insertCell(-1);
+				c.textContent = players[i].total;
+				for(var w = 0 ; w < players[i].weeks.length; w++)
+				{
+					c = r.insertCell(-1);
+					c.textContent = players[i].weeks[w].points;
+				}
 			}
 		}
 
@@ -384,33 +390,35 @@ var showResult = function()
 
 			for (var p = 0; p < players.length; p++)
 			{
-				r = t.insertRow(-1);
-				c = r.insertCell(-1);
-				c.textContent = players[p].name;
-				if (players[p].weeks[i-1] != undefined)
+				if (players[p].type == type)
 				{
+					r = t.insertRow(-1);
 					c = r.insertCell(-1);
-					c.textContent = players[p].weeks[i-1].pick5;
-					c.className = stylePick(i, players[p].weeks[i-1].pick5);
-					
-					c = r.insertCell(-1);					
-					c.textContent = players[p].weeks[i-1].pick4;
-					c.className = stylePick(i, players[p].weeks[i-1].pick4);
-					c = r.insertCell(-1);
-					c.textContent = players[p].weeks[i-1].pick3;
-					c.className = stylePick(i, players[p].weeks[i-1].pick3);
-					c = r.insertCell(-1);
-					c.textContent = players[p].weeks[i-1].pick2;
-					c.className = stylePick(i, players[p].weeks[i-1].pick2);
-					c = r.insertCell(-1);
-					c.textContent = players[p].weeks[i-1].pick1;
-					c.className = stylePick(i, players[p].weeks[i-1].pick1);
-					c = r.insertCell(-1);
-					c.textContent = players[p].weeks[i-1].designatedMatchUp;
-					c.className = stylePick(i, players[p].weeks[i-1].designatedMatchUp);
+					c.textContent = players[p].name;
+					if (players[p].weeks[i-1] != undefined)
+					{
+						c = r.insertCell(-1);
+						c.textContent = players[p].weeks[i-1].pick5;
+						c.className = stylePick(i, players[p].weeks[i-1].pick5);
+						
+						c = r.insertCell(-1);					
+						c.textContent = players[p].weeks[i-1].pick4;
+						c.className = stylePick(i, players[p].weeks[i-1].pick4);
+						c = r.insertCell(-1);
+						c.textContent = players[p].weeks[i-1].pick3;
+						c.className = stylePick(i, players[p].weeks[i-1].pick3);
+						c = r.insertCell(-1);
+						c.textContent = players[p].weeks[i-1].pick2;
+						c.className = stylePick(i, players[p].weeks[i-1].pick2);
+						c = r.insertCell(-1);
+						c.textContent = players[p].weeks[i-1].pick1;
+						c.className = stylePick(i, players[p].weeks[i-1].pick1);
+						c = r.insertCell(-1);
+						c.textContent = players[p].weeks[i-1].designatedMatchUp;
+						c.className = stylePick(i, players[p].weeks[i-1].designatedMatchUp);
 
+					}
 				}
-
 			}
 		}
 

@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 
 
 var webRoot = "./";
-var port = 8080;
+var port = 80;
 
 var passwords = null;
 var config = null;
