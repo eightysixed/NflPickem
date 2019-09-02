@@ -591,13 +591,14 @@ var loadPicks = function()
 	c.textContent = "Week"
 	
 	c = r.insertCell(-1);
-	var nameSelect = document.createElement("select");
+	var nameSelect = document.createElement("input");
 	nameSelect.id = "weekSelect";
+	nameSelect.disabled = true;
 	nameSelect.addEventListener("change", changeWeekSelect);
-	for(var i = startWeek; i <= 17; i++)
+	//for(var i = startWeek; i <= 17; i++)
 	{
-		var o = new Option("Week " + i, i);
-		nameSelect.add(o);
+		//var o = new Option("Week " + i, i);
+		//nameSelect.add(o);
 	}
 	c.appendChild(nameSelect);
 	nameSelect.value = startWeek;

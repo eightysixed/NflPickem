@@ -1,67 +1,128 @@
 [
  {
   "name": "Dede",
-  "paid": false,
+  "paid": true,
   "password": "1212",
   "type": "perso",
   "weeks": [
    {
     "week": 1,
-    "pick1": "Jets",
-    "pick2": "Browns",
-    "pick3": "Bengals",
-    "pick4": "Bears",
-    "pick5": "49ers",
+    "pick1": "Patriots",
+    "pick2": "Cowboys",
+    "pick3": "Chargers",
+    "pick4": "Eagles",
+    "pick5": "Seahawks",
     "designatedMatchUp": "49ers",
-    "points": null
+    "points": 0
    }
   ]
  },
  {
   "name": "Ariane",
-  "paid": false,
+  "paid": true,
   "password": "ariri17",
   "type": "perso",
   "weeks": []
  },
  {
   "name": "Genevieve",
-  "paid": false,
+  "paid": true,
   "password": "",
   "type": "perso",
   "weeks": []
  },
  {
   "name": "Jacques Sr. Duguay",
-  "paid": false,
+  "paid": true,
   "password": "",
   "type": "perso",
-  "weeks": []
+  "weeks": [
+   {
+    "week": 1,
+    "pick1": "Seahawks",
+    "pick2": "Cowboys",
+    "pick3": "Saints",
+    "pick4": "Patriots",
+    "pick5": "Chiefs",
+    "designatedMatchUp": "49ers"
+   }
+  ]
  },
  {
   "name": "Jean-Francois",
-  "paid": false,
+  "paid": true,
   "password": "wawa",
   "type": "perso",
-  "weeks": []
+  "weeks": [
+   {
+    "week": 1,
+    "pick1": "Bears",
+    "pick2": "Browns",
+    "pick3": "Chargers",
+    "pick4": "Patriots",
+    "pick5": "Chiefs",
+    "designatedMatchUp": "Buccaneers"
+   }
+  ]
  },
  {
   "name": "Marc-Andre Castonguay",
-  "paid": false,
+  "paid": true,
   "password": "",
   "type": "perso",
   "weeks": []
  },
  {
   "name": "Marc-Andre Leblanc",
-  "paid": false,
+  "paid": true,
   "password": "",
   "type": "perso",
   "weeks": []
  },
  {
   "name": "Pascale Paulin",
-  "paid": false,
+  "paid": true,
+  "password": "",
+  "type": "perso",
+  "weeks": [
+   {
+    "week": 1,
+    "pick1": "Cowboys",
+    "pick2": "Saints",
+    "pick3": "Seahawks",
+    "pick4": "Vikings",
+    "pick5": "Packers",
+    "designatedMatchUp": "49ers"
+   }
+  ]
+ },
+ {
+  "name": "Gabriel Duguay",
+  "paid": true,
+  "password": "",
+  "type": "perso",
+  "weeks": [
+   {
+    "week": 1,
+    "pick1": "Chiefs",
+    "pick2": "Saints",
+    "pick3": "Rams",
+    "pick4": "Bears",
+    "pick5": "Patriots",
+    "designatedMatchUp": "Buccaneers"
+   }
+  ]
+ },
+ {
+  "name": "David Robert",
+  "paid": true,
+  "password": "",
+  "type": "perso",
+  "weeks": []
+ },
+ {
+  "name": "Emilie Daigle",
+  "paid": true,
   "password": "",
   "type": "perso",
   "weeks": []
@@ -74,13 +135,13 @@
   "weeks": [
    {
     "week": 1,
-    "pick1": "Chiefs",
-    "pick2": "Browns",
-    "pick3": "Patriots",
-    "pick4": "Bears",
-    "pick5": "49ers",
+    "pick1": "Patriots",
+    "pick2": "Cowboys",
+    "pick3": "Chargers",
+    "pick4": "Eagles",
+    "pick5": "Seahawks",
     "designatedMatchUp": "49ers",
-    "points": 11
+    "points": 0
    }
   ]
  },
@@ -90,7 +151,7 @@
   "password": "",
   "type": "job",
   "weeks": []
- }, 
+ },
  {
   "name": "Paolo Giannetti",
   "paid": false,
@@ -147,14 +208,14 @@
   "type": "job",
   "weeks": []
  },
-  {
+ {
   "name": "Sok-Khieng Chum Hun",
   "paid": false,
   "password": "",
   "type": "job",
   "weeks": []
  },
-{
+ {
   "name": "",
   "paid": false,
   "password": "",

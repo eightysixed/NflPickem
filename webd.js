@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 
 
 var webRoot = "./";
-var port = 80;
+var port = 8080;
 
 var passwords = null;
 var config = null;
@@ -64,8 +64,8 @@ var endPhrasesPerso = [
 		phrases : ["Wow! Quels choix!  Tu es sur le point d'être le premier pooleur à être intronisé au temple de la renommé du football!"]
 	},
 	{
-		name: "Ariane",
-		phrases : ["Au moins cette année tu n'es pas toute seule dans la cave..."]
+//		name: "Ariane",
+//		phrases : ["Au moins cette année tu n'es pas toute seule dans la cave..."]
 //		phrases : ["Aaaaaa le confort de la cave du classement, avec ces choix on dirait que tu y encore cette saison!  Je suis tellement content de renouer avec toi!"]
 //		phrases : ["Fa que..... Tu trouves que je ne me renouvelle pas assez?  Messemble que si je regarde le classement, ça fait un p'tit boute que tu n'as pas RENOUVELLÉ ta position!!! Un sérieux cas du chaudron qui se moque de la poêle!"]
 	},
@@ -73,13 +73,14 @@ var endPhrasesPerso = [
 		name: "M-A Leblanc",
 		phrases : ["Tes choix semblent être basés sur les résultats de 10 ans passés.  J'imagine que vous venez de recevoir le journal de Montréal de 2007 à St-Zotique!?!?!"]
 	},
-*/
-	{
-		name: "Genevieve",
-		phrases : ["Tout ce temps d'analyse pour si peu de points...  On t'appellera pas Capitaine Efficacité!"]
+
+//	{
+//		name: "Genevieve",
+//		phrases : ["Tout ce temps d'analyse pour si peu de points...  On t'appellera pas Capitaine Efficacité!"]
 //		phrases : ["J'espere que ta progeniture, n'a pas herite de ton talent d'analyste!"]
 //		phrases : ["Ok Maxime tu peux arrêter de niasier!  Je sais que c'est toi!!!  (Junior Duguay en 2ieme position, c'est pas crédible...)"]
 	},
+
 	{
 		name: "Jacques Sr. Duguay",
 		phrases : ["Je pensais qu'avec l'age venait la sagesse.  Pauvre toi, il ne te reste pas grand chose."]
@@ -88,7 +89,24 @@ var endPhrasesPerso = [
 		name: "Marc-Andre Castonguay",
 		phrases : ["La bible dit: Le derniers seront les premiers.  Toi tu appliques le contraire..."]
 	},
+*/
+	{
+		name : "Gabriel Duguay",
+		phrases : ["Pauvre nouveau, On m'avait dit que tu étais mauvais mais je ne pensais pas pas que c'était si pire que ça!",
+		           "Je vois que les anciens se sont trouvés un 10$ facile...",
+		           "Je ne sais pas si c'est la moustache que coupe le sang au cerveau mais se sont les choix les plus cave que j'ai vu depuis longtemps!"
+		          ]
+	},
+	{
+		name: "Emilie Daigle",
+		phrases : ["Criss, tes choix de pool sont presqu'aussi pire que ton choix de chum!  La saison va etre loooooongue...."]
+	},
+	{
+		name : "David Robert",
+		phrases : ["Je vois que les anciens se sont trouvés un 10$ facile..."
 
+		          ]
+	},
 	{
 		name: "Andre-Claude",
 		phrases : ["Wow! Look at those choices!  You'll probably be the firt Pickem player to be inducted in the football Hall of Fame!!"]
