@@ -13,7 +13,26 @@
     "pick4": "Eagles",
     "pick5": "Seahawks",
     "designatedMatchUp": "49ers",
-    "points": 0
+    "points": 23
+   },
+   {
+    "week": 2,
+    "pick1": "Cowboys",
+    "pick2": "Chiefs",
+    "pick3": "Panthers",
+    "pick4": "Ravens",
+    "pick5": "Patriots",
+    "designatedMatchUp": "Eagles",
+    "points": 12
+   },
+   {
+    "week": 3,
+    "pick1": "Vikings",
+    "pick2": "Packers",
+    "pick3": "Chiefs",
+    "pick4": "Patriots",
+    "pick5": "Cowboys",
+    "designatedMatchUp": "Jaguars"
    }
   ]
  },
@@ -22,14 +41,54 @@
   "paid": true,
   "password": "ariri17",
   "type": "perso",
-  "weeks": []
+  "weeks": [
+   {
+    "week": 1,
+    "pick1": "Rams",
+    "pick2": "Ravens",
+    "pick3": "Vikings",
+    "pick4": "Eagles",
+    "pick5": "Chiefs",
+    "designatedMatchUp": "49ers",
+    "points": 23
+   },
+   {
+    "week": 2,
+    "pick1": "Jaguars",
+    "pick2": "Ravens",
+    "pick3": "Patriots",
+    "pick4": "Vikings",
+    "pick5": "Chiefs",
+    "designatedMatchUp": "Eagles"
+   }
+  ]
  },
  {
   "name": "Genevieve",
   "paid": true,
   "password": "",
   "type": "perso",
-  "weeks": []
+  "weeks": [
+   {
+    "week": 1,
+    "pick1": "Dolphins",
+    "pick2": "Saints",
+    "pick3": "Cowboys",
+    "pick4": "Chiefs",
+    "pick5": "Chargers",
+    "designatedMatchUp": "Buccaneers",
+    "points": 14
+   },
+   {
+    "week": 2,
+    "pick1": "Patriots",
+    "pick2": "Panthers",
+    "pick3": "Ravens",
+    "pick4": "Broncos",
+    "pick5": "Seahawks",
+    "designatedMatchUp": "Falcons"
+   }
+  ]
  },
  {
   "name": "Jacques Sr. Duguay",
@@ -44,7 +103,17 @@
     "pick3": "Saints",
     "pick4": "Patriots",
     "pick5": "Chiefs",
-    "designatedMatchUp": "49ers"
+    "designatedMatchUp": "49ers",
+    "points": 23
+   },
+   {
+    "week": 2,
+    "pick1": "Colts",
+    "pick2": "Chargers",
+    "pick3": "Cowboys",
+    "pick4": "Patriots",
+    "pick5": "Chiefs",
+    "designatedMatchUp": "Eagles"
    }
   ]
  },
@@ -61,7 +130,17 @@
     "pick3": "Chargers",
     "pick4": "Patriots",
     "pick5": "Chiefs",
-    "designatedMatchUp": "Buccaneers"
+    "designatedMatchUp": "Buccaneers",
+    "points": 12
+   },
+   {
+    "week": 2,
+    "pick1": "Bears",
+    "pick2": "Chargers",
+    "pick3": "Seahawks",
+    "pick4": "Saints",
+    "pick5": "Patriots",
+    "designatedMatchUp": "Eagles"
    }
   ]
  },
@@ -70,14 +149,54 @@
   "paid": true,
   "password": "",
   "type": "perso",
-  "weeks": []
+  "weeks": [
+   {
+    "week": 1,
+    "pick1": "Rams",
+    "pick2": "Cowboys",
+    "pick3": "Chiefs",
+    "pick4": "Ravens",
+    "pick5": "Seahawks",
+    "designatedMatchUp": "49ers",
+    "points": 23
+   },
+   {
+    "week": 2,
+    "pick1": "Cowboys",
+    "pick2": "Chargers",
+    "pick3": "Ravens",
+    "pick4": "Chiefs",
+    "pick5": "Patriots",
+    "designatedMatchUp": "Eagles"
+   }
+  ]
  },
  {
   "name": "Marc-Andre Leblanc",
   "paid": true,
   "password": "",
   "type": "perso",
-  "weeks": []
+  "weeks": [
+   {
+    "week": 1,
+    "pick1": "Browns",
+    "pick2": "Eagles",
+    "pick3": "Saints",
+    "pick4": "Chiefs",
+    "pick5": "Seahawks",
+    "designatedMatchUp": "49ers",
+    "points": 20
+   },
+   {
+    "week": 2,
+    "pick1": "Chargers",
+    "pick2": "Bears",
+    "pick3": "Browns",
+    "pick4": "Patriots",
+    "pick5": "Chiefs",
+    "designatedMatchUp": "Eagles"
+   }
+  ]
  },
  {
   "name": "Pascale Paulin",
@@ -92,7 +211,17 @@
     "pick3": "Seahawks",
     "pick4": "Vikings",
     "pick5": "Packers",
-    "designatedMatchUp": "49ers"
+    "designatedMatchUp": "49ers",
+    "points": 23
+   },
+   {
+    "week": 2,
+    "pick1": "Titans",
+    "pick2": "Patriots",
+    "pick3": "Seahawks",
+    "pick4": "Packers",
+    "pick5": "Chiefs",
+    "designatedMatchUp": "Eagles"
    }
   ]
  },
@@ -109,7 +238,18 @@
     "pick3": "Rams",
     "pick4": "Bears",
     "pick5": "Patriots",
-    "designatedMatchUp": "Buccaneers"
+    "designatedMatchUp": "Buccaneers",
+    "points": 11
+   },
+   {
+    "week": 2,
+    "pick1": "Ravens",
+    "pick2": "Texans",
+    "pick3": "Chargers",
+    "pick4": "Chiefs",
+    "pick5": "Patriots",
+    "designatedMatchUp": "Eagles",
+    "points": 0
    }
   ]
  },
@@ -118,14 +258,54 @@
   "paid": true,
   "password": "",
   "type": "perso",
-  "weeks": []
+  "weeks": [
+   {
+    "week": 1,
+    "pick1": "Chiefs",
+    "pick2": "Ravens",
+    "pick3": "Saints",
+    "pick4": "Rams",
+    "pick5": "Falcons",
+    "designatedMatchUp": "49ers",
+    "points": 16
+   },
+   {
+    "week": 2,
+    "pick1": "Saints",
+    "pick2": "Chiefs",
+    "pick3": "Texans",
+    "pick4": "Cowboys",
+    "pick5": "Patriots",
+    "designatedMatchUp": "Eagles"
+   }
+  ]
  },
  {
   "name": "Emilie Daigle",
   "paid": true,
   "password": "",
   "type": "perso",
-  "weeks": []
+  "weeks": [
+   {
+    "week": 1,
+    "pick1": "Bears",
+    "pick2": "Chiefs",
+    "pick3": "Rams",
+    "pick4": "Saints",
+    "pick5": "Patriots",
+    "designatedMatchUp": "Buccaneers",
+    "points": 14
+   },
+   {
+    "week": 2,
+    "pick1": "Chiefs",
+    "pick2": "Panthers",
+    "pick3": "Texans",
+    "pick4": "Ravens",
+    "pick5": "Patriots",
+    "designatedMatchUp": "Eagles"
+   }
+  ]
  },
  {
   "name": "Andre Claude Paulin",
@@ -141,79 +321,335 @@
     "pick4": "Eagles",
     "pick5": "Seahawks",
     "designatedMatchUp": "49ers",
-    "points": 0
+    "points": 23
+   },
+   {
+    "week": 2,
+    "pick1": "Cowboys",
+    "pick2": "Chiefs",
+    "pick3": "Panthers",
+    "pick4": "Ravens",
+    "pick5": "Patriots",
+    "designatedMatchUp": "Eagles",
+    "points": 12
+   },
+   {
+    "week": 3,
+    "pick1": "Vikings",
+    "pick2": "Packers",
+    "pick3": "Chiefs",
+    "pick4": "Patriots",
+    "pick5": "Cowboys",
+    "designatedMatchUp": "Jaguars"
    }
   ]
  },
  {
   "name": "Ted Knowles",
   "paid": false,
-  "password": "",
+  "password": "Ted3",
   "type": "job",
-  "weeks": []
+  "weeks": [
+   {
+    "week": 1,
+    "pick1": "Patriots",
+    "pick2": "Ravens",
+    "pick3": "Eagles",
+    "pick4": "Chargers",
+    "pick5": "Seahawks",
+    "designatedMatchUp": "49ers",
+    "points": 23
+   },
+   {
+    "week": 2,
+    "pick1": "Panthers",
+    "pick2": "Ravens",
+    "pick3": "Chiefs",
+    "pick4": "Texans",
+    "pick5": "Patriots",
+    "designatedMatchUp": "Eagles"
+   }
+  ]
  },
  {
   "name": "Paolo Giannetti",
   "paid": false,
   "password": "",
   "type": "job",
-  "weeks": []
+  "weeks": [
+   {
+    "week": 1,
+    "pick1": "Packers",
+    "pick2": "Saints",
+    "pick3": "Chargers",
+    "pick4": "Seahawks",
+    "pick5": "Chiefs",
+    "designatedMatchUp": "49ers",
+    "points": 23
+   },
+   {
+    "week": 2,
+    "pick1": "Seahawks",
+    "pick2": "Ravens",
+    "pick3": "Patriots",
+    "pick4": "Chiefs",
+    "pick5": "Panthers",
+    "designatedMatchUp": "Eagles"
+   }
+  ]
  },
  {
   "name": "Anne-Marie  Giacometti",
   "paid": false,
   "password": "",
   "type": "job",
-  "weeks": []
+  "weeks": [
+   {
+    "week": 1,
+    "pick1": "Broncos",
+    "pick2": "Patriots",
+    "pick3": "Seahawks",
+    "pick4": "Colts",
+    "pick5": "Bears",
+    "designatedMatchUp": "Buccaneers",
+    "points": 5
+   },
+   {
+    "week": 2,
+    "pick1": "Texans",
+    "pick2": "Panthers",
+    "pick3": "Cowboys",
+    "pick4": "Cardinals",
+    "pick5": "Patriots",
+    "designatedMatchUp": "Eagles"
+   }
+  ]
  },
  {
   "name": "Andre Charette",
   "paid": false,
-  "password": "",
+  "password": "Peanut",
   "type": "job",
-  "weeks": []
+  "weeks": [
+   {
+    "week": 1,
+    "pick1": "Chargers",
+    "pick2": "Cowboys",
+    "pick3": "Saints",
+    "pick4": "Eagles",
+    "pick5": "Seahawks",
+    "designatedMatchUp": "Buccaneers",
+    "points": 15
+   },
+   {
+    "week": 2,
+    "pick1": "Panthers",
+    "pick2": "Chiefs",
+    "pick3": "Texans",
+    "pick4": "Ravens",
+    "pick5": "Patriots",
+    "designatedMatchUp": "Eagles"
+   }
+  ]
  },
  {
   "name": "Souha Al-Sawda",
   "paid": false,
-  "password": "",
+  "password": "coconut",
   "type": "job",
-  "weeks": []
+  "weeks": [
+   {
+    "week": 1,
+    "pick1": "Chargers",
+    "pick2": "Saints",
+    "pick3": "Cowboys",
+    "pick4": "Seahawks",
+    "pick5": "Eagles",
+    "designatedMatchUp": "Buccaneers",
+    "points": 15
+   },
+   {
+    "week": 2,
+    "pick1": "Panthers",
+    "pick2": "Chiefs",
+    "pick3": "Texans",
+    "pick4": "Patriots",
+    "pick5": "Ravens",
+    "designatedMatchUp": "Falcons"
+   }
+  ]
  },
  {
   "name": "Alexis Cauchy",
   "paid": false,
   "password": "",
   "type": "job",
-  "weeks": []
+  "weeks": [
+   {
+    "week": 1,
+    "pick1": "Ravens",
+    "pick2": "Patriots",
+    "pick3": "Browns",
+    "pick4": "Seahawks",
+    "pick5": "Saints",
+    "designatedMatchUp": "49ers",
+    "points": 18
+   },
+   {
+    "week": 2,
+    "pick1": "Texans",
+    "pick2": "Chiefs",
+    "pick3": "Patriots",
+    "pick4": "Ravens",
+    "pick5": "Browns",
+    "designatedMatchUp": "Eagles",
+    "points": 10
+   },
+   {
+    "week": 3,
+    "pick1": "Bills",
+    "pick2": "Eagles",
+    "pick3": "Seahawks",
+    "pick4": "Patriots",
+    "pick5": "Cowboys",
+    "designatedMatchUp": "Titans"
+   }
+  ]
  },
  {
   "name": "Jamal Alex Brathwaite",
   "paid": false,
-  "password": "",
+  "password": "Blue123",
   "type": "job",
-  "weeks": []
+  "weeks": [
+   {
+    "week": 1,
+    "pick1": "Lions",
+    "pick2": "Browns",
+    "pick3": "Chargers",
+    "pick4": "Ravens",
+    "pick5": "Eagles",
+    "designatedMatchUp": "49ers",
+    "points": 18.5
+   },
+   {
+    "week": 2,
+    "pick1": "Patriots",
+    "pick2": "Cowboys",
+    "pick3": "Chargers",
+    "pick4": "Chiefs",
+    "pick5": "Ravens",
+    "designatedMatchUp": "Eagles"
+   }
+  ]
  },
  {
   "name": "Sebastien Leblanc",
   "paid": false,
   "password": "",
   "type": "job",
-  "weeks": []
+  "weeks": [
+   {
+    "week": 1,
+    "pick1": "Jets",
+    "pick2": "Seahawks",
+    "pick3": "Eagles",
+    "pick4": "Cowboys",
+    "pick5": "Chiefs",
+    "designatedMatchUp": "49ers",
+    "points": 20
+   },
+   {
+    "week": 2,
+    "pick1": "Cowboys",
+    "pick2": "Texans",
+    "pick3": "Chargers",
+    "pick4": "Chiefs",
+    "pick5": "Patriots",
+    "designatedMatchUp": "Eagles"
+   }
+  ]
  },
  {
   "name": "Maxime Jodoin",
   "paid": false,
   "password": "",
   "type": "job",
-  "weeks": []
+  "weeks": [
+   {
+    "week": 1,
+    "pick1": "Ravens",
+    "pick2": "Patriots",
+    "pick3": "Cowboys",
+    "pick4": "Seahawks",
+    "pick5": "Eagles",
+    "designatedMatchUp": "Buccaneers",
+    "points": 15
+   },
+   {
+    "week": 2,
+    "pick1": "Cowboys",
+    "pick2": "Texans",
+    "pick3": "Chiefs",
+    "pick4": "Ravens",
+    "pick5": "Patriots",
+    "designatedMatchUp": "Eagles"
+   }
+  ]
  },
  {
   "name": "Sok-Khieng Chum Hun",
   "paid": false,
   "password": "",
   "type": "job",
-  "weeks": []
+  "weeks": [
+   {
+    "week": 1,
+    "pick1": "Raiders",
+    "pick2": "Redskins",
+    "pick3": "Cardinals",
+    "pick4": "Steelers",
+    "pick5": "Cowboys",
+    "designatedMatchUp": "Buccaneers",
+    "points": 7.5
+   },
+   {
+    "week": 2,
+    "pick1": "Buccaneers",
+    "pick2": "Steelers",
+    "pick3": "49ers",
+    "pick4": "Colts",
+    "pick5": "Cowboys",
+    "designatedMatchUp": "Eagles"
+   }
+  ]
+ },
+ {
+  "name": "Kevin Ranger",
+  "paid": false,
+  "password": "Jaydon123",
+  "type": "job",
+  "weeks": [
+   {
+    "week": 1,
+    "pick1": "Chargers",
+    "pick2": "Ravens",
+    "pick3": "Saints",
+    "pick4": "Seahawks",
+    "pick5": "Eagles",
+    "designatedMatchUp": "49ers",
+    "points": 23
+   },
+   {
+    "week": 2,
+    "pick1": "Panthers",
+    "pick2": "Texans",
+    "pick3": "Ravens",
+    "pick4": "Patriots",
+    "pick5": "Chiefs",
+    "designatedMatchUp": "Eagles"
+   }
+  ]
  },
  {
   "name": "",

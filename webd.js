@@ -35,9 +35,10 @@ var endPhrases = new Array(
 );
 
 var endPhrasesPerso = [
-	{ 
+	{ 		
 		name: "Jean-Francois",
-		phrases: ["Criss pourtant cette année t'as tes deux jambes?  C'est quoi ton excuse!?!?"]
+//		phrases: ["Criss pourtant cette année t'as tes deux jambes?  C'est quoi ton excuse!?!?"]
+		phrases: ["Tabarnak.... C'est pas comme ça que tu vas sortir de la cave du classement! "]
 	},
 //	{ 
 //		name: "Andre Charette",
@@ -48,13 +49,13 @@ var endPhrasesPerso = [
 //		name: "Kevin Ranger",
 //		phrases: ["Admit that all those test equipments are not used to test the modems but to help you in your picks!?!?!"]
 //	},
-	{
-		name: "Pascale Paulin",
+//	{
+//		name: "Pascale Paulin",
 //		phrases: ["(Avec l'air de Vive le vent!) Clavicule, clavicule, clavicule petée. Aaron a mal, Les Packs sont out, y'a pas d'playoffs c't'année!"]
 //		phrases: ["Y'a tellement d'hommes qui connaissent le football dans ton entourage, tu devrais définitivement les consulter avec de faire tes choix!"]
 //		phrases: ["C'est ca tes choix!?!?!  Tu dois vraiment manquer de sommeil!  Reste couché le matin..."]
-		phrases: ["Moi qui me disais qu'en allant voir une game live tu finirais par comprendre la game.  Tu devais être trop saoule..."]
-	},
+//		phrases: ["Moi qui me disais qu'en allant voir une game live tu finirais par comprendre la game.  Tu devais être trop saoule..."]
+//	},
 //	{
 //		name: "Ted Knowles",
 //		phrases : ["After seeing the game that close, I tought you would finally understand it.  I guess I was wrong!"]
@@ -97,7 +98,7 @@ var endPhrasesPerso = [
 		           "Je ne sais pas si c'est la moustache que coupe le sang au cerveau mais se sont les choix les plus cave que j'ai vu depuis longtemps!"
 		          ]
 	},
-	{
+	/*{
 		name: "Emilie Daigle",
 		phrases : ["Criss, tes choix de pool sont presqu'aussi pire que ton choix de chum!  La saison va etre loooooongue...."]
 	},
@@ -106,6 +107,10 @@ var endPhrasesPerso = [
 		phrases : ["Je vois que les anciens se sont trouvés un 10$ facile..."
 
 		          ]
+	},*/
+	{
+		name : "Sebastien Leblanc",
+		phrases : ["Encore cette semaine, tu n'as pas trouvé les bonnes équipes...  Mais comme tu n'as pas réussi à trouver le Mont Orford, ce n'est pas surprenant..."]
 	},
 	{
 		name: "Andre-Claude",
@@ -227,11 +232,11 @@ router.route("/login/:type/:arg1").post(function(req, res, next)
 		{
 			for(var w=0; w < playersObj.picks[p].weeks.length; w++)
 			{
-				debug("Checking for " + newLoginObj.name + " : " + playersObj.picks[p].name + " : " + w  + " : " + config.week);
+				//debug("Checking for " + newLoginObj.name + " : " + playersObj.picks[p].name + " : " + w  + " : " + config.week);
 				if ((newLoginObj.name != playersObj.picks[p].name && w > (config.week-1)) ||
 					(newLoginObj.name != playersObj.picks[p].name && w == (config.week-1) && config.draftPeriod == "true"))
 				{
-					debug("Removing week " + (w+1) + " for " +  newLoginObj.name);
+					//debug("Removing week " + (w+1) + " for " +  newLoginObj.name);
 					playersObj.picks[p].weeks[w].pick5 = "";
 					playersObj.picks[p].weeks[w].pick4 = "";
 					playersObj.picks[p].weeks[w].pick3 = "";
@@ -260,7 +265,7 @@ router.route("/getplayers/:type/:arg1").get(function(req, res, next)
 		{
 			for(var w=0; w < playersObj[p].weeks.length; w++)
 			{
-				debug("Cleaning up player " + playersObj[p].name + " : week " + w);
+				//debug("Cleaning up player " + playersObj[p].name + " : week " + w);
 				playersObj[p].weeks[w].pick5 = "";
 				playersObj[p].weeks[w].pick4 = "";
 				playersObj[p].weeks[w].pick3 = "";
@@ -455,11 +460,11 @@ var checkPassword = function(loginInfo)
 
 	var playersString = fs.readFileSync("players.json", "utf8");
 	var playersObj = JSON.parse(playersString);
-	for(var p = 0; p < playersObj.length; p++)
+	for(var p = 0; p < playersObj.length && ret == false; p++)
 	{
-		debug("Comparing " + loginInfo.password + " : " +  playersObj[p].password);
 		if(loginInfo.name == playersObj[p].name && loginInfo.password == playersObj[p].password)
 		{
+			debug("Comparing " + loginInfo.password + " : " +  playersObj[p].password);
 			debug("Found it");
 			ret = true;
 		}

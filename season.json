@@ -141,11 +141,10 @@
     "Jets"
    ]
   ],
-  "bye": [
-  ],
+  "bye": [],
   "designatedMatchUp": [
-   "",
-   ""
+   "Eagles",
+   "Falcons"
   ]
  },
  {
@@ -216,11 +215,10 @@
     "Redskins"
    ]
   ],
-  "bye": [
-  ],
+  "bye": [],
   "designatedMatchUp": [
-   "",
-   ""
+   "Titans",
+   "Jaguars"
   ]
  },
  {
@@ -501,7 +499,10 @@
    ]
   ],
   "bye": [
-   "Panthers", "Browns", "Steelers", "Buccanneers"
+   "Panthers",
+   "Browns",
+   "Steelers",
+   "Buccanneers"
   ],
   "designatedMatchUp": [
    "",
@@ -573,7 +574,8 @@
    ]
   ],
   "bye": [
-   "Ravens", "Cowboys"
+   "Ravens",
+   "Cowboys"
   ],
   "designatedMatchUp": [
    "",
@@ -641,7 +643,10 @@
    ]
   ],
   "bye": [
-   "Falcons", "Bengals", "Rams", "Saints"
+   "Falcons",
+   "Bengals",
+   "Rams",
+   "Saints"
   ],
   "designatedMatchUp": [
    "",
@@ -705,7 +710,12 @@
    ]
   ],
   "bye": [
-   "Broncos", "Texans", "Jaguars", "Patriots", "Eagles", "Redskins"
+   "Broncos",
+   "Texans",
+   "Jaguars",
+   "Patriots",
+   "Eagles",
+   "Redskins"
   ],
   "designatedMatchUp": [
    "",
@@ -773,7 +783,10 @@
    ]
   ],
   "bye": [
-   "Packers", "Giants", "Seahawks", "Titans"
+   "Packers",
+   "Giants",
+   "Seahawks",
+   "Titans"
   ],
   "designatedMatchUp": [
    "",
@@ -841,7 +854,10 @@
    ]
   ],
   "bye": [
-   "Cardinals", "Chiefs", "Chargers", "Vickings"
+   "Cardinals",
+   "Chiefs",
+   "Chargers",
+   "Vickings"
   ],
   "designatedMatchUp": [
    "",
@@ -916,8 +932,7 @@
     "Seahawks"
    ]
   ],
-  "bye": [
-  ],
+  "bye": [],
   "designatedMatchUp": [
    "",
    ""
@@ -991,8 +1006,7 @@
     "Eagles"
    ]
   ],
-  "bye": [
-  ],
+  "bye": [],
   "designatedMatchUp": [
    "",
    ""
@@ -1066,8 +1080,7 @@
     "Saints"
    ]
   ],
-  "bye": [
-  ],
+  "bye": [],
   "designatedMatchUp": [
    "",
    ""
@@ -1141,8 +1154,7 @@
     "Vikings"
    ]
   ],
-  "bye": [
-  ],
+  "bye": [],
   "designatedMatchUp": [
    "",
    ""
@@ -1216,8 +1228,7 @@
     "Seahawks"
    ]
   ],
-  "bye": [
-  ],
+  "bye": [],
   "designatedMatchUp": [
    "",
    ""
