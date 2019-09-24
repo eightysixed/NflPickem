@@ -35,11 +35,11 @@ var endPhrases = new Array(
 );
 
 var endPhrasesPerso = [
-	{ 		
-		name: "Jean-Francois",
+//	{ 		
+//		name: "Jean-Francois",
 //		phrases: ["Criss pourtant cette année t'as tes deux jambes?  C'est quoi ton excuse!?!?"]
-		phrases: ["Tabarnak.... C'est pas comme ça que tu vas sortir de la cave du classement! "]
-	},
+//		phrases: ["Tabarnak.... C'est pas comme ça que tu vas sortir de la cave du classement! "]
+//	},
 //	{ 
 //		name: "Andre Charette",
 //		phrases : ["Avec des choix comme ça, moi aussi j'irais me cacher sur un bateau de croisière à la fin de l'année!  Ce n'est pas que tu le mérites mais ça va te permettre de te faire oublier un peu..."]
@@ -91,27 +91,32 @@ var endPhrasesPerso = [
 		phrases : ["La bible dit: Le derniers seront les premiers.  Toi tu appliques le contraire..."]
 	},
 */
+//	{
+//		name : "Gabriel Duguay",
+//		phrases : ["Pauvre nouveau, On m'avait dit que tu étais mauvais mais je ne pensais pas pas que c'était si pire que ça!",
+//		           "Je vois que les anciens se sont trouvés un 10$ facile...",
+//		           "Je ne sais pas si c'est la moustache que coupe le sang au cerveau mais se sont les choix les plus cave que j'ai vu depuis longtemps!"
+//		          ]
+//	},
 	{
-		name : "Gabriel Duguay",
-		phrases : ["Pauvre nouveau, On m'avait dit que tu étais mauvais mais je ne pensais pas pas que c'était si pire que ça!",
-		           "Je vois que les anciens se sont trouvés un 10$ facile...",
-		           "Je ne sais pas si c'est la moustache que coupe le sang au cerveau mais se sont les choix les plus cave que j'ai vu depuis longtemps!"
-		          ]
-	},
-	/*{
 		name: "Emilie Daigle",
-		phrases : ["Criss, tes choix de pool sont presqu'aussi pire que ton choix de chum!  La saison va etre loooooongue...."]
+//		phrases : ["Criss, tes choix de pool sont presqu'aussi pire que ton choix de chum!  La saison va etre loooooongue...."]
+		phrases : ["Arrête de copier sur ton chum, tu vois ben qu'il ne connait rien!"]
 	},
+//	{
+//		name : "David Robert",
+//		phrases : ["Je vois que les anciens se sont trouvés un 10$ facile..."
+//
+//		          ]
+//	},
 	{
-		name : "David Robert",
-		phrases : ["Je vois que les anciens se sont trouvés un 10$ facile..."
-
-		          ]
-	},*/
-	{
-		name : "Sebastien Leblanc",
-		phrases : ["Encore cette semaine, tu n'as pas trouvé les bonnes équipes...  Mais comme tu n'as pas réussi à trouver le Mont Orford, ce n'est pas surprenant..."]
+		name : "Andre Charette",
+		phrases : ["C'est ça ton choix de match désigné!?!!?  Iiiiiiishhhh.....  Tu as jusqu'à jeudi pour y repenser!"]
 	},
+//	{
+//		name : "Sebastien Leblanc",
+//		phrases : ["Encore cette semaine, tu n'as pas trouvé les bonnes équipes...  Mais comme tu n'as pas réussi à trouver le Mont Orford, ce n'est pas surprenant..."]
+//	},
 	{
 		name: "Andre-Claude",
 		phrases : ["Wow! Look at those choices!  You'll probably be the firt Pickem player to be inducted in the football Hall of Fame!!"]
