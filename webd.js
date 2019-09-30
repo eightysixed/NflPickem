@@ -98,11 +98,11 @@ var endPhrasesPerso = [
 //		           "Je ne sais pas si c'est la moustache que coupe le sang au cerveau mais se sont les choix les plus cave que j'ai vu depuis longtemps!"
 //		          ]
 //	},
-	{
-		name: "Emilie Daigle",
+//	{
+//		name: "Emilie Daigle",
 //		phrases : ["Criss, tes choix de pool sont presqu'aussi pire que ton choix de chum!  La saison va etre loooooongue...."]
-		phrases : ["Arrête de copier sur ton chum, tu vois ben qu'il ne connait rien!"]
-	},
+//		phrases : ["Arrête de copier sur ton chum, tu vois ben qu'il ne connait rien!"]
+//	},
 //	{
 //		name : "David Robert",
 //		phrases : ["Je vois que les anciens se sont trouvés un 10$ facile..."
@@ -118,7 +118,7 @@ var endPhrasesPerso = [
 //		phrases : ["Encore cette semaine, tu n'as pas trouvé les bonnes équipes...  Mais comme tu n'as pas réussi à trouver le Mont Orford, ce n'est pas surprenant..."]
 //	},
 	{
-		name: "Andre-Claude",
+		name: "Andre Claude",
 		phrases : ["Wow! Look at those choices!  You'll probably be the firt Pickem player to be inducted in the football Hall of Fame!!"]
 	}
 ];
