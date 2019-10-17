@@ -64,33 +64,34 @@ var endPhrasesPerso = [
 		name: "Dede",
 		phrases : ["Wow! Quels choix!  Tu es sur le point d'être le premier pooleur à être intronisé au temple de la renommé du football!"]
 	},
-	{
+//	{
 //		name: "Ariane",
 //		phrases : ["Au moins cette année tu n'es pas toute seule dans la cave..."]
 //		phrases : ["Aaaaaa le confort de la cave du classement, avec ces choix on dirait que tu y encore cette saison!  Je suis tellement content de renouer avec toi!"]
 //		phrases : ["Fa que..... Tu trouves que je ne me renouvelle pas assez?  Messemble que si je regarde le classement, ça fait un p'tit boute que tu n'as pas RENOUVELLÉ ta position!!! Un sérieux cas du chaudron qui se moque de la poêle!"]
-	},
+//	},
 /*	{
 		name: "M-A Leblanc",
 		phrases : ["Tes choix semblent être basés sur les résultats de 10 ans passés.  J'imagine que vous venez de recevoir le journal de Montréal de 2007 à St-Zotique!?!?!"]
 	},
-
+*/
 //	{
 //		name: "Genevieve",
 //		phrases : ["Tout ce temps d'analyse pour si peu de points...  On t'appellera pas Capitaine Efficacité!"]
 //		phrases : ["J'espere que ta progeniture, n'a pas herite de ton talent d'analyste!"]
 //		phrases : ["Ok Maxime tu peux arrêter de niasier!  Je sais que c'est toi!!!  (Junior Duguay en 2ieme position, c'est pas crédible...)"]
-	},
+//	},
 
 	{
 		name: "Jacques Sr. Duguay",
-		phrases : ["Je pensais qu'avec l'age venait la sagesse.  Pauvre toi, il ne te reste pas grand chose."]
+//		phrases : ["Je pensais qu'avec l'age venait la sagesse.  Pauvre toi, il ne te reste pas grand chose."]
+		phrases : ["The wheels on the wheelchair go round and round, round and ruond, round and round...  All the way through the cave."]
 	},
 	{
 		name: "Marc-Andre Castonguay",
 		phrases : ["La bible dit: Le derniers seront les premiers.  Toi tu appliques le contraire..."]
 	},
-*/
+
 //	{
 //		name : "Gabriel Duguay",
 //		phrases : ["Pauvre nouveau, On m'avait dit que tu étais mauvais mais je ne pensais pas pas que c'était si pire que ça!",
