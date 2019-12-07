@@ -112,7 +112,8 @@ var endPhrasesPerso = [
 //	},
 	{
 		name : "Andre Charette",
-		phrases : ["C'est ça ton choix de match désigné!?!!?  Iiiiiiishhhh.....  Tu as jusqu'à jeudi pour y repenser!"]
+//		phrases : ["C'est ça ton choix de match désigné!?!!?  Iiiiiiishhhh.....  Tu as jusqu'à jeudi pour y repenser!"]
+		phrases : ["3ième place!!!!  Ben braaaaavoooo!  (Slow clap...) C'est triste d'avoir atteint son top si tot dans la saison.  C'est surtout triste que ton top vaut pas une piastre!"]
 	},
 //	{
 //		name : "Sebastien Leblanc",
