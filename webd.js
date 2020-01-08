@@ -16,7 +16,7 @@ var players = null;
 var transporter = null;
 
 var endPhrases = new Array(
-	"I think I have been hacked.  Those can't possibly be your choices.  Someone must really wants to put a joke on you to submit these to your name!",
+/*	"I think I have been hacked.  Those can't possibly be your choices.  Someone must really wants to put a joke on you to submit these to your name!",
 	"I am looking at these choices and I cannot stop laughing!!!",
 	"Maybe next year you should enroll in a badminton Pickem!!",
 	"Based on these choices, I wouldn't watch TV on Sunday if I were you...",
@@ -30,7 +30,8 @@ var endPhrases = new Array(
 	"Up until now the worst decision in gambling history was made by Pete Rose, you sadly beat him by a long stretch!",
 	"Maybe I should make an 'Insta-pick' feature just for you...",
 	"Geeeeeese... If you don't want to play anymore, just quit!",
-	"You are lucky my 'Rejected for stupidity' feature is not yet implemented."
+	"You are lucky my 'Rejected for stupidity' feature is not yet implemented." */
+	"Be prepare to celebrate greatness!  It is inevitable...  The smartest, most awsome will win.  Since it would be hard to be a worst one, I wish a better year for 2020!  You have 8 months to wise up!  (Hehehe)"
 
 );
 
@@ -60,10 +61,10 @@ var endPhrasesPerso = [
 //		name: "Ted Knowles",
 //		phrases : ["After seeing the game that close, I tought you would finally understand it.  I guess I was wrong!"]
 //	},
-	{
-		name: "Dede",
-		phrases : ["Wow! Quels choix!  Tu es sur le point d'être le premier pooleur à être intronisé au temple de la renommé du football!"]
-	},
+//	{
+//		name: "Dede",
+//		phrases : ["Wow! Quels choix!  Tu es sur le point d'être le premier pooleur à être intronisé au temple de la renommé du football!"]
+//	},
 //	{
 //		name: "Ariane",
 //		phrases : ["Au moins cette année tu n'es pas toute seule dans la cave..."]
@@ -82,15 +83,15 @@ var endPhrasesPerso = [
 //		phrases : ["Ok Maxime tu peux arrêter de niasier!  Je sais que c'est toi!!!  (Junior Duguay en 2ieme position, c'est pas crédible...)"]
 //	},
 
-	{
-		name: "Jacques Sr. Duguay",
+//	{
+//		name: "Jacques Sr. Duguay",
 //		phrases : ["Je pensais qu'avec l'age venait la sagesse.  Pauvre toi, il ne te reste pas grand chose."]
-		phrases : ["The wheels on the wheelchair go round and round, round and ruond, round and round...  All the way through the cave."]
-	},
-	{
-		name: "Marc-Andre Castonguay",
-		phrases : ["La bible dit: Le derniers seront les premiers.  Toi tu appliques le contraire..."]
-	},
+//		phrases : ["The wheels on the wheelchair go round and round, round and ruond, round and round...  All the way through the cave."]
+//	},
+//	{
+//		name: "Marc-Andre Castonguay",
+//		phrases : ["La bible dit: Le derniers seront les premiers.  Toi tu appliques le contraire..."]
+//	},
 
 //	{
 //		name : "Gabriel Duguay",
@@ -110,19 +111,19 @@ var endPhrasesPerso = [
 //
 //		          ]
 //	},
-	{
-		name : "Andre Charette",
+//	{
+//		name : "Andre Charette",
 //		phrases : ["C'est ça ton choix de match désigné!?!!?  Iiiiiiishhhh.....  Tu as jusqu'à jeudi pour y repenser!"]
-		phrases : ["3ième place!!!!  Ben braaaaavoooo!  (Slow clap...) C'est triste d'avoir atteint son top si tot dans la saison.  C'est surtout triste que ton top vaut pas une piastre!"]
-	},
+//		phrases : ["3ième place!!!!  Ben braaaaavoooo!  (Slow clap...) C'est triste d'avoir atteint son top si tot dans la saison.  C'est surtout triste que ton top vaut pas une piastre!"]
+//	},
 //	{
 //		name : "Sebastien Leblanc",
 //		phrases : ["Encore cette semaine, tu n'as pas trouvé les bonnes équipes...  Mais comme tu n'as pas réussi à trouver le Mont Orford, ce n'est pas surprenant..."]
 //	},
-	{
-		name: "Andre Claude",
-		phrases : ["Wow! Look at those choices!  You'll probably be the firt Pickem player to be inducted in the football Hall of Fame!!"]
-	}
+//	{
+//		name: "Andre Claude Paslin",
+//		phrases : ["Wow! Look at those choices!  You'll probably be the firt Pickem player to be inducted in the football Hall of Fame!!"]
+//	}
 ];
 
 
