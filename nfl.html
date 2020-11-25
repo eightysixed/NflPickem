@@ -140,13 +140,13 @@ var teams = new Array(
 	"Raiders",
 	"Rams",
 	"Ravens",
-	"Redskins",
 	"Saints",
 	"Seahawks",
 	"Steelers",
 	"Texans",
 	"Titans",
-	"Vikings"
+	"Vikings",
+	"Washington FC"
 );
 
 
@@ -357,7 +357,7 @@ var showResult = function()
 		t.className = "resultTable";
 		r = t.insertRow(-1);
 		c = r.insertCell(-1);
-		c.colSpan = 7;
+		c.colSpan = 8;
 		c.className = "detailsHeader";
 		c.textContent = "Weekly Details";
 
@@ -384,6 +384,9 @@ var showResult = function()
 			c = r.insertCell(-1);
 			c.className = "detailsHeader";
 			c.textContent = "1 Pts";
+			c = r.insertCell(-1);
+			c.className = "detailsHeader";
+			c.textContent = "Random Matchup";
 			c = r.insertCell(-1);
 			c.className = "detailsHeader";
 			c.textContent = "Designated Matchup";
@@ -413,6 +416,9 @@ var showResult = function()
 						c = r.insertCell(-1);
 						c.textContent = players[p].weeks[i-1].pick1;
 						c.className = stylePick(i, players[p].weeks[i-1].pick1);
+						c = r.insertCell(-1);
+						c.textContent = players[p].weeks[i-1].randomMatchUp;
+						c.className = stylePick(i, players[p].weeks[i-1].randomMatchUp);
 						c = r.insertCell(-1);
 						c.textContent = players[p].weeks[i-1].designatedMatchUp;
 						c.className = stylePick(i, players[p].weeks[i-1].designatedMatchUp);
@@ -515,7 +521,8 @@ var getWeekPoints = function(w)
 	w.points += getPoints(3, w.week, w.pick3);
 	w.points += getPoints(2, w.week, w.pick2);
 	w.points += getPoints(1, w.week, w.pick1);
-	w.points += getPoints(6, w.week, w.designatedMatchUp);
+	w.points += getPoints(3, w.week, w.randomMatchUp);
+	w.points += getPoints(3, w.week, w.designatedMatchUp);
 	
 	// Bonus for perfect week
 	if (w.points == 21)
@@ -644,7 +651,32 @@ var loadPicks = function()
 	r = t.insertRow(-1);
 	c = r.insertCell(-1);
 	c.colSpan = 2;
-	c.textContent = "Designated Matchup (6pts) : " + season[config.week -1].designatedMatchUp[0] + " vs. " + season[config.week -1].designatedMatchUp[1];
+	c.textContent = "Random Matchup (3ts) : " + season[config.week -1].randomMatchUp[0] + " vs. " + season[config.week -1].randomMatchUp[1];
+
+	r = t.insertRow(-1);
+	c = r.insertCell(-1);
+	c.id = "randomMatchUpTd";
+	c.colSpan = 2;
+	s = document.createElement("select");
+	s.id = "randomMatchUp";
+	s.add(new Option("",""));
+	s.add(new Option(season[config.week -1].randomMatchUp[0], season[config.week -1].randomMatchUp[0]));
+	s.add(new Option(season[config.week -1].randomMatchUp[1], season[config.week -1].randomMatchUp[1]));
+	if (pickObj.weeks[startWeek-1] != undefined)
+	{
+		s.value = pickObj.weeks[startWeek-1].randomMatchUp;
+	}
+	else
+	{
+		s.value = "";
+	}
+	c.appendChild(s);
+
+
+	r = t.insertRow(-1);
+	c = r.insertCell(-1);
+	c.colSpan = 2;
+	c.textContent = "Designated Matchup (3ts) : " + season[config.week -1].designatedMatchUp[0] + " vs. " + season[config.week -1].designatedMatchUp[1];
 
 	
 	r = t.insertRow(-1);
@@ -699,6 +731,22 @@ var changeWeekSelect = function(e)
 				pickSelect.value = "";
 			}
 		}
+		gebi("randomMatchUpTd").removeChild(gebi("randomMatchUp"));
+		var rms = document.createElement("select");
+		rms.id = "randomMatchUp";
+		rms.add(new Option("",""));
+		rms.add(new Option(season[s.value -1].randomMatchUp[0], season[s.value -1].randomMatchUp[0]));
+		rms.add(new Option(season[s.value -1].randomMatchUp[1], season[s.value -1].randomMatchUp[1]));
+		if (pickObj.weeks[s.value -1] != undefined)
+		{
+			rms.value = pickObj.weeks[s.value -1].randomMatchUp
+		}
+		else
+		{
+			rms.value = "";
+		}
+		gebi("randomMatchUpTd").appendChild(rms);
+
 		gebi("designatedMatchupTd").removeChild(gebi("designatedMatchUp"));
 		var dms = document.createElement("select");
 		dms.id = "designatedMatchUp";
@@ -741,6 +789,7 @@ var storePicValues = function (week)
 				pickObj.weeks[i-1].pick3 = "";
 				pickObj.weeks[i-1].pick4 = "";
 				pickObj.weeks[i-1].pick5 = "";
+				pickObj.weeks[i-1].randomMatchUp = "";
 				pickObj.weeks[i-1].designatedMatchUp = "";
 			}
 		}
@@ -765,6 +814,7 @@ var storePicValues = function (week)
 			console.log("Dupplicated Pick");
 		}
 	}
+	pickObj.weeks[week-1]["randomMatchUp"] = gebi("randomMatchUp").value;
 	pickObj.weeks[week-1]["designatedMatchUp"] = gebi("designatedMatchUp").value;
 	
 	return retCode;

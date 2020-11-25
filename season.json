@@ -3,314 +3,347 @@
   "week": 1,
   "matchups": [
    [
-    "Packers",
-    "Bears"
+    "Texans",
+    "Chiefs"
    ],
    [
-    "Falcons",
-    "Vikings"
+    "Seahawks",
+    "Falcons"
    ],
    [
-    "Ravens",
-    "Dolphins"
+    "Browns",
+    "Ravens"
    ],
    [
-    "Bills",
-    "Jets"
+    "Jets",
+    "Bills"
    ],
    [
-    "Chiefs",
-    "Jaguars"
-   ],
-   [
-    "Rams",
+    "Raiders",
     "Panthers"
    ],
    [
-    "Titans",
-    "Browns"
-   ],
-   [
-    "Redskins",
-    "Eagles"
-   ],
-   [
-    "Bengals",
-    "Seahawks"
+    "Bears",
+    "Lions"
    ],
    [
     "Colts",
-    "Chargers"
+    "Jaguars"
    ],
    [
-    "Lions",
-    "Cardinals"
+    "Packers",
+    "Vikings"
    ],
    [
-    "Giants",
-    "Cowboys"
-   ],
-   [
-    "49ers",
-    "Buccaneers"
-   ],
-   [
-    "Steelers",
+    "Dolphins",
     "Patriots"
    ],
    [
-    "Texans",
+    "Eagles",
+    "Washington FC"
+   ],
+   [
+    "Chargers",
+    "Bengals"
+   ],
+   [
+    "Buccaneers",
     "Saints"
    ],
    [
-    "Broncos",
-    "Raiders"
+    "Cardinals",
+    "49ers"
+   ],
+   [
+    "Cowboys",
+    "Rams"
+   ],
+   [
+    "Steelers",
+    "Giants"
+   ],
+   [
+    "Titans",
+    "Broncos"
    ]
   ],
   "bye": [],
+  "randomMatchUp": [
+   "Seahawks",
+   "Falcons"
+  ],
   "designatedMatchUp": [
-   "49ers",
-   "Buccaneers"
+   "Titans",
+   "Broncos"
   ]
  },
  {
   "week": 2,
   "matchups": [
    [
-    "Buccaneers",
-    "Panthers"
+    "Bengals",
+    "Browns"
    ],
    [
-    "Cardinals",
-    "Ravens"
+    "Giants",
+    "Bears"
    ],
    [
-    "Bills",
-    "Giants"
+    "Falcons",
+    "Cowboys"
    ],
    [
-    "Cowboys",
-    "Redskins"
-   ],
-   [
-    "Colts",
-    "Titans"
-   ],
-   [
-    "Jaguars",
-    "Texans"
-   ],
-   [
-    "Chargers",
-    "Lions"
-   ],
-   [
-    "Vikings",
+    "Lions",
     "Packers"
    ],
    [
-    "Patriots",
+    "Vikings",
+    "Colts"
+   ],
+   [
+    "Bills",
     "Dolphins"
    ],
    [
     "49ers",
-    "Bengals"
+    "Jets"
    ],
    [
-    "Seahawks",
+    "Rams",
+    "Eagles"
+   ],
+   [
+    "Broncos",
     "Steelers"
    ],
    [
-    "Chiefs",
-    "Raiders"
+    "Panthers",
+    "Buccaneers"
    ],
    [
-    "Bears",
-    "Broncos"
+    "Jaguars",
+    "Titans"
+   ],
+   [
+    "Washington FC",
+    "Cardinals"
+   ],
+   [
+    "Ravens",
+    "Texans"
+   ],
+   [
+    "Chiefs",
+    "Chargers"
+   ],
+   [
+    "Patriots",
+    "Seahawks"
    ],
    [
     "Saints",
-    "Rams"
-   ],
-   [
-    "Eagles",
-    "Falcons"
-   ],
-   [
-    "Browns",
-    "Jets"
+    "Raiders"
    ]
   ],
   "bye": [],
+  "randomMatchUp": [
+   "Patriots",
+   "Seahawks"
+  ],
   "designatedMatchUp": [
-   "Eagles",
-   "Falcons"
+   "Rams",
+   "Eagles"
   ]
  },
  {
   "week": 3,
   "matchups": [
    [
-    "Titans",
+    "Dolphins",
     "Jaguars"
    ],
    [
-    "Falcons",
-    "Colts"
-   ],
-   [
-    "Ravens",
-    "Chiefs"
-   ],
-   [
-    "Bengals",
-    "Bills"
-   ],
-   [
-    "Broncos",
-    "Packers"
-   ],
-   [
-    "Lions",
-    "Eagles"
-   ],
-   [
-    "Dolphins",
-    "Cowboys"
-   ],
-   [
-    "Jets",
-    "Patriots"
-   ],
-   [
-    "Raiders",
-    "Vikings"
-   ],
-   [
-    "Panthers",
-    "Cardinals"
-   ],
-   [
-    "Giants",
-    "Buccaneers"
-   ],
-   [
-    "Texans",
-    "Chargers"
-   ],
-   [
-    "Saints",
-    "Seahawks"
-   ],
-   [
-    "Steelers",
-    "49ers"
+    "Bears",
+    "Falcons"
    ],
    [
     "Rams",
+    "Bills"
+   ],
+   [
+    "Washington FC",
     "Browns"
    ],
    [
-    "Bears",
-    "Redskins"
+    "Titans",
+    "Vikings"
+   ],
+   [
+    "Raiders",
+    "Patriots"
+   ],
+   [
+    "49ers",
+    "Giants"
+   ],
+   [
+    "Bengals",
+    "Eagles"
+   ],
+   [
+    "Texans",
+    "Steelers"
+   ],
+   [
+    "Jets",
+    "Colts"
+   ],
+   [
+    "Panthers",
+    "Chargers"
+   ],
+   [
+    "Lions",
+    "Cardinals"
+   ],
+   [
+    "Buccaneers",
+    "Broncos"
+   ],
+   [
+    "Cowboys",
+    "Seahawks"
+   ],
+   [
+    "Packers",
+    "Saints"
+   ],
+   [
+    "Chiefs",
+    "Ravens"
    ]
   ],
   "bye": [],
+  "randomMatchUp": [
+   "Washington FC",
+   "Browns"
+  ],
   "designatedMatchUp": [
-   "Titans",
-   "Jaguars"
+   "Chiefs",
+   "Ravens"
   ]
  },
  {
   "week": 4,
   "matchups": [
    [
-    "Eagles",
-    "Packers"
+    "Broncos",
+    "Jets"
    ],
    [
-    "Panthers",
-    "Texans"
+    "Cardinals",
+    "Panthers"
    ],
    [
-    "Browns",
-    "Ravens"
-   ],
-   [
-    "Chiefs",
-    "Lions"
-   ],
-   [
-    "Chargers",
-    "Dolphins"
-   ],
-   [
-    "Patriots",
-    "Bills"
-   ],
-   [
-    "Raiders",
-    "Colts"
-   ],
-   [
-    "Titans",
-    "Falcons"
-   ],
-   [
-    "Redskins",
-    "Giants"
-   ],
-   [
-    "Seahawks",
-    "Cardinals"
-   ],
-   [
-    "Buccaneers",
-    "Rams"
-   ],
-   [
-    "Jaguars",
-    "Broncos"
-   ],
-   [
-    "Vikings",
+    "Colts",
     "Bears"
    ],
    [
-    "Cowboys",
-    "Saints"
+    "Jaguars",
+    "Bengals"
    ],
    [
-    "Bengals",
-    "Steelers"
+    "Browns",
+    "Cowboys"
+   ],
+   [
+    "Saints",
+    "Lions"
+   ],
+   [
+    "Vikings",
+    "Texans"
+   ],
+   [
+    "Seahawks",
+    "Dolphins"
+   ],
+   [
+    "Chargers",
+    "Buccaneers"
+   ],
+   [
+    "Steelers",
+    "Titans"
+   ],
+   [
+    "Ravens",
+    "Washington FC"
+   ],
+   [
+    "Giants",
+    "Rams"
+   ],
+   [
+    "Patriots",
+    "Chiefs"
+   ],
+   [
+    "Bills",
+    "Raiders"
+   ],
+   [
+    "Eagles",
+    "49ers"
+   ],
+   [
+    "Falcons",
+    "Packers"
    ]
   ],
-  "bye": [
-   "Jets",
-   "49ers"
+  "bye": [],
+  "randomMatchUp": [
+   "Jaguars",
+   "Bengals"
   ],
   "designatedMatchUp": [
-   "Bears",
-   "Vikings"
+   "Steelers",
+   "Titans"
   ]
  },
  {
   "week": 5,
   "matchups": [
    [
-    "Rams",
-    "Seahawks"
+    "Buccaneers",
+    "Bears"
    ],
    [
-    "Cardinals",
-    "Bengals"
+    "Panthers",
+    "Falcons"
    ],
    [
-    "Falcons",
+    "Bengals",
+    "Ravens"
+   ],
+   [
+    "Jaguars",
     "Texans"
    ],
    [
-    "Ravens",
+    "Raiders",
+    "Chiefs"
+   ],
+   [
+    "Broncos",
+    "Patriots"
+   ],
+   [
+    "Cardinals",
+    "Jets"
+   ],
+   [
+    "Eagles",
     "Steelers"
    ],
    [
@@ -318,123 +351,112 @@
     "Titans"
    ],
    [
-    "Bears",
-    "Raiders"
+    "Rams",
+    "Washington FC"
    ],
    [
-    "Jaguars",
-    "Panthers"
-   ],
-   [
-    "Vikings",
-    "Giants"
-   ],
-   [
-    "Patriots",
-    "Redskins"
-   ],
-   [
-    "Jets",
-    "Eagles"
-   ],
-   [
-    "Buccaneers",
-    "Saints"
-   ],
-   [
-    "Broncos",
-    "Chargers"
-   ],
-   [
-    "Packers",
-    "Cowboys"
+    "Dolphins",
+    "49ers"
    ],
    [
     "Colts",
-    "Chiefs"
+    "Browns"
    ],
    [
-    "Browns",
-    "49ers"
+    "Giants",
+    "Cowboys"
+   ],
+   [
+    "Vikings",
+    "Seahawks"
+   ],
+   [
+    "Chargers",
+    "Saints"
    ]
   ],
-  "bye": [
-   "Lions",
-   "Dolphins"
+  "bye": [],
+  "randomMatchUp": [
+   "Panthers",
+   "Falcons"
   ],
   "designatedMatchUp": [
-   "Rams",
-   "Seahawks"
+   "Colts",
+   "Browns"
   ]
  },
  {
   "week": 6,
   "matchups": [
    [
-    "Giants",
-    "Patriots"
-   ],
-   [
-    "Panthers",
-    "Buccaneers"
+    "Chiefs",
+    "Bills"
    ],
    [
     "Bengals",
-    "Ravens"
-   ],
-   [
-    "Texans",
-    "Chiefs"
-   ],
-   [
-    "Saints",
-    "Jaguars"
-   ],
-   [
-    "Eagles",
-    "Vikings"
-   ],
-   [
-    "Seahawks",
-    "Browns"
-   ],
-   [
-    "Redskins",
-    "Dolphins"
-   ],
-   [
-    "Falcons",
-    "Cardinals"
-   ],
-   [
-    "49ers",
-    "Rams"
-   ],
-   [
-    "Cowboys",
-    "Jets"
-   ],
-   [
-    "Titans",
-    "Broncos"
-   ],
-   [
-    "Steelers",
-    "Chargers"
+    "Colts"
    ],
    [
     "Lions",
-    "Packers"
+    "Jaguars"
+   ],
+   [
+    "Falcons",
+    "Vikings"
+   ],
+   [
+    "Bears",
+    "Panthers"
+   ],
+   [
+    "Washington FC",
+    "Giants"
+   ],
+   [
+    "Ravens",
+    "Eagles"
+   ],
+   [
+    "Browns",
+    "Steelers"
+   ],
+   [
+    "Texans",
+    "Titans"
+   ],
+   [
+    "Patriots",
+    "Broncos"
+   ],
+   [
+    "Jets",
+    "Dolphins"
+   ],
+   [
+    "Packers",
+    "Buccaneers"
+   ],
+   [
+    "Rams",
+    "49ers"
+   ],
+   [
+    "Cardinals",
+    "Cowboys"
    ]
   ],
   "bye": [
-   "Bills",
-   "Bears",
-   "Colts",
-   "Raiders"
+   "Raiders",
+   "Chargers",
+   "Saints",
+   "Seahawks"
+  ],
+  "randomMatchUp": [
+   "Lions",
+   "Jaguars"
   ],
   "designatedMatchUp": [
-   "Panthers",
+   "Packers",
    "Buccaneers"
   ]
  },
@@ -442,422 +464,223 @@
   "week": 7,
   "matchups": [
    [
+    "Giants",
+    "Eagles"
+   ],
+   [
+    "Lions",
+    "Falcons"
+   ],
+   [
+    "Steelers",
+    "Titans"
+   ],
+   [
+    "Browns",
+    "Bengals"
+   ],
+   [
+    "Packers",
+    "Texans"
+   ],
+   [
+    "Panthers",
+    "Saints"
+   ],
+   [
+    "Bills",
+    "Jets"
+   ],
+   [
+    "Cowboys",
+    "Washington FC"
+   ],
+   [
+    "Seahawks",
+    "Cardinals"
+   ],
+   [
     "Chiefs",
     "Broncos"
    ],
    [
-    "Cardinals",
-    "Giants"
-   ],
-   [
-    "Texans",
-    "Colts"
-   ],
-   [
     "Jaguars",
-    "Bengals"
-   ],
-   [
-    "Rams",
-    "Falcons"
-   ],
-   [
-    "Dolphins",
-    "Bills"
-   ],
-   [
-    "Vikings",
-    "Lions"
-   ],
-   [
-    "Raiders",
-    "Packers"
+    "Chargers"
    ],
    [
     "49ers",
-    "Redskins"
+    "Patriots"
    ],
    [
-    "Chargers",
-    "Titans"
+    "Buccaneers",
+    "Raiders"
    ],
    [
-    "Ravens",
-    "Seahawks"
-   ],
-   [
-    "Saints",
-    "Bears"
-   ],
-   [
-    "Eagles",
-    "Cowboys"
-   ],
-   [
-    "Patriots",
-    "Jets"
+    "Bears",
+    "Rams"
    ]
   ],
   "bye": [
-   "Panthers",
-   "Browns",
+   "Ravens",
+   "Colts",
+   "Dolphins",
+   "Vickings",
    "Steelers",
-   "Buccanneers"
+   "Titans"
+  ],
+  "randomMatchUp": [
+   "Packers",
+   "Texans"
   ],
   "designatedMatchUp": [
-   "Chargers",
-   "Titans"
+   "Browns",
+   "Bengals"
   ]
  },
  {
   "week": 8,
   "matchups": [
    [
-    "Redskins",
-    "Vikings"
+    "Falcons",
+    "Panthers"
    ],
    [
-    "Cardinals",
-    "Saints"
-   ],
-   [
-    "Bengals",
-    "Rams"
-   ],
-   [
-    "Chargers",
-    "Bears"
-   ],
-   [
-    "Giants",
-    "Lions"
-   ],
-   [
-    "Jets",
-    "Jaguars"
-   ],
-   [
-    "Raiders",
-    "Texans"
-   ],
-   [
-    "Eagles",
+    "Patriots",
     "Bills"
    ],
    [
-    "Seahawks",
-    "Falcons"
+    "Titans",
+    "Bengals"
    ],
    [
-    "Buccaneers",
-    "Titans"
+    "Steelers",
+    "Ravens"
    ],
    [
-    "Panthers",
-    "49ers"
+    "Raiders",
+    "Browns"
    ],
    [
-    "Browns",
-    "Patriots"
+    "Colts",
+    "Lions"
    ],
    [
-    "Broncos",
-    "Colts"
+    "Vikings",
+    "Packers"
    ],
    [
-    "Packers",
+    "Jets",
     "Chiefs"
    ],
    [
-    "Dolphins",
-    "Steelers"
+    "Rams",
+    "Dolphins"
+   ],
+   [
+    "Chargers",
+    "Broncos"
+   ],
+   [
+    "Saints",
+    "Bears"
+   ],
+   [
+    "49ers",
+    "Seahawks"
+   ],
+   [
+    "Cowboys",
+    "Eagles"
+   ],
+   [
+    "Buccaneers",
+    "Giants"
    ]
   ],
   "bye": [
-   "Ravens",
-   "Cowboys"
+   "Jaguars",
+   "Cardinals",
+   "Texans",
+   "Washington FC"
+  ],
+  "randomMatchUp": [
+   "Saints",
+   "Bears"
   ],
   "designatedMatchUp": [
-   "Eagles",
-   "Bills"
+   "Colts",
+   "Lions"
   ]
  },
  {
   "week": 9,
   "matchups": [
    [
-    "49ers",
-    "Cardinals"
+    "Packers",
+    "49ers"
+   ],
+   [
+    "Broncos",
+    "Falcons"
+   ],
+   [
+    "Seahawks",
+    "Bills"
+   ],
+   [
+    "Ravens",
+    "Colts"
    ],
    [
     "Texans",
     "Jaguars"
    ],
    [
-    "Bears",
-    "Eagles"
-   ],
-   [
-    "Colts",
-    "Steelers"
-   ],
-   [
-    "Vikings",
+    "Panthers",
     "Chiefs"
    ],
    [
-    "Jets",
-    "Dolphins"
-   ],
-   [
-    "Titans",
-    "Panthers"
-   ],
-   [
-    "Redskins",
-    "Bills"
-   ],
-   [
     "Lions",
-    "Raiders"
+    "Vikings"
    ],
    [
-    "Buccaneers",
-    "Seahawks"
-   ],
-   [
-    "Browns",
-    "Broncos"
-   ],
-   [
-    "Packers",
-    "Chargers"
-   ],
-   [
-    "Patriots",
-    "Ravens"
-   ],
-   [
-    "Cowboys",
-    "Giants"
-   ]
-  ],
-  "bye": [
-   "Falcons",
-   "Bengals",
-   "Rams",
-   "Saints"
-  ],
-  "designatedMatchUp": [
-   "Colts",
-   "Steelers"
-  ]
- },
- {
-  "week": 10,
-  "matchups": [
-   [
-    "Chargers",
-    "Raiders"
-   ],
-   [
-    "Cardinals",
-    "Buccaneers"
-   ],
-   [
-    "Falcons",
-    "Saints"
-   ],
-   [
-    "Ravens",
-    "Bengals"
-   ],
-   [
-    "Bills",
-    "Browns"
-   ],
-   [
-    "Panthers",
-    "Packers"
-   ],
-   [
-    "Lions",
-    "Bears"
-   ],
-   [
-    "Chiefs",
+    "Bears",
     "Titans"
    ],
    [
     "Giants",
-    "Jets"
+    "Washington FC"
+   ],
+   [
+    "Raiders",
+    "Chargers"
    ],
    [
     "Dolphins",
-    "Colts"
+    "Cardinals"
    ],
-   [
-    "Rams",
-    "Steelers"
-   ],
-   [
-    "Vikings",
-    "Cowboys"
-   ],
-   [
-    "Seahawks",
-    "49ers"
-   ]
-  ],
-  "bye": [
-   "Broncos",
-   "Texans",
-   "Jaguars",
-   "Patriots",
-   "Eagles",
-   "Redskins"
-  ],
-  "designatedMatchUp": [
-   "Chargers",
-   "Raiders"
-  ]
- },
- {
-  "week": 11,
-  "matchups": [
    [
     "Steelers",
-    "Browns"
-   ],
-   [
-    "Falcons",
-    "Panthers"
-   ],
-   [
-    "Bills",
-    "Dolphins"
-   ],
-   [
-    "Cowboys",
-    "Lions"
-   ],
-   [
-    "Broncos",
-    "Vikings"
-   ],
-   [
-    "Texans",
-    "Ravens"
-   ],
-   [
-    "Jaguars",
-    "Colts"
+    "Cowboys"
    ],
    [
     "Saints",
     "Buccaneers"
    ],
    [
-    "Jets",
-    "Redskins"
-   ],
-   [
-    "Cardinals",
-    "49ers"
-   ],
-   [
-    "Bengals",
-    "Raiders"
-   ],
-   [
     "Patriots",
-    "Eagles"
-   ],
-   [
-    "Bears",
-    "Rams"
-   ],
-   [
-    "Chiefs",
-    ""
-   ]
-  ],
-  "bye": [
-   "Packers",
-   "Giants",
-   "Seahawks",
-   "Titans"
-  ],
-  "designatedMatchUp": [
-   "Jets",
-   "Redskins"
-  ]
- },
- {
-  "week": 12,
-  "matchups": [
-   [
-    "Colts",
-    "Texans"
-   ],
-   [
-    "Panthers",
-    "Saints"
-   ],
-   [
-    "Broncos",
-    "Bills"
-   ],
-   [
-    "Lions",
-    "Redskins"
-   ],
-   [
-    "Dolphins",
-    "Browns"
-   ],
-   [
-    "Giants",
-    "Bears"
-   ],
-   [
-    "Raiders",
     "Jets"
-   ],
-   [
-    "Steelers",
-    "Bengals"
-   ],
-   [
-    "Buccaneers",
-    "Falcons"
-   ],
-   [
-    "Jaguars",
-    "Titans"
-   ],
-   [
-    "Cowboys",
-    "Patriots"
-   ],
-   [
-    "Packers",
-    "49ers"
-   ],
-   [
-    "Seahawks",
-    "Eagles"
-   ],
-   [
-    "Ravens",
-    "Rams"
    ]
   ],
   "bye": [
-   "Cardinals",
-   "Chiefs",
-   "Chargers",
-   "Vickings"
+   "Bengals",
+   "Browns",
+   "Rams",
+   "Eagles"
+  ],
+  "randomMatchUp": [
+   "Raiders",
+   "Chargers"
   ],
   "designatedMatchUp": [
    "Packers",
@@ -865,373 +688,618 @@
   ]
  },
  {
-  "week": 13,
+  "week": 10,
   "matchups": [
    [
-    "Bears",
-    "Lions"
-   ],
-   [
-    "Bills",
-    "Cowboys"
-   ],
-   [
-    "Saints",
-    "Falcons"
-   ],
-   [
-    "Packers",
-    "Giants"
-   ],
-   [
-    "Jets",
-    "Bengals"
-   ],
-   [
-    "Raiders",
-    "Chiefs"
-   ],
-   [
-    "Eagles",
-    "Dolphins"
-   ],
-   [
-    "49ers",
-    "Ravens"
+    "Colts",
+    "Titans"
    ],
    [
     "Buccaneers",
-    "Jaguars"
-   ],
-   [
-    "Titans",
-    "Colts"
-   ],
-   [
-    "Redskins",
     "Panthers"
    ],
    [
-    "Rams",
-    "Cardinals"
+    "Texans",
+    "Browns"
    ],
    [
-    "Browns",
+    "Washington FC",
+    "Lions"
+   ],
+   [
+    "Jaguars",
+    "Packers"
+   ],
+   [
+    "Eagles",
+    "Giants"
+   ],
+   [
+    "Bengals",
     "Steelers"
    ],
    [
+    "Bills",
+    "Cardinals"
+   ],
+   [
+    "Broncos",
+    "Raiders"
+   ],
+   [
     "Chargers",
-    "Broncos"
+    "Dolphins"
+   ],
+   [
+    "Seahawks",
+    "Rams"
+   ],
+   [
+    "49ers",
+    "Saints"
+   ],
+   [
+    "Ravens",
+    "Patriots"
+   ],
+   [
+    "Vikings",
+    "Bears"
+   ]
+  ],
+  "bye": [
+   "Falcons",
+   "Cowboys",
+   "Chiefs",
+   "Jets"
+  ],
+  "randomMatchUp": [
+   "Jaguars",
+   "Packers"
+  ],
+  "designatedMatchUp": [
+   "Bills",
+   "Cardinals"
+  ]
+ },
+ {
+  "week": 11,
+  "matchups": [
+   [
+    "Cardinals",
+    "Seahawks"
+   ],
+   [
+    "Titans",
+    "Ravens"
+   ],
+   [
+    "Lions",
+    "Panthers"
+   ],
+   [
+    "Eagles",
+    "Browns"
    ],
    [
     "Patriots",
     "Texans"
    ],
    [
-    "Vikings",
+    "Packers",
+    "Colts"
+   ],
+   [
+    "Steelers",
+    "Jaguars"
+   ],
+   [
+    "Falcons",
+    "Saints"
+   ],
+   [
+    "Bengals",
+    "Washington FC"
+   ],
+   [
+    "Dolphins",
+    "Broncos"
+   ],
+   [
+    "Cowboys",
+    "Vikings"
+   ],
+   [
+    "Chiefs",
+    "Raiders"
+   ],
+   [
+    "Jets",
+    "Chargers"
+   ],
+   [
+    "Rams",
+    "Buccaneers"
+   ]
+  ],
+  "bye": [
+   "Bills",
+   "Bears",
+   "Giants",
+   "49ers"
+  ],
+  "randomMatchUp": [
+   "Titans",
+   "Ravens"
+  ],
+  "designatedMatchUp": [
+   "Bengals",
+   "Washington FC"
+  ]
+ },
+ {
+  "week": 12,
+  "matchups": [
+   [
+    "Texans",
+    "Lions"
+   ],
+   [
+    "Washington FC",
+    "Cowboys"
+   ],
+   [
+    "Ravens",
+    "Steelers"
+   ],
+   [
+    "Raiders",
+    "Falcons"
+   ],
+   [
+    "Chargers",
+    "Bills"
+   ],
+   [
+    "Giants",
+    "Bengals"
+   ],
+   [
+    "Titans",
+    "Colts"
+   ],
+   [
+    "Browns",
+    "Jaguars"
+   ],
+   [
+    "Panthers",
+    "Vikings"
+   ],
+   [
+    "Cardinals",
+    "Patriots"
+   ],
+   [
+    "Dolphins",
+    "Jets"
+   ],
+   [
+    "Saints",
+    "Broncos"
+   ],
+   [
+    "49ers",
+    "Rams"
+   ],
+   [
+    "Chiefs",
+    "Buccaneers"
+   ],
+   [
+    "Bears",
+    "Packers"
+   ],
+   [
+    "Seahawks",
+    "Eagles"
+   ]
+  ],
+  "bye": [
+  ],
+  "randomMatchUp": [
+   "Washington FC",
+   "Cowboys"
+  ],
+  "designatedMatchUp": [
+   "Cardinals",
+   "Patriots"
+  ]
+ },
+ {
+  "week": 13,
+  "matchups": [
+   [
+    "Cowboys",
+    "Ravens"
+   ],
+   [
+    "Saints",
+    "Falcons"
+   ],
+   [
+    "Lions",
+    "Bears"
+   ],
+   [
+    "Colts",
+    "Texans"
+   ],
+   [
+    "Bengals",
+    "Dolphins"
+   ],
+   [
+    "Jaguars",
+    "Vikings"
+   ],
+   [
+    "Raiders",
+    "Jets"
+   ],
+   [
+    "Washington FC",
+    "Steelers"
+   ],
+   [
+    "Browns",
+    "Titans"
+   ],
+   [
+    "Rams",
+    "Cardinals"
+   ],
+   [
+    "Giants",
     "Seahawks"
+   ],
+   [
+    "Eagles",
+    "Packers"
+   ],
+   [
+    "Patriots",
+    "Chargers"
+   ],
+   [
+    "Broncos",
+    "Chiefs"
+   ],
+   [
+    "Bills",
+    "49ers"
    ]
   ],
   "bye": [],
+  "randomMatchUp": [
+   "Rams",
+   "Cardinals"
+  ],
   "designatedMatchUp": [
-   "Chargers",
-   "Broncos"
+   "",
+   ""
   ]
  },
  {
   "week": 14,
   "matchups": [
    [
-    "Cowboys",
-    "Bears"
-   ],
-   [
-    "Ravens",
-    "Bills"
-   ],
-   [
-    "Panthers",
-    "Falcons"
-   ],
-   [
-    "Bengals",
-    "Browns"
+    "Patriots",
+    "Rams"
    ],
    [
     "Broncos",
-    "Texans"
+    "Panthers"
    ],
    [
-    "Lions",
-    "Vikings"
+    "Texans",
+    "Bears"
    ],
    [
-    "Colts",
-    "Buccaneers"
+    "Cowboys",
+    "Bengals"
    ],
    [
-    "Dolphins",
-    "Jets"
+    "Packers",
+    "Lions"
    ],
    [
-    "49ers",
-    "Saints"
-   ],
-   [
-    "Redskins",
-    "Packers"
-   ],
-   [
-    "Chargers",
+    "Titans",
     "Jaguars"
    ],
    [
     "Chiefs",
-    "Patriots"
+    "Dolphins"
    ],
    [
-    "Steelers",
-    "Cardinals"
+    "Cardinals",
+    "Giants"
    ],
    [
-    "Titans",
+    "Vikings",
+    "Buccaneers"
+   ],
+   [
+    "Colts",
     "Raiders"
    ],
    [
-    "Seahawks",
-    "Rams"
+    "Jets",
+    "Seahawks"
    ],
    [
-    "Giants",
+    "Falcons",
+    "Chargers"
+   ],
+   [
+    "Saints",
     "Eagles"
+   ],
+   [
+    "Washington FC",
+    "49ers"
+   ],
+   [
+    "Steelers",
+    "Bills"
+   ],
+   [
+    "Ravens",
+    "Browns"
    ]
   ],
   "bye": [],
+  "randomMatchUp": [
+   "Titans",
+   "Jaguars"
+  ],
   "designatedMatchUp": [
-   "49ers",
-   "Saints"
+   "",
+   ""
   ]
  },
  {
   "week": 15,
   "matchups": [
    [
-    "Jets",
-    "Ravens"
-   ],
-   [
-    "Bills",
-    "Steelers"
-   ],
-   [
-    "Bears",
-    "Packers"
-   ],
-   [
-    "Broncos",
-    "Chiefs"
-   ],
-   [
-    "Texans",
-    "Titans"
-   ],
-   [
-    "Dolphins",
-    "Giants"
-   ],
-   [
-    "Patriots",
-    "Bengals"
-   ],
-   [
-    "Eagles",
-    "Redskins"
-   ],
-   [
-    "Seahawks",
-    "Panthers"
-   ],
-   [
-    "Buccaneers",
-    "Lions"
-   ],
-   [
-    "Browns",
-    "Cardinals"
-   ],
-   [
-    "Jaguars",
+    "Chargers",
     "Raiders"
    ],
    [
-    "Falcons",
-    "49ers"
+    "Bills",
+    "Broncos"
    ],
    [
-    "Rams",
+    "Panthers",
+    "Packers"
+   ],
+   [
+    "Texans",
+    "Colts"
+   ],
+   [
+    "Jets",
+    "Rams"
+   ],
+   [
+    "Lions",
+    "Titans"
+   ],
+   [
+    "Buccaneers",
+    "Falcons"
+   ],
+   [
+    "Jaguars",
+    "Ravens"
+   ],
+   [
+    "Patriots",
+    "Dolphins"
+   ],
+   [
+    "Bears",
+    "Vikings"
+   ],
+   [
+    "Browns",
+    "Giants"
+   ],
+   [
+    "Seahawks",
+    "Washington FC"
+   ],
+   [
+    "Eagles",
+    "Cardinals"
+   ],
+   [
+    "Chiefs",
+    "Saints"
+   ],
+   [
+    "49ers",
     "Cowboys"
    ],
    [
-    "Vikings",
-    "Chargers"
-   ],
-   [
-    "Colts",
-    "Saints"
+    "Steelers",
+    "Bengals"
    ]
   ],
   "bye": [],
+  "randomMatchUp": [
+   "Buccaneers",
+   "Falcons"
+  ],
   "designatedMatchUp": [
-   "Bills",
-   "Steelers"
+   "",
+   ""
   ]
  },
  {
   "week": 16,
   "matchups": [
    [
-    "Ravens",
-    "Browns"
+    "Vikings",
+    "Saints"
+   ],
+   [
+    "49ers",
+    "Cardinals"
+   ],
+   [
+    "Buccaneers",
+    "Lions"
+   ],
+   [
+    "Dolphins",
+    "Raiders"
+   ],
+   [
+    "Broncos",
+    "Chargers"
+   ],
+   [
+    "Browns",
+    "Jets"
+   ],
+   [
+    "Giants",
+    "Ravens"
+   ],
+   [
+    "Bengals",
+    "Texans"
+   ],
+   [
+    "Bears",
+    "Jaguars"
+   ],
+   [
+    "Falcons",
+    "Chiefs"
+   ],
+   [
+    "Colts",
+    "Steelers"
+   ],
+   [
+    "Panthers",
+    "Washington FC"
+   ],
+   [
+    "Rams",
+    "Seahawks"
+   ],
+   [
+    "Eagles",
+    "Cowboys"
+   ],
+   [
+    "Titans",
+    "Packers"
    ],
    [
     "Bills",
     "Patriots"
-   ],
-   [
-    "Panthers",
-    "Colts"
-   ],
-   [
-    "Bengals",
-    "Dolphins"
-   ],
-   [
-    "Lions",
-    "Broncos"
-   ],
-   [
-    "Texans",
-    "Buccaneers"
-   ],
-   [
-    "Jaguars",
-    "Falcons"
-   ],
-   [
-    "Rams",
-    "49ers"
-   ],
-   [
-    "Saints",
-    "Titans"
-   ],
-   [
-    "Giants",
-    "Redskins"
-   ],
-   [
-    "Raiders",
-    "Chargers"
-   ],
-   [
-    "Steelers",
-    "Jets"
-   ],
-   [
-    "Cardinals",
-    "Seahawks"
-   ],
-   [
-    "Cowboys",
-    "Eagles"
-   ],
-   [
-    "Chiefs",
-    "Bears"
-   ],
-   [
-    "Packers",
-    "Vikings"
    ]
   ],
   "bye": [],
+  "randomMatchUp": [
+   "Colts",
+   "Steelers"
+  ],
   "designatedMatchUp": [
-   "Cowboys",
-   "Eagles"
+   "",
+   ""
   ]
  },
  {
   "week": 17,
   "matchups": [
    [
-    "Falcons",
-    "Buccaneers"
-   ],
-   [
-    "Bears",
-    "Vikings"
-   ],
-   [
-    "Browns",
-    "Bengals"
-   ],
-   [
-    "Packers",
-    "Lions"
-   ],
-   [
-    "Colts",
-    "Jaguars"
-   ],
-   [
-    "Chargers",
-    "Chiefs"
-   ],
-   [
     "Dolphins",
-    "Patriots"
+    "Bills"
    ],
    [
     "Saints",
     "Panthers"
    ],
    [
-    "Jets",
-    "Bills"
+    "Packers",
+    "Bears"
    ],
    [
-    "Eagles",
-    "Giants"
+    "Ravens",
+    "Bengals"
    ],
    [
     "Steelers",
-    "Ravens"
+    "Browns"
+   ],
+   [
+    "Vikings",
+    "Lions"
    ],
    [
     "Titans",
     "Texans"
    ],
    [
-    "Redskins",
-    "Cowboys"
+    "Jaguars",
+    "Colts"
    ],
    [
-    "Cardinals",
-    "Rams"
+    "Chargers",
+    "Chiefs"
+   ],
+   [
+    "Jets",
+    "Patriots"
+   ],
+   [
+    "Cowboys",
+    "Giants"
+   ],
+   [
+    "Washington FC",
+    "Eagles"
+   ],
+   [
+    "Falcons",
+    "Buccaneers"
    ],
    [
     "Raiders",
     "Broncos"
    ],
    [
-    "49ers",
-    "Seahawks"
+    "Cardinals",
+    "Rams"
+   ],
+   [
+    "Seahawks",
+    "49ers"
    ]
   ],
   "bye": [],
+  "randomMatchUp": [
+   "Seahawks",
+   "49ers"
+  ],
   "designatedMatchUp": [
-   "49ers",
-   "Seahawks"
+   "",
+   ""
   ]
  }
 ]

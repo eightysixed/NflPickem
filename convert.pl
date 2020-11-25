@@ -38,7 +38,7 @@ my %translate = (
 my $bye;
 
 
-open my $input, "<season2019.txt" or die "Cannot open input file";
+open my $input, "<season2020b.txt" or die "Cannot open input file";
 open my $output, ">output.json" or die "Cannot open output file";
 
 print $output "[\n";
@@ -70,14 +70,15 @@ while(<$input>)
 		print $output "\t\t[\n";
 		
 	}
-	elsif ($cl =~ /\d+\:\d{2} [a|p]m\t ([^\t]+)\t (.+)/)
+	elsif ($cl =~ /(.+) at (.+)\,/)
 	{
 		if ($matchupCount != 0)
 		{
 			print $output ",\n";
 		}
 		$matchupCount++;
-		print $output "\t\t\t[\"$translate{$1}\", \"$translate{$2}\"]";
+		# print $output "\t\t\t[\"$translate{$1}\", \"$translate{$2}\"]";
+		print $output "\t\t\t[\"$1\", \"$2\"]";
 	}
 	elsif ($cl =~ /Bye\:\s+(.+)/)
 	{

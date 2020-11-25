@@ -30,9 +30,15 @@ var endPhrases = new Array(
 	"Up until now the worst decision in gambling history was made by Pete Rose, you sadly beat him by a long stretch!",
 	"Maybe I should make an 'Insta-pick' feature just for you...",
 	"Geeeeeese... If you don't want to play anymore, just quit!",
-	"You are lucky my 'Rejected for stupidity' feature is not yet implemented." */
-	"Be prepare to celebrate greatness!  It is inevitable...  The smartest, most awsome will win.  Since it would be hard to be a worst one, I wish a better year for 2020!  You have 8 months to wise up!  (Hehehe)"
-
+	"You are lucky my 'Rejected for stupidity' feature is not yet implemented." 
+	"Be prepare to celebrate greatness!  It is inevitable...  The smartest, most awsome will win.  Since it would be hard to be a worst one, I wish a better year for 2020!  You have 8 months to wise up!  (Hehehe)" */
+	//"Criss, tu commences avec ça cette année.  Messemble que 2020 est déjà assez pénible sans que tu te mettes dans le trouble... En tout cas, je ne dois pas avoir le COVID parce que 'je sens' que tu vas finir dans la cave!"
+	//"Ouff...  Je ne sais pas ce que j'ai mais je me sens tout croche...  Je ne me sens même pas capable de calculer les points du pool comme il faut.  Les résultats affichés risquent d'être n'importe quoi...  De grands champions pourraient se retrouver dans la cave et des nobody au sommet à cause de mon état!  J'espère que ça va se rétablir et que les dommages ne seront pas irréversibles!"
+	//"Entre tes choix et ceux de Pascale qui prends les 2 équipe de la même game, je ne sais pas qui est le pire! Une chance que les Nordiques n'étaient pas dans les choix, je suis sur que tu les aurais pris!!!!"
+	//"Well... Ça ne sent pas le frais dans la cave du classement!!!!!",
+	//"Bon ben ça d'l'air que Maxime a recommencé à fairer des choix cette année...",
+	//"Tu suces!!!!  (Je suis en manque d'inspiration...)",
+	"Jacques a eu une semaine parfaite...  Tous les espoires sont permis même pour toi!"
 );
 
 var endPhrasesPerso = [
@@ -56,6 +62,8 @@ var endPhrasesPerso = [
 //		phrases: ["Y'a tellement d'hommes qui connaissent le football dans ton entourage, tu devrais définitivement les consulter avec de faire tes choix!"]
 //		phrases: ["C'est ca tes choix!?!?!  Tu dois vraiment manquer de sommeil!  Reste couché le matin..."]
 //		phrases: ["Moi qui me disais qu'en allant voir une game live tu finirais par comprendre la game.  Tu devais être trop saoule..."]
+//		phrases: ["Si ton objectif est de ne pas avoir 0 point à la fin de la semaine:  Excellente stratégie!  Si ton objectifs est de gagné le pool: Criss t'étais mêlée!!!"]
+//		phrases: ["T'es pu dans la cave!?!?!  Ben bravooooo!!!!  Moi j'appelle ça de la cruauté envers les aînés!"]
 //	},
 //	{
 //		name: "Ted Knowles",
@@ -71,11 +79,11 @@ var endPhrasesPerso = [
 //		phrases : ["Aaaaaa le confort de la cave du classement, avec ces choix on dirait que tu y encore cette saison!  Je suis tellement content de renouer avec toi!"]
 //		phrases : ["Fa que..... Tu trouves que je ne me renouvelle pas assez?  Messemble que si je regarde le classement, ça fait un p'tit boute que tu n'as pas RENOUVELLÉ ta position!!! Un sérieux cas du chaudron qui se moque de la poêle!"]
 //	},
-/*	{
-		name: "M-A Leblanc",
-		phrases : ["Tes choix semblent être basés sur les résultats de 10 ans passés.  J'imagine que vous venez de recevoir le journal de Montréal de 2007 à St-Zotique!?!?!"]
-	},
-*/
+//	{
+	//	name: "M-A Leblanc",
+		//phrases : ["Tes choix semblent être basés sur les résultats de 10 ans passés.  J'imagine que vous venez de recevoir le journal de Montréal de 2007 à St-Zotique!?!?!"]
+//		phrases : ["Sacrament, messemble que c'est pas si compliqué que ça!?!?!"]
+//	},
 //	{
 //		name: "Genevieve",
 //		phrases : ["Tout ce temps d'analyse pour si peu de points...  On t'appellera pas Capitaine Efficacité!"]
@@ -112,6 +120,12 @@ var endPhrasesPerso = [
 //		          ]
 //	},
 //	{
+//		name : "Jean-Francois",
+//		phrases : ["Bon bon bon, ça pourrit dans le fond du classement pis ça demande un petit mot personnalisé...  À ta place, je préfèreait passer sous l'anonymat!!"
+//
+//		          ]
+//	},
+//	{
 //		name : "Andre Charette",
 //		phrases : ["C'est ça ton choix de match désigné!?!!?  Iiiiiiishhhh.....  Tu as jusqu'à jeudi pour y repenser!"]
 //		phrases : ["3ième place!!!!  Ben braaaaavoooo!  (Slow clap...) C'est triste d'avoir atteint son top si tot dans la saison.  C'est surtout triste que ton top vaut pas une piastre!"]
@@ -120,10 +134,10 @@ var endPhrasesPerso = [
 //		name : "Sebastien Leblanc",
 //		phrases : ["Encore cette semaine, tu n'as pas trouvé les bonnes équipes...  Mais comme tu n'as pas réussi à trouver le Mont Orford, ce n'est pas surprenant..."]
 //	},
-//	{
-//		name: "Andre Claude Paslin",
-//		phrases : ["Wow! Look at those choices!  You'll probably be the firt Pickem player to be inducted in the football Hall of Fame!!"]
-//	}
+	{
+		name: "Andre Claude Paslin",
+		phrases : ["Wow! Look at those choices!  You'll probably be the firt Pickem player to be inducted in the football Hall of Fame!!"]
+	}
 ];
 
 
@@ -224,7 +238,7 @@ router.route("/login/:type/:arg1").post(function(req, res, next)
 	debug("Login attempt " + req.body);
 	var newLoginString = req.body;
 	var newLoginObj = JSON.parse(newLoginString);
-	debug(newLoginObj.name + " : " + newLoginObj.password);
+	//debug(newLoginObj.name + " : " + newLoginObj.password);
 	
 	var playersString = fs.readFileSync("players.json", "utf8");
 	var playersObj = new Object();
@@ -250,6 +264,7 @@ router.route("/login/:type/:arg1").post(function(req, res, next)
 					playersObj.picks[p].weeks[w].pick3 = "";
 					playersObj.picks[p].weeks[w].pick2 = "";
 					playersObj.picks[p].weeks[w].pick1 = "";
+					playersObj.picks[p].weeks[w].randomMatchUp = "";
 					playersObj.picks[p].weeks[w].designatedMatchUp = "";
 				}
 				
@@ -279,6 +294,7 @@ router.route("/getplayers/:type/:arg1").get(function(req, res, next)
 				playersObj[p].weeks[w].pick3 = "";
 				playersObj[p].weeks[w].pick2 = "";
 				playersObj[p].weeks[w].pick1 = "";
+				playersObj[p].weeks[w].randomMatchUp = "";
 				playersObj[p].weeks[w].designatedMatchUp = "";
 			}
 		}
@@ -397,7 +413,7 @@ router.route("/changeresults/:type/:arg1").post(function(req, res, next)
 															 
 router.route("/submitPicks/:type/:arg1").post(function(req, res, next) 
 {
-	debug(req.body);
+	//debug(req.body);
 	var newPick = JSON.parse(req.body);
 	if (newPick != null)
 	{
@@ -534,6 +550,11 @@ var validateSeason = function(s)
 			{
 				ret = false;
 				debug ("No bye member in week " + (i+1));
+			}
+			else if (s[i].randomMatchUp == undefined)
+			{
+				ret = false;
+				debug ("No Random Matchup member in week " + (i+1));
 			}
 			else if (s[i].designatedMatchUp == undefined)
 			{
