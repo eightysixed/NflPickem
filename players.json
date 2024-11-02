@@ -123,7 +123,7 @@
     "pick4": "Chargers",
     "pick5": "Steelers",
     "randomMatchUp": "Ravens",
-    "designatedMatchUp": "Washington FC",
+    "designatedMatchUp": "Washington Commanders",
     "points": 15
    },
    {
@@ -217,7 +217,7 @@
     "pick3": "Titans",
     "pick4": "Seahawks",
     "pick5": "Steelers",
-    "randomMatchUp": "Washington FC",
+    "randomMatchUp": "Washington Commanders",
     "designatedMatchUp": "Chiefs",
     "points": 17
    },
@@ -306,7 +306,7 @@
     "pick4": "Chiefs",
     "pick5": "Steelers",
     "randomMatchUp": "Ravens",
-    "designatedMatchUp": "Washington FC",
+    "designatedMatchUp": "Washington Commanders",
     "points": 14
    },
    {
@@ -428,7 +428,7 @@
    },
    {
     "week": 7,
-    "pick1": "Washington FC",
+    "pick1": "Washington Commanders",
     "pick2": "Seahawks",
     "pick3": "Saints",
     "pick4": "Bills",
@@ -478,7 +478,7 @@
     "pick4": "Packers",
     "pick5": "Saints",
     "randomMatchUp": "Ravens",
-    "designatedMatchUp": "Washington FC",
+    "designatedMatchUp": "Washington Commanders",
     "points": 8
    },
    {
@@ -494,7 +494,7 @@
    },
    {
     "week": 13,
-    "pick1": "Washington FC",
+    "pick1": "Washington Commanders",
     "pick2": "Chiefs",
     "pick3": "Raiders",
     "pick4": "Saints",
@@ -733,7 +733,7 @@
     "pick3": "Steelers",
     "pick4": "Rams",
     "pick5": "Seahawks",
-    "randomMatchUp": "Washington FC",
+    "randomMatchUp": "Washington Commanders",
     "designatedMatchUp": "Chiefs",
     "points": 13
    },
@@ -822,7 +822,7 @@
     "pick4": "Steelers",
     "pick5": "Chiefs",
     "randomMatchUp": "Ravens",
-    "designatedMatchUp": "Washington FC",
+    "designatedMatchUp": "Washington Commanders",
     "points": 15
    },
    {
@@ -832,7 +832,7 @@
     "pick3": "Seahawks",
     "pick4": "Dolphins",
     "pick5": "Raiders",
-    "randomMatchUp": "Washington FC",
+    "randomMatchUp": "Washington Commanders",
     "designatedMatchUp": "Patriots",
     "points": 16
    },
@@ -1004,7 +1004,7 @@
     "pick3": "Dolphins",
     "pick4": "Saints",
     "pick5": "Seahawks",
-    "randomMatchUp": "Washington FC",
+    "randomMatchUp": "Washington Commanders",
     "designatedMatchUp": "Cardinals",
     "points": 18
    },
@@ -1176,7 +1176,7 @@
     "pick3": "Packers",
     "pick4": "Vikings",
     "pick5": "Seahawks",
-    "randomMatchUp": "Washington FC",
+    "randomMatchUp": "Washington Commanders",
     "designatedMatchUp": "Cardinals",
     "points": 18
    },
@@ -1250,7 +1250,7 @@
     "pick3": "Bears",
     "pick4": "Seahawks",
     "pick5": "Cardinals",
-    "randomMatchUp": "Washington FC",
+    "randomMatchUp": "Washington Commanders",
     "designatedMatchUp": "Ravens",
     "points": 9
    },
@@ -1311,7 +1311,7 @@
    },
    {
     "week": 9,
-    "pick1": "Washington FC",
+    "pick1": "Washington Commanders",
     "pick2": "Bears",
     "pick3": "Buccaneers",
     "pick4": "Patriots",
@@ -1339,7 +1339,7 @@
     "pick4": "Browns",
     "pick5": "Saints",
     "randomMatchUp": "Titans",
-    "designatedMatchUp": "Washington FC",
+    "designatedMatchUp": "Washington Commanders",
     "points": 16
    },
    {
@@ -1349,7 +1349,7 @@
     "pick3": "Packers",
     "pick4": "Rams",
     "pick5": "Bills",
-    "randomMatchUp": "Washington FC",
+    "randomMatchUp": "Washington Commanders",
     "designatedMatchUp": "Cardinals",
     "points": 14
    },
@@ -1511,7 +1511,7 @@
     "pick4": "Chiefs",
     "pick5": "Steelers",
     "randomMatchUp": "Ravens",
-    "designatedMatchUp": "Washington FC",
+    "designatedMatchUp": "Washington Commanders",
     "points": 18
    },
    {
@@ -1683,7 +1683,7 @@
     "pick4": "Chiefs",
     "pick5": "Steelers",
     "randomMatchUp": "Ravens",
-    "designatedMatchUp": "Washington FC",
+    "designatedMatchUp": "Washington Commanders",
     "points": 14
    },
    {
@@ -1855,7 +1855,7 @@
     "pick4": "Saints",
     "pick5": "Steelers",
     "randomMatchUp": "Ravens",
-    "designatedMatchUp": "Washington FC",
+    "designatedMatchUp": "Washington Commanders",
     "points": 17
    },
    {
