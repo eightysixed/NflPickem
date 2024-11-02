@@ -51,7 +51,7 @@
     "Broncos"
    ],
    [
-    "Redskins",
+    "Commanders",
     "Cardinals"
    ],
    [
@@ -70,7 +70,7 @@
   "bye": [],
   "designatedMatchUp": [
    "Cardinals",
-   "Redskins"
+   "Commanders"
   ]
  },
  {
@@ -94,7 +94,7 @@
    ],
    [
     "Colts",
-    "Redskins"
+    "Commanders"
    ],
    [
     "Chiefs",
@@ -168,7 +168,7 @@
    ],
    [
     "Packers",
-    "Redskins"
+    "Commanders"
    ],
    [
     "Colts",
@@ -287,7 +287,7 @@
   ],
   "bye": [
    "Panthers",
-   "Redskins"
+   "Commanders"
   ],
   "designatedMatchUp": [
    "Texans",
@@ -354,7 +354,7 @@
     "Texans"
    ],
    [
-    "Redskins",
+    "Commanders",
     "Saints"
    ]
   ],
@@ -384,7 +384,7 @@
    ],
    [
     "Panthers",
-    "Redskins"
+    "Commanders"
    ],
    [
     "Bears",
@@ -489,7 +489,7 @@
    ],
    [
     "Cowboys",
-    "Redskins"
+    "Commanders"
    ],
    [
     "Rams",
@@ -508,7 +508,7 @@
   ],
   "designatedMatchUp": [
    "Cowboys",
-   "Redskins"
+   "Commanders"
   ]
  },
  {
@@ -547,7 +547,7 @@
     "Bengals"
    ],
    [
-    "Redskins",
+    "Commanders",
     "Giants"
    ],
    [
@@ -591,7 +591,7 @@
    ],
    [
     "Falcons",
-    "Redskins"
+    "Commanders"
    ],
    [
     "Bears",
@@ -691,7 +691,7 @@
     "Bengals"
    ],
    [
-    "Redskins",
+    "Commanders",
     "Buccaneers"
    ],
    [
@@ -719,7 +719,7 @@
   ],
   "designatedMatchUp": [
    "Buccaneers",
-   "Redskins"
+   "Commanders"
   ]
  },
  {
@@ -743,7 +743,7 @@
    ],
    [
     "Texans",
-    "Redskins"
+    "Commanders"
    ],
    [
     "Vikings",
@@ -799,7 +799,7 @@
     "Lions"
    ],
    [
-    "Redskins",
+    "Commanders",
     "Cowboys"
    ],
    [
@@ -928,7 +928,7 @@
     "Seahawks"
    ],
    [
-    "Redskins",
+    "Commanders",
     "Eagles"
    ]
   ],
@@ -975,7 +975,7 @@
    ],
    [
     "Giants",
-    "Redskins"
+    "Commanders"
    ],
    [
     "Jets",
@@ -1060,7 +1060,7 @@
     "Giants"
    ],
    [
-    "Redskins",
+    "Commanders",
     "Jaguars"
    ],
    [
@@ -1126,7 +1126,7 @@
     "Cowboys"
    ],
    [
-    "Redskins",
+    "Commanders",
     "Titans"
    ],
    [
@@ -1213,7 +1213,7 @@
    ],
    [
     "Eagles",
-    "Redskins"
+    "Commanders"
    ],
    [
     "Cardinals",
