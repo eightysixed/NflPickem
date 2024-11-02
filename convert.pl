@@ -15,7 +15,7 @@ my %translate = (
 "Carolina Panthers"=> "Panthers",
 "Tennessee Titans"=> "Titans", 
 "Cleveland Browns"=> "Browns",
-"Washington Redskins"=> "Redskins", 
+"Washington Commanders"=> "Commanders", 
 "Philadelphia Eagles"=> "Eagles",
 "Cincinnati Bengals"=> "Bengals", 
 "Seattle Seahawks"=> "Seahawks",
@@ -32,7 +32,7 @@ my %translate = (
 "Houston Texans"=> "Texans", 
 "New Orleans Saints"=> "Saints",
 "Denver Broncos"=> "Broncos", 
-"Oakland Raiders"=> "Raiders"
+"Las Vegas Raiders"=> "Raiders"
 );
 
 my $bye;
